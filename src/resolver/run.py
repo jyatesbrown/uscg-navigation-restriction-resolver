@@ -13,11 +13,32 @@ from ..models.output import Coverage, DatasetStatus, QueryInfo, QueryResult, Sum
 from ..normalization.categories import ALL_CATEGORIES
 from ..normalization.dates import iso
 from ..sources.navcen import INDEX_URL, Cache, fetch_categories, fetch_index
-from ..utils.errors import SourceError
+from ..utils.errors import SourceError, SourceState
 from ..utils.http import create_client
 from .intersections import match
 
 SOURCE_ID = "USCG_NAVCEN_MSI"
+
+
+def coverage_note(
+    failed: list[str], incomplete: list[str], unpublished: list[DatasetStatus], failures: list[DatasetStatus]
+) -> str | None:
+    if not failed and not incomplete:
+        return None
+    parts = []
+    if failures:
+        parts.append("could not be retrieved or validated: " + ", ".join(s.dataset for s in failures))
+    if unpublished:
+        parts.append(
+            "are listed in NAVCEN's file index but not published: " + ", ".join(s.dataset for s in unpublished)
+        )
+    return (
+        "Coverage is incomplete. These official dataset files "
+        + "; ".join(parts)
+        + ". Records in them were not checked, so zero matches in "
+        + ", ".join(failed + incomplete)
+        + " does not mean no records exist there."
+    )
 
 
 @dataclass
@@ -94,10 +115,19 @@ async def resolve(inp: ActorInput, client: httpx.AsyncClient, now: datetime, cac
         )
         for r in results
     ]
-    failed = [c for c in cats if any(r.category == c and r.state != "success" for r in results)]
-    checked = [c for c in cats if c not in failed]
+    unpublished_state = SourceState.LISTED_BUT_NOT_PUBLISHED
+    failed = [
+        c for c in cats if any(r.category == c and r.state not in ("success", unpublished_state) for r in results)
+    ]
+    incomplete = [
+        c for c in cats if c not in failed and any(r.category == c and r.state == unpublished_state for r in results)
+    ]
+    checked = [c for c in cats if c not in failed and c not in incomplete]
+    unpublished = [s for s in statuses if s.status == unpublished_state]
+    failures = [s for s in statuses if s.status not in ("success", unpublished_state)]
     notices, expired = match(area, [r for r in results if r.state == "success"], at)
-    status = "success" if not failed else "partial" if checked else "source_unavailable"
+    any_success = any(r.state == "success" for r in results)
+    status = "success" if not failed and not incomplete else "partial" if any_success else "source_unavailable"
     by_cat = {c: sum(1 for n in notices if n.category == c) for c in ALL_CATEGORIES}
     summary = Summary(
         matched_notice_count=len(notices),
@@ -117,14 +147,18 @@ async def resolve(inp: ActorInput, client: httpx.AsyncClient, now: datetime, cac
             categories_requested=cats,
             categories_checked=checked,
             categories_failed=failed,
-            complete_for_requested_layers=not failed,
-            source_failures=[s for s in statuses if s.status != "success"],
+            categories_incomplete=incomplete,
+            complete_for_requested_layers=not failed and not incomplete,
+            coverage_note=coverage_note(failed, incomplete, unpublished, failures),
+            source_failures=failures,
+            unpublished_datasets=unpublished,
             datasets=statuses,
             features_skipped=sum(r.skipped for r in results),
         ),
         summary=summary,
         notices=notices,
-        errors=[f"{s.dataset}: {s.status}" for s in statuses if s.status != "success"],
+        errors=[f"{s.dataset}: {s.status}" for s in failures]
+        + [f"{s.dataset}: listed in NAVCEN file index but not published (HTTP 404); not checked" for s in unpublished],
         billing=billing_decision(status, len(notices)),
     )
 

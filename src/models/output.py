@@ -10,7 +10,7 @@ from ..normalization.dates import Validity
 
 SCHEMA_VERSION = "1.0"
 ResultStatus = Literal["success", "partial", "source_unavailable", "invalid_input"]
-DatasetState = Literal["success", "unavailable", "timeout", "invalid_format", "not_queried"]
+DatasetState = Literal["success", "unavailable", "timeout", "invalid_format", "listed_but_not_published", "not_queried"]
 
 SCOPE_NOTE = (
     "Zero matches means no matching records were found in the official datasets successfully checked. "
@@ -102,9 +102,20 @@ class Coverage(_Model):
     categories_checked: list[Category] = Field(
         default_factory=list, description="Categories whose every listed dataset file loaded and validated."
     )
-    categories_failed: list[Category] = Field(default_factory=list)
+    categories_failed: list[Category] = Field(
+        default_factory=list, description="Categories with a dataset file that was unavailable, timed out or malformed."
+    )
+    categories_incomplete: list[Category] = Field(
+        default_factory=list,
+        description="Categories with a dataset file listed in NAVCEN's file index but not published (HTTP 404). "
+        "Not checked and not treated as empty.",
+    )
     complete_for_requested_layers: bool
+    coverage_note: str | None = Field(None, description="Present when coverage is incomplete.")
     source_failures: list[DatasetStatus] = Field(default_factory=list)
+    unpublished_datasets: list[DatasetStatus] = Field(
+        default_factory=list, description="Dataset files listed in NAVCEN's file index but not published (HTTP 404)."
+    )
     datasets: list[DatasetStatus] = Field(default_factory=list)
     features_skipped: int = 0
     not_covered: list[str] = Field(default_factory=lambda: list(NOT_COVERED))

@@ -150,6 +150,25 @@
                         "type": "array"
                     },
                     "categoriesFailed": {
+                        "description": "Categories with a dataset file that was unavailable, timed out or malformed.",
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "categoriesIncomplete": {
+                        "description": "Categories with a dataset file listed in NAVCEN's file index but not published (HTTP 404). Not checked and not treated as empty.",
                         "items": {
                             "enum": [
                                 "safety_zone",
@@ -168,6 +187,18 @@
                     },
                     "completeForRequestedLayers": {
                         "type": "boolean"
+                    },
+                    "coverageNote": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null,
+                        "description": "Present when coverage is incomplete."
                     },
                     "sourceFailures": {
                         "items": {
@@ -206,6 +237,86 @@
                                         "unavailable",
                                         "timeout",
                                         "invalid_format",
+                                        "listed_but_not_published",
+                                        "not_queried"
+                                    ],
+                                    "type": "string"
+                                },
+                                "publishedAt": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "featureCount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "integer"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "fromCache": {
+                                    "default": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "dataset",
+                                "url",
+                                "status"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "unpublishedDatasets": {
+                        "description": "Dataset files listed in NAVCEN's file index but not published (HTTP 404).",
+                        "items": {
+                            "properties": {
+                                "category": {
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "safety_zone",
+                                                "hazard_to_navigation",
+                                                "marine_construction",
+                                                "marine_event",
+                                                "naval_activity",
+                                                "space_operation",
+                                                "temporary_change",
+                                                "tess_advisory",
+                                                "msib"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "dataset": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "enum": [
+                                        "success",
+                                        "unavailable",
+                                        "timeout",
+                                        "invalid_format",
+                                        "listed_but_not_published",
                                         "not_queried"
                                     ],
                                     "type": "string"
@@ -283,6 +394,7 @@
                                         "unavailable",
                                         "timeout",
                                         "invalid_format",
+                                        "listed_but_not_published",
                                         "not_queried"
                                     ],
                                     "type": "string"
