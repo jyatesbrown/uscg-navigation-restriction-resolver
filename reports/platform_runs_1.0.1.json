@@ -1,0 +1,203 @@
+[
+ {
+  "case": "A_nyc_bbox",
+  "runId": "iTISnw7M9SG8NZNTh",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 53,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 7.309,
+  "usageUsd": 0.0014364826936804588,
+  "fromCache": 0,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 3049
+ },
+ {
+  "case": "B_new_rochelle_point",
+  "runId": "xzn1GNN9bvR2nwFgc",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 2,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 5.256,
+  "usageUsd": 0.00037228931184113027,
+  "fromCache": 23,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 693
+ },
+ {
+  "case": "C_houston_route",
+  "runId": "uUpPIJFU55G8rrWDt",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 14,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 2.915,
+  "usageUsd": 0.0003389116212642855,
+  "fromCache": 23,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 386
+ },
+ {
+  "case": "D_vandenberg_space_route",
+  "runId": "HnUSGVjtiwVGfH2sE",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 5,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 5.982,
+  "usageUsd": 0.0004344853504349788,
+  "fromCache": 22,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 752
+ },
+ {
+  "case": "E_kaneohe_d14",
+  "runId": "sf63sF7ThL9SoxNZZ",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 4,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 3.373,
+  "usageUsd": 0.00034762250579728027,
+  "fromCache": 23,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 326
+ },
+ {
+  "case": "F_open_ocean_all_layers",
+  "runId": "uO7Uj8kIDd4gFSTjz",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 0,
+  "billable": false,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 0
+  },
+  "runtimeSecs": 3.009,
+  "usageUsd": 0.0002793227516065042,
+  "fromCache": 23,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 368
+ },
+ {
+  "case": "G_open_ocean_hazards_only",
+  "runId": "Kr8ZfyV7PcUsWVQUr",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "success",
+  "matched": 0,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 5.937,
+  "usageUsd": 8.057849831051297e-05,
+  "fromCache": 3,
+  "unpublished": [],
+  "errors": [],
+  "queryMs": 1081
+ },
+ {
+  "case": "H_invalid_zero_length_route",
+  "runId": "TO83krrMbR9BXCzzV",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "invalid_input",
+  "matched": 0,
+  "billable": false,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 0
+  },
+  "runtimeSecs": 5.451,
+  "usageUsd": 0.000187008040552338,
+  "fromCache": 0,
+  "unpublished": [],
+  "errors": [
+   "input: Value error, route has zero length"
+  ],
+  "queryMs": null
+ },
+ {
+  "case": "I_cached_repeat_nyc",
+  "runId": "DiVnsILizV2tIhmYM",
+  "runStatus": "SUCCEEDED",
+  "items": 1,
+  "status": "partial",
+  "matched": 53,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 1
+  },
+  "runtimeSecs": 4.285,
+  "usageUsd": 0.00036115958654218256,
+  "fromCache": 23,
+  "unpublished": [
+   "safeZoneLine_1"
+  ],
+  "errors": [
+   "safeZoneLine_1: listed in NAVCEN file index but not published (HTTP 404); not checked"
+  ],
+  "queryMs": 441
+ }
+]
