@@ -1,0 +1,116 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 24395,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.13130999999998,
+     25.902060000000063
+    ]
+   },
+   "properties": {
+    "LNM_UID": 100119534987,
+    "AID_NUMBER": 100118041555,
+    "ATON_UID": 100119534987,
+    "WTRW_UID": 100116383422,
+    "ESRI_OID": 24395,
+    "ATON_GROUP": "TEMPORARY CHANGES - AIDS",
+    "LLNR": 47824,
+    "NAME": "Biscayne Bay Buoy 7A",
+    "TC_STATUS": "DISCONTINUED",
+    "TC_CORR_STATUS": "Correction Status Unreported",
+    "ATU": 7,
+    "MSI_STATUS": "Approved",
+    "WATERWAY_NAME": "Biscayne Bay",
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis7:secmiaseckeywesexcecozon:secseckeywesmiatersea:secmiaseckeywessublanact:bisbay",
+    "AID_TYPE": "FD",
+    "AID_SUBTYPE": "FL",
+    "COLOR": "G",
+    "DESCRIPTION_TYPE": "ULB",
+    "CREATE_DATE": 1762794960000,
+    "BNM_NUM": null,
+    "ASSIGNED_LONGITUDE": "080-07-52.705W",
+    "ASSIGNED_LATITUDE": "25-54-07.409N",
+    "DECIMAL_LONGITUDE": -80.13131,
+    "DECIMAL_LATITUDE": 25.90206
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 24396,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.13185999999996,
+     25.901130000000023
+    ]
+   },
+   "properties": {
+    "LNM_UID": 100119534988,
+    "AID_NUMBER": 100118041582,
+    "ATON_UID": 100119534988,
+    "WTRW_UID": 100116383422,
+    "ESRI_OID": 24396,
+    "ATON_GROUP": "TEMPORARY CHANGES - AIDS",
+    "LLNR": 47828,
+    "NAME": "Biscayne Bay Buoy 7B",
+    "TC_STATUS": "DISCONTINUED",
+    "TC_CORR_STATUS": "Correction Status Unreported",
+    "ATU": 7,
+    "MSI_STATUS": "Approved",
+    "WATERWAY_NAME": "Biscayne Bay",
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis7:secmiaseckeywesexcecozon:secseckeywesmiatersea:secmiaseckeywessublanact:bisbay",
+    "AID_TYPE": "FD",
+    "AID_SUBTYPE": "FL",
+    "COLOR": "G",
+    "DESCRIPTION_TYPE": "ULB",
+    "CREATE_DATE": 1762795045000,
+    "BNM_NUM": null,
+    "ASSIGNED_LONGITUDE": "080-07-54.690W",
+    "ASSIGNED_LATITUDE": "25-54-04.073N",
+    "DECIMAL_LONGITUDE": -80.13186,
+    "DECIMAL_LATITUDE": 25.90113
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 24439,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -89.59909999999996,
+     29.404660000000035
+    ]
+   },
+   "properties": {
+    "LNM_UID": 100119535439,
+    "AID_NUMBER": 200100415246,
+    "ATON_UID": 100119535439,
+    "WTRW_UID": 100116385067,
+    "ESRI_OID": 24439,
+    "ATON_GROUP": "TEMPORARY CHANGES - AIDS",
+    "LLNR": 13225,
+    "NAME": "Point Pleasant Lower Light 30",
+    "TC_STATUS": "Reduced Intensity",
+    "TC_CORR_STATUS": "Correction Status Unreported",
+    "ATU": 8,
+    "MSI_STATUS": "Approved",
+    "WATERWAY_NAME": "Head Of Passes To New Orleans",
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis8:secneworlexcecozon:secneworltersea:secneworlsublanact:soupas:heaofpastoneworl",
+    "AID_TYPE": "FD",
+    "AID_SUBTYPE": "FX",
+    "COLOR": "R",
+    "DESCRIPTION_TYPE": "LT",
+    "CREATE_DATE": 1763125099000,
+    "BNM_NUM": null,
+    "ASSIGNED_LONGITUDE": "089-35-56.752W",
+    "ASSIGNED_LATITUDE": "29-24-16.787N",
+    "DECIMAL_LONGITUDE": -89.5991,
+    "DECIMAL_LATITUDE": 29.40466
+   }
+  }
+ ]
+}

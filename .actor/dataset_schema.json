@@ -1,0 +1,802 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "properties": {
+            "schemaVersion": {
+                "default": "1.0",
+                "type": "string"
+            },
+            "status": {
+                "enum": [
+                    "success",
+                    "partial",
+                    "source_unavailable",
+                    "invalid_input"
+                ],
+                "type": "string"
+            },
+            "checkedAt": {
+                "type": "string"
+            },
+            "query": {
+                "properties": {
+                    "type": {
+                        "anyOf": [
+                            {
+                                "enum": [
+                                    "point",
+                                    "route",
+                                    "bbox"
+                                ],
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null
+                    },
+                    "atTime": {
+                        "type": "string"
+                    },
+                    "radiusNm": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null
+                    },
+                    "corridorNm": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null
+                    },
+                    "routeLengthNm": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null
+                    },
+                    "pointCount": {
+                        "anyOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null
+                    },
+                    "categoriesRequested": {
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "atTime"
+                ],
+                "type": "object"
+            },
+            "coverage": {
+                "properties": {
+                    "officialSourcesChecked": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "categoriesRequested": {
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "categoriesChecked": {
+                        "description": "Categories whose every listed dataset file loaded and validated.",
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "categoriesFailed": {
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "completeForRequestedLayers": {
+                        "type": "boolean"
+                    },
+                    "sourceFailures": {
+                        "items": {
+                            "properties": {
+                                "category": {
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "safety_zone",
+                                                "hazard_to_navigation",
+                                                "marine_construction",
+                                                "marine_event",
+                                                "naval_activity",
+                                                "space_operation",
+                                                "temporary_change",
+                                                "tess_advisory",
+                                                "msib"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "dataset": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "enum": [
+                                        "success",
+                                        "unavailable",
+                                        "timeout",
+                                        "invalid_format",
+                                        "not_queried"
+                                    ],
+                                    "type": "string"
+                                },
+                                "publishedAt": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "featureCount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "integer"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "fromCache": {
+                                    "default": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "dataset",
+                                "url",
+                                "status"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "datasets": {
+                        "items": {
+                            "properties": {
+                                "category": {
+                                    "anyOf": [
+                                        {
+                                            "enum": [
+                                                "safety_zone",
+                                                "hazard_to_navigation",
+                                                "marine_construction",
+                                                "marine_event",
+                                                "naval_activity",
+                                                "space_operation",
+                                                "temporary_change",
+                                                "tess_advisory",
+                                                "msib"
+                                            ],
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "dataset": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "enum": [
+                                        "success",
+                                        "unavailable",
+                                        "timeout",
+                                        "invalid_format",
+                                        "not_queried"
+                                    ],
+                                    "type": "string"
+                                },
+                                "publishedAt": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "featureCount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "integer"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "fromCache": {
+                                    "default": false,
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "dataset",
+                                "url",
+                                "status"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "featuresSkipped": {
+                        "default": 0,
+                        "type": "integer"
+                    },
+                    "notCovered": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "completeForRequestedLayers"
+                ],
+                "type": "object"
+            },
+            "summary": {
+                "properties": {
+                    "matchedNoticeCount": {
+                        "default": 0,
+                        "type": "integer"
+                    },
+                    "activeCount": {
+                        "default": 0,
+                        "type": "integer"
+                    },
+                    "upcomingCount": {
+                        "default": 0,
+                        "type": "integer"
+                    },
+                    "unknownValidityCount": {
+                        "default": 0,
+                        "type": "integer"
+                    },
+                    "expiredExcludedCount": {
+                        "default": 0,
+                        "type": "integer"
+                    },
+                    "categoriesMatched": {
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "byCategory": {
+                        "additionalProperties": {
+                            "type": "integer"
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "notices": {
+                "items": {
+                    "properties": {
+                        "msiUid": {
+                            "anyOf": [
+                                {
+                                    "type": "integer"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ],
+                            "description": "NAVCEN MSI_UID (LNM_UID for temporary changes)."
+                        },
+                        "category": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "nativeCategory": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "default": null,
+                            "description": "NAVCEN SUB_CATEGORY (or ATON_GROUP for temporary changes)."
+                        },
+                        "nativeType": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "default": null
+                        },
+                        "waterwayName": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "default": null
+                        },
+                        "coastGuardDistrict": {
+                            "anyOf": [
+                                {
+                                    "type": "integer"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "default": null
+                        },
+                        "recordStatus": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "default": null,
+                            "description": "NAVCEN STATUS field verbatim (e.g. Approved)."
+                        },
+                        "validity": {
+                            "description": "Computed from the effective window at query.atTime; unknown if no dates.",
+                            "enum": [
+                                "active",
+                                "upcoming",
+                                "expired",
+                                "unknown"
+                            ],
+                            "type": "string"
+                        },
+                        "effectiveWindow": {
+                            "properties": {
+                                "start": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null,
+                                    "description": "BEGIN_DATE from NAVCEN (UTC). Null when NAVCEN gives none."
+                                },
+                                "end": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null,
+                                    "description": "END_DATE from NAVCEN (UTC). Null = not stated (open-ended or unknown)."
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "geometry": {
+                            "additionalProperties": true,
+                            "description": "Official GeoJSON geometry (WGS84).",
+                            "type": "object"
+                        },
+                        "relationshipToQuery": {
+                            "properties": {
+                                "intersectsQueryGeometry": {
+                                    "description": "Feature touches the point, the route line itself, or the bbox.",
+                                    "type": "boolean"
+                                },
+                                "withinSearchArea": {
+                                    "description": "Feature intersects the radius circle, route corridor or bbox.",
+                                    "type": "boolean"
+                                },
+                                "minimumDistanceNm": {
+                                    "description": "Geodesic distance from the query geometry; 0 when intersecting.",
+                                    "type": "number"
+                                },
+                                "routePosition": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null,
+                                    "description": "Approximate fraction (0-1) of the supplied route length where the notice is nearest."
+                                }
+                            },
+                            "required": [
+                                "intersectsQueryGeometry",
+                                "withinSearchArea",
+                                "minimumDistanceNm"
+                            ],
+                            "type": "object"
+                        },
+                        "officialText": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "null"
+                                }
+                            ],
+                            "default": null,
+                            "description": "NAVCEN DESCRIPTION verbatim."
+                        },
+                        "source": {
+                            "properties": {
+                                "agency": {
+                                    "default": "U.S. Coast Guard",
+                                    "type": "string"
+                                },
+                                "system": {
+                                    "default": "NAVCEN Maritime Safety Information",
+                                    "type": "string"
+                                },
+                                "sourceType": {
+                                    "default": "Local Notice to Mariners geospatial record",
+                                    "type": "string"
+                                },
+                                "dataset": {
+                                    "type": "string"
+                                },
+                                "datasetUrl": {
+                                    "type": "string"
+                                },
+                                "appUrl": {
+                                    "default": "https://www.navcen.uscg.gov/msi",
+                                    "type": "string"
+                                },
+                                "recordCreated": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                },
+                                "recordModified": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "null"
+                                        }
+                                    ],
+                                    "default": null
+                                }
+                            },
+                            "required": [
+                                "dataset",
+                                "datasetUrl"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "msiUid",
+                        "category",
+                        "title",
+                        "validity",
+                        "effectiveWindow",
+                        "geometry",
+                        "relationshipToQuery",
+                        "source"
+                    ],
+                    "type": "object"
+                },
+                "type": "array"
+            },
+            "errors": {
+                "items": {
+                    "type": "string"
+                },
+                "type": "array"
+            },
+            "scopeNote": {
+                "default": "Zero matches means no matching records were found in the official datasets successfully checked. It does not establish that hazards or restrictions are absent. This is official-notice information, not navigational advice: consult official charts, current Local and Broadcast Notices to Mariners, VHF broadcasts and applicable Coast Guard instructions.",
+                "type": "string"
+            },
+            "billing": {
+                "properties": {
+                    "billable": {
+                        "type": "boolean"
+                    },
+                    "eventName": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ],
+                        "default": null
+                    },
+                    "reason": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "billable",
+                    "reason"
+                ],
+                "type": "object"
+            }
+        },
+        "required": [
+            "status",
+            "checkedAt",
+            "query",
+            "coverage",
+            "summary",
+            "billing"
+        ],
+        "type": "object"
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "description": "Check status, coverage and match counts.",
+            "transformation": {
+                "flatten": [
+                    "query",
+                    "summary",
+                    "coverage",
+                    "billing"
+                ],
+                "fields": [
+                    "status",
+                    "query.type",
+                    "summary.matchedNoticeCount",
+                    "summary.activeCount",
+                    "summary.categoriesMatched",
+                    "coverage.completeForRequestedLayers",
+                    "coverage.categoriesFailed",
+                    "billing.billable",
+                    "checkedAt"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "status": {
+                        "label": "Status",
+                        "format": "text"
+                    },
+                    "query.type": {
+                        "label": "Query",
+                        "format": "text"
+                    },
+                    "summary.matchedNoticeCount": {
+                        "label": "Matched notices",
+                        "format": "number"
+                    },
+                    "summary.activeCount": {
+                        "label": "Active",
+                        "format": "number"
+                    },
+                    "summary.categoriesMatched": {
+                        "label": "Categories matched",
+                        "format": "array"
+                    },
+                    "coverage.completeForRequestedLayers": {
+                        "label": "All layers checked",
+                        "format": "boolean"
+                    },
+                    "coverage.categoriesFailed": {
+                        "label": "Failed categories",
+                        "format": "array"
+                    },
+                    "billing.billable": {
+                        "label": "Billable",
+                        "format": "boolean"
+                    },
+                    "checkedAt": {
+                        "label": "Checked at",
+                        "format": "date"
+                    }
+                }
+            }
+        },
+        "notices": {
+            "title": "Notices",
+            "description": "One row per matched official USCG notice.",
+            "transformation": {
+                "unwind": [
+                    "notices"
+                ],
+                "fields": [
+                    "category",
+                    "title",
+                    "validity",
+                    "effectiveWindow.start",
+                    "effectiveWindow.end",
+                    "relationshipToQuery.minimumDistanceNm",
+                    "relationshipToQuery.routePosition",
+                    "source.datasetUrl"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "category": {
+                        "label": "Category",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "Title",
+                        "format": "text"
+                    },
+                    "validity": {
+                        "label": "Validity",
+                        "format": "text"
+                    },
+                    "effectiveWindow.start": {
+                        "label": "Start",
+                        "format": "text"
+                    },
+                    "effectiveWindow.end": {
+                        "label": "End",
+                        "format": "text"
+                    },
+                    "relationshipToQuery.minimumDistanceNm": {
+                        "label": "Distance (nm)",
+                        "format": "number"
+                    },
+                    "relationshipToQuery.routePosition": {
+                        "label": "Route position",
+                        "format": "number"
+                    },
+                    "source.datasetUrl": {
+                        "label": "Dataset",
+                        "format": "link"
+                    }
+                }
+            }
+        }
+    }
+}

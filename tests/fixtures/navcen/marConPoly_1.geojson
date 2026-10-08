@@ -1,0 +1,285 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 53466,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -76.33211999999997,
+       36.88033000000007
+      ],
+      [
+       -76.33224999999999,
+       36.87924000000004
+      ],
+      [
+       -76.32636999999994,
+       36.87885000000006
+      ],
+      [
+       -76.32602999999995,
+       36.87979000000007
+      ],
+      [
+       -76.33211999999997,
+       36.88033000000007
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 53466,
+    "MSI_UID": 53466,
+    "ATU": 5,
+    "TITLE": "James River - Elizabeth River/General/Marine Construction (Excluding Bridges)/Dredging",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Dredging",
+    "WTRW_UID": 100116382768,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis5:secvirexcecozon:secvirtersea:secvirsublanact:checha:jamriv:eliriv",
+    "WATERWAY_NAME": "Elizabeth River",
+    "CREATE_DATE": 1789056527000,
+    "MODIFIED_DATE": 1789056568000,
+    "BEGIN_DATE": 1791504000000,
+    "END_DATE": 1799107199000,
+    "DESCRIPTION": "General/Marine Construction (Excluding Bridges)/Dredging\n\nFrom: 2026-10-09 To: 2027-01-04\n\nLocation:\nLambert's Point Pier 6 - Elizabeth River\n\nMechanical dredging operations on behalf of Norfolk Southern will commence on or about October 21, 2026, at Lamberts Point Pier 6 in Norfolk on the Elizabeth River.\nLoaded scows will be towed from the work area at Pier 6 to the Unloader barge located at Shirley\u2019s Plantation (Weanack Island).\nThe Dredge KOKO V will perform the dredging with the assistance of towing tugs and scows. Vessels and crew will monitor VHF channel 13 during the project execution. Dredging and unloading operations will continue until the estimated completion date of December 31, 2026.\nMSI #53466.\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-76.33212,36.88033],[-76.33225,36.87924],[-76.32637,36.87885],[-76.32603,36.87979],[-76.33212,36.88033]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 270,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -77.05249999999995,
+       38.88825000000003
+      ],
+      [
+       -77.05277999999998,
+       38.88812000000007
+      ],
+      [
+       -77.04957999999993,
+       38.88540000000006
+      ],
+      [
+       -77.04176999999999,
+       38.879680000000064
+      ],
+      [
+       -77.04008999999996,
+       38.87990000000008
+      ],
+      [
+       -77.04054999999994,
+       38.88018000000005
+      ],
+      [
+       -77.04182999999995,
+       38.88012000000003
+      ],
+      [
+       -77.05249999999995,
+       38.88825000000003
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 270,
+    "MSI_UID": 270,
+    "ATU": 5,
+    "TITLE": "Chesapeake Channel - Potomac River/General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "WTRW_UID": 100116383115,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis5:secvirexcecozon:secvirtersea:secvirsublanact:checha:potriv:uppmaccredahcha",
+    "WATERWAY_NAME": "Upper Machodoc Creek Dahlgren Channel",
+    "CREATE_DATE": 1725907983000,
+    "MODIFIED_DATE": 1726164183000,
+    "BEGIN_DATE": 1725840000000,
+    "END_DATE": 1801440000000,
+    "DESCRIPTION": "General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes\n\nFrom: 2024-09-09 To: 2027-02-01\n\nLocation:\n38.88825\u00b0 N / 77.0525\u00b0 W\n38.88012\u00b0 N / 77.04183\u00b0 W\n38.88018\u00b0 N / 77.04055\u00b0 W\n38.8799\u00b0 N / 77.04009\u00b0 W\n38.87968\u00b0 N / 77.04177\u00b0 W\n38.8854\u00b0 N / 77.04958\u00b0 W\n38.88812\u00b0 N / 77.05278\u00b0 W\n38.88825\u00b0 N / 77.0525\u00b0 W\n\nStarting on April 15th, 2024 Cianbro Corporation will be mobilizing to begin the Tidal Basin and West Potomac Park Seawall Rehabilitation Project for The National Park Service. This project is scheduled from April 15th, 2024 to February 1st, 2027; with waterside activities being completed by the end of 2026. Starting in mid-June of 2024, one (1) temporary trestle will be installed between 38.8805754591474N, -77.04249015204742W and will extend approximately 94 feet into the river. In July 2024, one additional (1) temporary trestle in the Tidal Basin will be installed at 38.88154282457337N, -77.04085444069864W and will extend approximately 55 feet into the basin. The work area in the Potomac River will span from Arlington Memorial Bridge to The Inlet Bridge following the shoreline of West Potomac Park in stages starting in March of 2025. Directly surrounding the work areas we will have turbidity curtain deployed to contain the work impact zone, two (2) Turbidity Monitoring Bouy\u2019s Twenty-Five (25) LF upstream and downstream from the immediate work area. Additional equipment such as boats, crane barges, and material barges in the Potomac River to facilitate the completion of the work. While work is in proximity to a navigable channel, mariners are asked to refrain from entering the work area and maintain a respectful distance with minimize wake to prevent any hazardous conditions from arising for the safety of our Team Members and the traveling public.",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-77.0525,38.88825],[-77.05278,38.88812],[-77.04958,38.8854],[-77.04177,38.87968],[-77.04009,38.8799],[-77.04055,38.88018],[-77.04183,38.88012],[-77.0525,38.88825]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 424,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -68.79509999999993,
+       44.388780000000054
+      ],
+      [
+       -68.79698999999994,
+       44.38605000000007
+      ],
+      [
+       -68.79677999999996,
+       44.38587000000007
+      ],
+      [
+       -68.79471999999998,
+       44.38861000000003
+      ],
+      [
+       -68.79509999999993,
+       44.388780000000054
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 424,
+    "MSI_UID": 424,
+    "ATU": 1,
+    "TITLE": "East Penobscot Bay - Castine Harbor/General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "WTRW_UID": 100116381768,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:secnornewengexcecozon:secnornewengtersea:secnornewengsublanact:islauhaubay:easpenbay:cashar",
+    "WATERWAY_NAME": "Castine Harbor",
+    "CREATE_DATE": 1726665407000,
+    "MODIFIED_DATE": 1726665414000,
+    "BEGIN_DATE": 1720396800000,
+    "END_DATE": 1806451200000,
+    "DESCRIPTION": "General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes\n\nFrom: 2024-07-08 To: 2027-03-31\n\nLocation:\n44.38878\u00b0 N / 68.7951\u00b0 W\n44.38861\u00b0 N / 68.79472\u00b0 W\n44.38587\u00b0 N / 68.79678\u00b0 W\n44.38605\u00b0 N / 68.79699\u00b0 W\n44.38878\u00b0 N / 68.7951\u00b0 W\n\nME-PENOBSCOT BAY-CASTINE HARBOR\nRedd &amp;amp; Reed will be conducting marine construction and pier replacement and expansion operations at the Maine Maritime Academy, in Castine, in position 44-23-10.8N, 068-47-47.9W, from July 8, 2024, to the winter of 2027. Work will be conducted between 7:00am to 7:00pm, by deck barges, tugboats, push boats, and work skiffs, who will monitoring VHF-FM CH 11 for any concerned traffic. Mariners are urged to use extreme caution and transit the area at their slowest safe speed to create minimum wake after passing arrangements have been made.\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-68.7951,44.38878],[-68.79699,44.38605],[-68.79678,44.38587],[-68.79472,44.38861],[-68.7951,44.38878]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 913,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -73.97141999999997,
+       40.72676000000007
+      ],
+      [
+       -73.97156999999999,
+       40.72676000000007
+      ],
+      [
+       -73.97186999999997,
+       40.72541000000007
+      ],
+      [
+       -73.97347999999994,
+       40.718800000000044
+      ],
+      [
+       -73.97525999999993,
+       40.714350000000024
+      ],
+      [
+       -73.97671999999994,
+       40.71144000000004
+      ],
+      [
+       -73.97786999999994,
+       40.710570000000075
+      ],
+      [
+       -73.98128999999994,
+       40.71022000000005
+      ],
+      [
+       -73.98121999999995,
+       40.70981000000006
+      ],
+      [
+       -73.98422999999997,
+       40.709550000000036
+      ],
+      [
+       -73.98420999999996,
+       40.70947000000007
+      ],
+      [
+       -73.98105999999996,
+       40.70978000000008
+      ],
+      [
+       -73.98106999999999,
+       40.71014000000008
+      ],
+      [
+       -73.97782999999998,
+       40.71049000000005
+      ],
+      [
+       -73.97658999999999,
+       40.71142000000003
+      ],
+      [
+       -73.97512999999998,
+       40.714350000000024
+      ],
+      [
+       -73.97334999999998,
+       40.718800000000044
+      ],
+      [
+       -73.97173999999995,
+       40.72541000000007
+      ],
+      [
+       -73.97141999999997,
+       40.72676000000007
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 913,
+    "MSI_UID": 913,
+    "ATU": 1,
+    "TITLE": "Main Channel - East River Main Channel/General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "WTRW_UID": 100116382167,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:secnewyorexcecozon:secnewyortersea:secnewyorsublanact:ambcha:maicha:easrivmaicha",
+    "WATERWAY_NAME": "East River Main Channel",
+    "CREATE_DATE": 1727718232000,
+    "MODIFIED_DATE": 1727718320000,
+    "BEGIN_DATE": 1641168000000,
+    "END_DATE": 1798588800000,
+    "DESCRIPTION": "General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes\n\nNY-NYC-EAST RIVER-MONGOMERY STREET TO E 14 STREET\n\nFrom: 2022-01-03 To: 2026-12-30\n\nLocation:\n40.72676\u00b0 N / 73.97142\u00b0 W\n40.72541\u00b0 N / 73.97174\u00b0 W\n40.7188\u00b0 N / 73.97335\u00b0 W\n40.71435\u00b0 N / 73.97513\u00b0 W\n40.71142\u00b0 N / 73.97659\u00b0 W\n40.71049\u00b0 N / 73.97783\u00b0 W\n40.71014\u00b0 N / 73.98107\u00b0 W\n40.70978\u00b0 N / 73.98106\u00b0 W\n40.70947\u00b0 N / 73.98421\u00b0 W\n40.70955\u00b0 N / 73.98423\u00b0 W\n40.70981\u00b0 N / 73.98122\u00b0 W\n40.71022\u00b0 N / 73.98129\u00b0 W\n40.71057\u00b0 N / 73.97787\u00b0 W\n40.71144\u00b0 N / 73.97672\u00b0 W\n40.71435\u00b0 N / 73.97526\u00b0 W\n40.7188\u00b0 N / 73.97348\u00b0 W\n40.72541\u00b0 N / 73.97187\u00b0 W\n40.72676\u00b0 N / 73.97157\u00b0 W\n40.72676\u00b0 N / 73.97142\u00b0 W\n\nIPCP will be conducting esplanade, bulkhead, and park reconstruction, on the East River, Montgomery St to East 14th Street, from January 2022 to December 2026, 5-7 days a week, between 6:00am to 6:00pm.  Equipment on scene will be Tugboat DEBRA QUINN, Inspection Boat, 290 x 40 Mooring Barges, 250 x 62 Gantry Crane Barge, Crawler Crane Barge, 150 x 60 Deck Barges, 140 x 40 Hopper Barges All moving of vessels to occur by tugboat; vessels will be moved at all times of day and night and will be monitoring VHF-CH 13 and 66. Mariners are urged to transit at their slowest safe speed to minimize wake and proceed with caution after passing arrangements have been made.",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-73.97142,40.72676],[-73.97157,40.72676],[-73.97187,40.72541],[-73.97348,40.7188],[-73.97526,40.71435],[-73.97672,40.71144],[-73.97787,40.71057],[-73.98129,40.71022],[-73.98122,40.70981],[-73.98423,40.70955],[-73.98421,40.70947],[-73.98106,40.70978],[-73.98107,40.71014],[-73.97783,40.71049],[-73.97659,40.71142],[-73.97513,40.71435],[-73.97335,40.7188],[-73.97174,40.72541],[-73.97142,40.72676]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+    "apify-actor-start": {
+        "eventTitle": "Actor start",
+        "eventDescription": "Charged once per run when the Actor starts.",
+        "eventPriceUsd": 0.00005
+    },
+    "navigation-area-check": {
+        "eventTitle": "Navigation area check",
+        "eventDescription": "One point, route or bounding-box check against the official USCG NAVCEN MSI layers. Charged once per run, only when all requested layers were checked (including zero matches) or when matching notices were found despite a failed layer. Not charged for invalid input or when sources fail without matches.",
+        "eventPriceUsd": 0.05
+    }
+}

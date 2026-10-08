@@ -1,0 +1,289 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 6236,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -73.78254999999996,
+       40.890010000000075
+      ],
+      [
+       -73.78276999999997,
+       40.88984000000005
+      ],
+      [
+       -73.78282999999993,
+       40.88964000000004
+      ],
+      [
+       -73.78270999999995,
+       40.88952000000006
+      ],
+      [
+       -73.78273999999993,
+       40.88945000000007
+      ],
+      [
+       -73.78287999999998,
+       40.889380000000074
+      ],
+      [
+       -73.78311999999994,
+       40.889530000000036
+      ],
+      [
+       -73.78247999999996,
+       40.88841000000008
+      ],
+      [
+       -73.78220999999996,
+       40.888640000000066
+      ],
+      [
+       -73.78206999999998,
+       40.888720000000035
+      ],
+      [
+       -73.78191999999996,
+       40.888720000000035
+      ],
+      [
+       -73.78171999999995,
+       40.88853000000006
+      ],
+      [
+       -73.78139999999996,
+       40.88853000000006
+      ],
+      [
+       -73.78103999999996,
+       40.88875000000007
+      ],
+      [
+       -73.78254999999996,
+       40.890010000000075
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 6236,
+    "MSI_UID": 6236,
+    "ATU": 1,
+    "TITLE": "New Rochelle Harbor North Approach - Middle Channel/General/LAA/RNA/Temporary Regulated Navigation Zone",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "LAA/RNA",
+    "TYPE": "Temporary Regulated Navigation Zone",
+    "WTRW_UID": 100116381667,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:seclonislsouexcecozon:seclonislsoutersea:seclonislsousublanact:newrocharnorapp:bloislsouandgarbay:lonislsoueaspar:lonislsouwespar:newrocharnorapp:midcha",
+    "WATERWAY_NAME": "Middle Channel",
+    "CREATE_DATE": 1732732702000,
+    "MODIFIED_DATE": 1773769396000,
+    "BEGIN_DATE": 1732665600000,
+    "END_DATE": 1811462399000,
+    "DESCRIPTION": "New Rochelle, NY - Long Island Sound \u2013 Safety Zone \u2013 Bridge Construction\nMariners are advised that a safety zone will be enforced for construction work on the Glen Island Approach Bridge. The safety zone will be enforced from 7 a.m. until 5 p.m. each day starting on midnight December 2, 2024, through May 27, 2027.  The safety zone will only be enforced during periods when construction operations at the Glen Island Bridge rehabilitation project are in progress. The Safety Zone encompasses all waters within a line beginning at 40\u00b0 53' 18.58\"N 73\u00b0 46' 56.26\"W; thence to 40\u00b0 53' 22.08\"N 73\u00b0 46' 59.39\"W; thence north along the shore to 40\u00b0 53' 23.8\"N 73\u00b046' 57.51\"W; thence to 40\u00b0 53' 19.15\"N 73\u00b0 46' 52.54\"W and thence south along the shore back to the point of origin (WGS 84). You may not enter, remain in, or transit through the Safety Zone during the enforcement period unless authorized by the Coast Guard Captain of the Port. Other Federal, State and local agencies may assist these personnel in the enforcement of the Safety Zone. Mariners are urged to exercise caution while in the area. The anticipated dates for the windows of full channel closures: Date December 2, 2024, through December 20, 2024 February 3, 2025, through May 22, 2025 October 2, 2025 through 12 p.m. on May 22, 2026; from 7 a.m. on May 26, 2026, through 5 p.m. on May 29, 2026; and from 7 a.m. on June 22, 2026, through 5 p.m. on June 26, 2026.\n\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-73.78255,40.89001],[-73.78277,40.88984],[-73.78283,40.88964],[-73.78271,40.88952],[-73.78274,40.88945],[-73.78288,40.88938],[-73.78312,40.88953],[-73.78248,40.88841],[-73.78221,40.88864],[-73.78207,40.88872],[-73.78192,40.88872],[-73.78172,40.88853],[-73.7814,40.88853],[-73.78104,40.88875],[-73.78255,40.89001]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 7532,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -73.78250999999995,
+       40.88972000000007
+      ],
+      [
+       -73.78322999999995,
+       40.889230000000055
+      ],
+      [
+       -73.78256999999996,
+       40.88853000000006
+      ],
+      [
+       -73.78177999999997,
+       40.88895000000008
+      ],
+      [
+       -73.78250999999995,
+       40.88972000000007
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 7532,
+    "MSI_UID": 7532,
+    "ATU": 1,
+    "TITLE": "New Rochelle Harbor North Approach - Middle Channel/General/LAA/RNA/COTP Restriction",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "LAA/RNA",
+    "TYPE": "COTP Restriction",
+    "WTRW_UID": 100116381667,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:seclonislsouexcecozon:seclonislsoutersea:seclonislsousublanact:newrocharnorapp:bloislsouandgarbay:lonislsoueaspar:lonislsouwespar:newrocharnorapp:midcha",
+    "WATERWAY_NAME": "Middle Channel",
+    "CREATE_DATE": 1734396944000,
+    "MODIFIED_DATE": 1760468924000,
+    "BEGIN_DATE": 1734307200000,
+    "END_DATE": 1811807999000,
+    "DESCRIPTION": "General/LAA/RNA/COTP Restriction\n\nFrom: 2024-12-16 To: 2027-05-31\n\nThe Coast Guard is establishing a temporary safety zone for certain waters of Long Island Sound in the vicinity of the Glen Island Approach Bridge, New Rochelle, NY, for construction vessels and machinery involved in the rehabilitation project of the bridge. The safety zone is needed to protect personnel, vessels, and the marine environment from potential hazards associated with the bridge construction between December 2, 2024, through May 27, 2027. When enforced, this regulation prohibits persons and vessels from being in the safety zone unless authorized by the Captain of the Port New York or a designated representative.\n\nDATES:\nThis rule is effective without notice from December 3, 2024, through 5 p.m. on May 27, 2027. For the purposes of enforcement, actual notice will be used from midnight on December 2, 2024, until December 3, 2024. This rule will only be enforced during periods when construction operations at the bridge are in progress.\nComments and related material must be received by the Coast Guard on or before March 3, 2025.\n\nADDRESSES:\nTo view documents mentioned in this preamble as being available in the docket, go to https://www.regulations.gov, type USCG-2024-0956 in the search box and click \u201cSearch.\u201d Next, in the Document Type column, select \u201cSupporting &amp;amp; Related Material.\u201d\n\nFOR FURTHER INFORMATION CONTACT:\nIf you have questions about this rule, call or email Jeffrey Yunker, Waterways Management Division, U.S. Coast Guard Sector New York; telephone 718-354-4195, email Jeffrey.M.Yunker@uscg.mil.\n\nIV. Discussion of the Rule\nThis rule establishes a safety zone from 7 a.m. until 5 p.m. each day starting on midnight December 2, 2024, through May 27, 2027. The safety zone will only be enforced during periods when construction operations at the Glen Island Bridge rehabilitation project are in progress. The anticipated dates for the windows of full channel closures are from 7 a.m. on December 2, 2024, through 5 p.m. on December 20, 2024; from 7 a.m. on February 3, 2025, through 5 p.m. on May 22, 2025; and from 7 a.m. on October 2, 2025, through 5 p.m. on April 29, 2026. The Coast Guard will make notice of the safety zone via the Local Notice to Mariners and issue a Broadcast Notice to Mariners via marine channel 16 (VHF-FM) as soon as practicable in advance of these scheduled closures. All these dates are tentative and subject to change due to weather, supply chain delays, or other unforeseen circumstances. This rule remains effective through May 27, 2027, in case the project is delayed due to unforeseen circumstances. The area regulated by the safety zone will encompass the waters around the Glen Island Bridge and will cover all navigable waters, from surface to bottom, within the area formed by connecting the following latitude and longitude points in the following order:\n\n40\u00b053\u203218.58\u2033 N 73\u00b046\u203256.26\u2033 W; thence to 40\u00b053\u203222.08\u2033 N 73\u00b046\u203259.39\u2033 W; thence north along the shore to 40\u00b053\u203223.8\u2033 N 73\u00b046\u203257.51\u2033 W; thence to 40\u00b053\u203219.15\u2033 N 73\u00b046\u203252.54\u2033 W and thence south along the shore back to the point of origin. This area is intended for the vessels and machinery being used by personnel for the Glen Island Bridge rehabilitation project. The duration of the zone is intended to ensure the safety of personnel, vessels, and these navigable waters during the bridge construction. No vessel or person will be permitted to enter the safety zone without obtaining permission from the COTP or a designated representative.\n\nThe Coast Guard will make notice of the safety zone via the Local Notice to Mariners and issue a Broadcast Notice to Mariners via marine channel 16 (VHF-FM) as soon as practicable in response to an emergency or hazardous condition. \n\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-73.78251,40.88972],[-73.78323,40.88923],[-73.78257,40.88853],[-73.78178,40.88895],[-73.78251,40.88972]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 23123,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.81840999999997,
+       42.900010000000066
+      ],
+      [
+       -70.82044999999994,
+       42.899020000000064
+      ],
+      [
+       -70.82049999999998,
+       42.894760000000076
+      ],
+      [
+       -70.81679999999994,
+       42.89578000000006
+      ],
+      [
+       -70.81034999999997,
+       42.892580000000066
+      ],
+      [
+       -70.80802999999997,
+       42.894780000000026
+      ],
+      [
+       -70.81064999999995,
+       42.89673000000005
+      ],
+      [
+       -70.81641999999994,
+       42.89745000000005
+      ],
+      [
+       -70.81840999999997,
+       42.900010000000066
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 23123,
+    "MSI_UID": 23123,
+    "ATU": 1,
+    "TITLE": "Sector Northern New England, Submerged Lands Act (SLA) - Hampton Harbor/General/LAA/RNA/Temporary Regulated Navigation Zone",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "LAA/RNA",
+    "TYPE": "Temporary Regulated Navigation Zone",
+    "WTRW_UID": 100116382107,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:secnornewengexcecozon:secnornewengtersea:secnornewengsublanact:hamhar",
+    "WATERWAY_NAME": "Hampton Harbor",
+    "CREATE_DATE": 1751971831000,
+    "MODIFIED_DATE": 1760468925000,
+    "BEGIN_DATE": 1751932800000,
+    "END_DATE": 1924991999000,
+    "DESCRIPTION": "General/LAA/RNA/Temporary Regulated Navigation Zone\n\nFrom: 2025-07-08 To: 2030-12-31\nThe Coast Guard is establishing a temporary regulated navigation area (RNA) and a safety zone on the Hampton River at the inlet to Hampton Harbor, Hampton, NH, in response to hazardous conditions created by construction activities for the Neil R. Underwood Seabrook-Hampton Harbor Bridge replacement project. This rule is necessary to provide for the safety of life in the areas undergoing demolition and construction.\nThe RNA will be enforced from July 1, 2025, through December 31, 2030, and will establish the following operating restrictions on vessels:\nNothing in this regulation relieves any vessel, owner, operator, charterer, master, or person directing the movement of a vessel, from the consequences of any neglect to comply with this part or any other applicable law or regulation (i.e. the International Regulations for Prevention of Collisions at Sea, 1972 (72 COLREGS) or 33 CFR part 84\u2014Subchapter E, Inland Navigation Rules) or of the neglect of any precaution which may be required by the ordinary practice of seamen, or by the special circumstances of the case.\nEntry and movement within the RNA is subject to a \u201cSlow-No Wake\u201d speed limit. All vessels may not produce a wake and may not attain speeds greater than five (5) knots unless a higher minimum speed is necessary to maintain bare steerageway.\nAny vessel transiting through the RNA must make a direct passage. No vessel may stop, fish, moor, anchor, or loiter within the RNA at any time.\nVessels may not pass (overtake) another vessel within the RNA.\nOnly one vessel is permitted to pass through the center span navigational channel at any given time.\nExcept when transiting through the center span navigation channel, no vessel or craft may operate within 20 feet of the bridge(s).\nThe operator of any vessel transiting in the RNA must comply with all lawful directions given to them by the COTP or the COTP's on-scene representative.\nviii)\nOne-way traffic will flow northbound between the eastern side of the shallow waters and the Seabrook-Hampton Harbor Bridge. The northern side of the shallow area will accommodate one-way traffic moving west.\nThe Safety Zone, includes all navigable waters within a 50-yard radius of the center point of the bridge, will be effective from July 1, 2025, through Decmember 31, 2030, but will only be enforced during active construction within the main span navigational channel or other instances which may cause a hazard to navigation as determined by the COTP. The COTP will make notification of the exact dates and times in advance of each closure period of the safety zone to the local maritime community through the Local Notice to Mariners and will issue a Broadcast Notice to Mariners via marine channel 16 (VHF-FM) as soon as practicable in response to an emergency.\nThe complete rulemaking is available under Federal Register docket number USCG-2025-0389 and can be accessed through the federal portal at https://www.regulations.gov/document/USCG-2025-0389-0001\nWe invite your comments on this rulemaking. To submit your comment online, go to https://www.regulations.gov, and insert \u201cUSCG-2025-0389\u201d in the \u201csearch box\u201d. Click \u201cSearch\u201d and then click \u201cComment.\u201d We will consider all comments received on or before October 6, 2025.\nIf the project is completed before December 31, 2030, enforcement of the safety zones will be suspended, and notice given via Local Notice to Mariners. The First Coast Guard District Local Notice to Mariners can be found at: https://www.navcen.uscg.gov/msi.\nFor questions regarding this Marine Safety Information Bulletin contact Mr. Craig Lapiejko, Waterways Management at First Coast Guard District, telephone (571) 607-6314, e-mail: craig.d.lapiejko@uscg.mil.\nMatthew B. Stuck, First Coast Guard District Chief of Waterways Management, sends\n\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-70.81841,42.90001],[-70.82045,42.89902],[-70.8205,42.89476],[-70.8168,42.89578],[-70.81035,42.89258],[-70.80803,42.89478],[-70.81065,42.89673],[-70.81642,42.89745],[-70.81841,42.90001]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 34479,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -76.32159999999999,
+       37.011880000000076
+      ],
+      [
+       -76.32382999999999,
+       37.011270000000025
+      ],
+      [
+       -76.32073999999994,
+       37.00195000000008
+      ],
+      [
+       -76.31747999999999,
+       36.99866000000003
+      ],
+      [
+       -76.31584999999995,
+       36.99989000000005
+      ],
+      [
+       -76.31781999999998,
+       37.00249000000008
+      ],
+      [
+       -76.32013999999998,
+       37.008120000000076
+      ],
+      [
+       -76.32082999999994,
+       37.01051000000007
+      ],
+      [
+       -76.32159999999999,
+       37.011880000000076
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 34479,
+    "MSI_UID": 34479,
+    "ATU": 5,
+    "TITLE": "General/LAA/RNA/Safety Zone",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "LAA/RNA",
+    "TYPE": "Safety Zone",
+    "WTRW_UID": 100116382605,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis5:secvirexcecozon:secvirtersea:secvirsublanact:checha:jamriv",
+    "WATERWAY_NAME": "James River",
+    "CREATE_DATE": 1767213250000,
+    "MODIFIED_DATE": 1767213855000,
+    "BEGIN_DATE": 1766620800000,
+    "END_DATE": 1924041599000,
+    "DESCRIPTION": "The COTP Sector Virginia has determined that the HRBT Expansion Project will continue to be protected by six Safety Zones identical to those formerly charted as established in 33cfr165.519. The new temporary regulation will be found at 33cfr165.T05-1069 and has been signed. The new temporary regulation is identical to the previous and is scheduled to be published in January. The zones will be enforceable until 20 December 2030 or potentially earlier if deemed no longer necessary by the COTP. ",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-76.3216,37.01188],[-76.32383,37.01127],[-76.32074,37.00195],[-76.31748,36.99866],[-76.31585,36.99989],[-76.31782,37.00249],[-76.32014,37.00812],[-76.32083,37.01051],[-76.3216,37.01188]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

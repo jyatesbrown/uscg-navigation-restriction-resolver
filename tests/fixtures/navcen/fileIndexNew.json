@@ -1,0 +1,190 @@
+{
+ "buoys_": {
+  "counter": 0,
+  "timestamp": 1791487112
+ },
+ "discFedAid_": {
+  "counter": 0,
+  "timestamp": 1791482614
+ },
+ "discFedAidCor_": {
+  "counter": 0,
+  "timestamp": 1791385086
+ },
+ "discPriAid_": {
+  "counter": 0,
+  "timestamp": 1791482204
+ },
+ "discPriAidCor_": {
+  "counter": 0,
+  "timestamp": 1791486416
+ },
+ "tmpChange_": {
+  "counter": 1,
+  "timestamp": 1791386811
+ },
+ "tmpChangeCor_": {
+  "counter": 0,
+  "timestamp": 1791385621
+ },
+ "bridge_": {
+  "counter": 0,
+  "timestamp": 1791483154
+ },
+ "bridgePoly_": {
+  "counter": 0,
+  "timestamp": 1791446652
+ },
+ "bridgeLine_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "change_": {
+  "counter": 0,
+  "timestamp": 1791389658
+ },
+ "changeAdvNot_": {
+  "counter": 0,
+  "timestamp": 1791483743
+ },
+ "changeAdvNotLine_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "changeAdvNotPoly_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "changeProp_": {
+  "counter": 0,
+  "timestamp": 1791483381
+ },
+ "changePropLine_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "changePropPoly_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "hazNav_": {
+  "counter": 1,
+  "timestamp": 1791437513
+ },
+ "hazNavLine_": {
+  "counter": 0,
+  "timestamp": 1791388290
+ },
+ "hazNavPoly_": {
+  "counter": 1,
+  "timestamp": 1791479426
+ },
+ "marCon_": {
+  "counter": 0,
+  "timestamp": 1791385709
+ },
+ "marConLine_": {
+  "counter": 1,
+  "timestamp": 1791482832
+ },
+ "marConPoly_": {
+  "counter": 1,
+  "timestamp": 1791481881
+ },
+ "marEvent_": {
+  "counter": 0,
+  "timestamp": 1791385424
+ },
+ "marEventLine_": {
+  "counter": 0,
+  "timestamp": 1791387276
+ },
+ "marEventPoly_": {
+  "counter": 1,
+  "timestamp": 1791386577
+ },
+ "misc_": {
+  "counter": 0,
+  "timestamp": 1791484445
+ },
+ "miscLine_": {
+  "counter": 0,
+  "timestamp": 1791482319
+ },
+ "miscPoly_": {
+  "counter": 0,
+  "timestamp": 1791202999
+ },
+ "msib_": {
+  "counter": 0,
+  "timestamp": 1791384855
+ },
+ "msibLine_": {
+  "counter": 0,
+  "timestamp": 1791478921
+ },
+ "msibPoly_": {
+  "counter": 1,
+  "timestamp": 1791459572
+ },
+ "navalAct_": {
+  "counter": 0,
+  "timestamp": 1791484540
+ },
+ "navalActLine_": {
+  "counter": 0,
+  "timestamp": 1791487486
+ },
+ "navalActPoly_": {
+  "counter": 1,
+  "timestamp": 1791481644
+ },
+ "safeZone_": {
+  "counter": 1,
+  "timestamp": 1791482949
+ },
+ "safeZoneLine_": {
+  "counter": 0,
+  "timestamp": 1786964863
+ },
+ "safeZonePoly_": {
+  "counter": 1,
+  "timestamp": 1791481525
+ },
+ "tessAdv_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "tessAdvLine_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "tessAdvPoly_": {
+  "counter": 1,
+  "timestamp": 1791483535
+ },
+ "spaceOps_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "spaceOpsLine_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "spaceOpsPoly_": {
+  "counter": 1,
+  "timestamp": 1791487420
+ },
+ "autoVesselPoint_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "autoVesselLine_": {
+  "counter": 0,
+  "timestamp": 1785159382
+ },
+ "autoVesselPoly_": {
+  "counter": 0,
+  "timestamp": 1786629152
+ }
+}

@@ -1,0 +1,123 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 54438,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.35783999999995,
+       32.89639000000005
+      ],
+      [
+       -118.40040999999997,
+       32.86179000000004
+      ],
+      [
+       -118.37002999999999,
+       32.84074000000004
+      ],
+      [
+       -118.32744999999994,
+       32.874190000000056
+      ],
+      [
+       -118.35783999999995,
+       32.89639000000005
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 54438,
+    "MSI_UID": 54438,
+    "ATU": 11,
+    "TITLE": "Sector San Diego, Territorial Sea - Sector San Diego, Submerged Lands Act (SLA)/General/Naval Activity/Military Operations",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Naval Activity",
+    "TYPE": "Military Operations",
+    "WTRW_UID": 100116385453,
+    "MRN": "urn:mrn:iala:wwy:us:navXII:dis11:secsandieexcecozon:secsandietersea:secsandiesublanact",
+    "WATERWAY_NAME": "Sector San Diego, Submerged Lands Act (SLA)",
+    "CREATE_DATE": 1790360659000,
+    "MODIFIED_DATE": 1790365884000,
+    "BEGIN_DATE": 1791849600000,
+    "END_DATE": 1792281599000,
+    "DESCRIPTION": "The U.S. Navy will conduct naval operations on October 13, 15, and 16, 2026, daily between the hours of 1200 and 1630. Operations will be centered along the coastline near the following positions: \n32.849482, -118.368963; \n32.852276, -118.372688; \n32.855606, -118.377128; and \n32.858666, -118.381018. \n\nAll mariners are advised to remain well clear of the operational area and maintain a safe clearance of at least 4 nautical miles offshore of the southeastern coastline of San Clemente Island. On-scene safety and escort vessels will actively monitor VHF-FM Channel 16. For live range status or coordination, contact FACSFAC San Diego or hail San Clemente Range Operations on VHF-FM Channel 16.",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-118.35784,32.89639],[-118.40041,32.86179],[-118.37003,32.84074],[-118.32745,32.87419],[-118.35784,32.89639]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 3943,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -157.76152999999996,
+       21.466980000000035
+      ],
+      [
+       -157.78847999999996,
+       21.457230000000038
+      ],
+      [
+       -157.78899999999996,
+       21.44333000000006
+      ],
+      [
+       -157.76496999999998,
+       21.43255000000005
+      ],
+      [
+       -157.76109999999997,
+       21.42879000000005
+      ],
+      [
+       -157.73389999999998,
+       21.42879000000005
+      ],
+      [
+       -157.71500999999998,
+       21.461070000000063
+      ],
+      [
+       -157.76152999999996,
+       21.466980000000035
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 3943,
+    "MSI_UID": 3943,
+    "ATU": 14,
+    "TITLE": "Kaneohe Bay - Sampan Channel/General/Naval Activity/Naval Gunnery Exercises",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Naval Activity",
+    "TYPE": "Naval Gunnery Exercises",
+    "WTRW_UID": 100116385686,
+    "MRN": "urn:mrn:iala:wwy:us:navXII:dis14:sechonexcecozon:sechontersea:kanbay:samcha",
+    "WATERWAY_NAME": "Sampan Channel",
+    "CREATE_DATE": 1730319979000,
+    "MODIFIED_DATE": 1791233026000,
+    "BEGIN_DATE": 1730246400000,
+    "END_DATE": 1845849599000,
+    "DESCRIPTION": "The Pyramid Rock / Fort Hase / Kaneohe Bay Danger Zone is located in ocean waters as described by the below coordinates and is closed at all times to surface craft, swimmers, and divers, with the exception of authorized personnel. Mark B.J. Edmonson at mark.bj.edmonson@usmc.mil.\n\nThe Danger Zone surrounding Mokapu Peninsula at various coordinates:\n\nKBay: 21.4398 / -157.7844 to 21.4354 / -157.7730\nHale Koa / Pyramid Rock: 21.4459 / -157.7824 to 21.4664 / -157.7689 to 21.46229 / -157.7569\nFort Hase: 21.4402 / -157.7332 to 21.4396 / -157.7332\n\nThe following are hazardous operations to mariners for October 5th, 2026 through October 16th, 2026:\n\nMon, Oct 5- N/A\nTue, Oct 6- N/A\n Wed, Oct 7- N/A\nThu, Oct 8- N/A\nFri, Oct 9- N/A\nSat, Oct 10- N/A\nSun, Oct 11- N/A\nMon, Oct 12- N/A\nTue, Oct 13- N/A\nWed, Oct 14- 0900-1400 PRTA Light House Helo SAR Ops \nThu, Oct 15- N/A\nFri, Oct 16- N/A",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-157.76153,21.46698],[-157.78848,21.45723],[-157.789,21.44333],[-157.76497,21.43255],[-157.7611,21.42879],[-157.7339,21.42879],[-157.71501,21.46107],[-157.76153,21.46698]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

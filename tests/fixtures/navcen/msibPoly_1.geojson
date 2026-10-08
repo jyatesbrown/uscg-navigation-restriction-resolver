@@ -1,0 +1,247 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 22114,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -94.77757999999994,
+       29.379020000000025
+      ],
+      [
+       -94.78524999999996,
+       29.372910000000047
+      ],
+      [
+       -94.78721999999999,
+       29.371710000000064
+      ],
+      [
+       -94.78621999999996,
+       29.36877000000004
+      ],
+      [
+       -94.78457999999995,
+       29.37104000000005
+      ],
+      [
+       -94.77638999999994,
+       29.378070000000037
+      ],
+      [
+       -94.77757999999994,
+       29.379020000000025
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 22114,
+    "MSI_UID": 22114,
+    "ATU": 8,
+    "TITLE": "Galveston Bay - Bolivar Peninsula/General/MSIB",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "MSIB",
+    "TYPE": null,
+    "WTRW_UID": 100116384812,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis8:sechouexcecozon:sechoutersea:sechousublanact:galbayentcha:galbay:bolpen",
+    "WATERWAY_NAME": "Bolivar Peninsula",
+    "CREATE_DATE": 1750871919000,
+    "MODIFIED_DATE": 1750872658000,
+    "BEGIN_DATE": 1750809600000,
+    "END_DATE": 2082758399000,
+    "DESCRIPTION": "Bolivar Peninsula - GIWW - VTS Bolivar Directive --- U.S. Coast Guard Vessel Traffic Service Houston-Galveston directs no meeting or overtaking between Bolivar Peninsula Virtual Aid 22 (Bolivar Peninsula 22 V-AIS, LLNR-35947) and Bolivar Peninsula Light 14 (LLNR-35915). The VTS recommends mariners confirm their position in the GIWW with their Electronic Chart Display and Information Systems (ECDIS).  Bolivar Aids to Navigation are set in shoal water.  The VTS recommends confirming Bolivar Peninsula Virtual Aids to Navigation 19A (Bolivar Peninsula 19A V-AIS, LLNR-35942) and 22 (LLNR-35947) prior to making the turn to/from Bolivar and/or into the Alternate Inbound Channel.",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-94.77758,29.37902],[-94.78525,29.37291],[-94.78722,29.37171],[-94.78622,29.36877],[-94.78458,29.37104],[-94.77639,29.37807],[-94.77758,29.37902]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 27034,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -95.02708999999999,
+       29.730990000000077
+      ],
+      [
+       -95.02961999999997,
+       29.728230000000053
+      ],
+      [
+       -95.02648999999997,
+       29.72685000000007
+      ],
+      [
+       -95.02343999999994,
+       29.723670000000027
+      ],
+      [
+       -95.02227999999997,
+       29.72195000000005
+      ],
+      [
+       -95.02219999999994,
+       29.70963000000006
+      ],
+      [
+       -95.02114999999998,
+       29.70682000000005
+      ],
+      [
+       -95.02019999999999,
+       29.703630000000032
+      ],
+      [
+       -95.01637999999997,
+       29.701230000000066
+      ],
+      [
+       -95.01214999999996,
+       29.700200000000052
+      ],
+      [
+       -95.00526999999994,
+       29.699420000000032
+      ],
+      [
+       -95.00026999999994,
+       29.698020000000042
+      ],
+      [
+       -94.99719999999996,
+       29.696210000000065
+      ],
+      [
+       -94.99242999999996,
+       29.69247000000007
+      ],
+      [
+       -94.98700999999994,
+       29.688120000000026
+      ],
+      [
+       -94.98599999999999,
+       29.68635000000006
+      ],
+      [
+       -94.98328999999995,
+       29.68264000000005
+      ],
+      [
+       -94.98258999999996,
+       29.681730000000073
+      ],
+      [
+       -94.98028999999997,
+       29.676810000000046
+      ],
+      [
+       -94.97775999999999,
+       29.677000000000078
+      ],
+      [
+       -94.98045999999994,
+       29.684380000000033
+      ],
+      [
+       -94.98346999999995,
+       29.68807000000004
+      ],
+      [
+       -94.99367999999998,
+       29.696800000000053
+      ],
+      [
+       -94.99946999999997,
+       29.70008000000007
+      ],
+      [
+       -95.00384999999994,
+       29.701490000000035
+      ],
+      [
+       -95.01109999999994,
+       29.702350000000024
+      ],
+      [
+       -95.01393999999999,
+       29.70321000000007
+      ],
+      [
+       -95.01629999999994,
+       29.704770000000053
+      ],
+      [
+       -95.01817999999997,
+       29.70709000000005
+      ],
+      [
+       -95.01908999999995,
+       29.70876000000004
+      ],
+      [
+       -95.01942999999994,
+       29.710330000000056
+      ],
+      [
+       -95.01950999999997,
+       29.719940000000065
+      ],
+      [
+       -95.01968999999997,
+       29.721990000000062
+      ],
+      [
+       -95.02036999999996,
+       29.72371000000004
+      ],
+      [
+       -95.02152999999998,
+       29.725610000000074
+      ],
+      [
+       -95.02543999999995,
+       29.729870000000062
+      ],
+      [
+       -95.02708999999999,
+       29.730990000000077
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 27034,
+    "MSI_UID": 27034,
+    "ATU": 8,
+    "TITLE": "Galveston Bay Entrance Channel - Houston Ship Channel/General/MSIB",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "MSIB",
+    "TYPE": null,
+    "WTRW_UID": 100117414264,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis8:sechouexcecozon:sechoutersea:sechousublanact:galbayentcha:houshicha",
+    "WATERWAY_NAME": "Houston Ship Channel",
+    "CREATE_DATE": 1756391160000,
+    "MODIFIED_DATE": 1756398024000,
+    "BEGIN_DATE": 1756339200000,
+    "END_DATE": 2082758399000,
+    "DESCRIPTION": "Houston Ship Channel - Morgans Point - VTS USI Canal/San Jacinto Bay Channel Directive --- The USI Canal/San Jacinto Bay Channel has become increasingly trafficked over the last 2 years.  For various reasons, many tows attempt to reconfigure between Morgans Point and Exxon to go into or come out of the USI Canal.  This practice has resulted in several near miss situations between Morgans Point and the Exxon Terminal in the Houston Ship Channel.  In order to fulfill the VTS mission of reducing risk of collision, allision, damage, pollution, and injury, the following Directive is in effect and will be written as policy in documentation updates to the U.S. Coast Guard VTS Houston-Galveston User Guide: \u2022 Vessel Traffic Service Houston-Galveston Directs no barge work in the Houston Ship Channel between Morgans Point and Exxon for purposes of going into/out of the USI Canal. \u2022 ",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-95.02709,29.73099],[-95.02962,29.72823],[-95.02649,29.72685],[-95.02344,29.72367],[-95.02228,29.72195],[-95.0222,29.70963],[-95.02115,29.70682],[-95.0202,29.70363],[-95.01638,29.70123],[-95.01215,29.7002],[-95.00527,29.69942],[-95.00027,29.69802],[-94.9972,29.69621],[-94.99243,29.69247],[-94.98701,29.68812],[-94.986,29.68635],[-94.98329,29.68264],[-94.98259,29.68173],[-94.98029,29.67681],[-94.97776,29.677],[-94.98046,29.68438],[-94.98347,29.68807],[-94.99368,29.6968],[-94.99947,29.70008],[-95.00385,29.70149],[-95.0111,29.70235],[-95.01394,29.70321],[-95.0163,29.70477],[-95.01818,29.70709],[-95.01909,29.70876],[-95.01943,29.71033],[-95.01951,29.71994],[-95.01969,29.72199],[-95.02037,29.72371],[-95.02153,29.72561],[-95.02544,29.72987],[-95.02709,29.73099]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

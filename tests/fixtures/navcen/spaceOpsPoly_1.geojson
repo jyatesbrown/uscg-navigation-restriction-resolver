@@ -1,0 +1,208 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 54068,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -120.59999999999997,
+       34.66667000000007
+      ],
+      [
+       -120.64999999999998,
+       34.650000000000034
+      ],
+      [
+       -120.64999999999998,
+       34.50000000000006
+      ],
+      [
+       -117.98332999999997,
+       29.033330000000035
+      ],
+      [
+       -117.31666999999999,
+       28.200000000000045
+      ],
+      [
+       -117.26666999999998,
+       29.60000000000008
+      ],
+      [
+       -120.29999999999995,
+       34.46667000000008
+      ],
+      [
+       -120.59999999999997,
+       34.66667000000007
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 54068,
+    "MSI_UID": 54068,
+    "ATU": 11,
+    "TITLE": "Sector San Diego, Exclusive Economic Zone (EEZ)/Space Operations/Hazardous Warning Area/Commercial (Hazardous)",
+    "STATUS": "Approved",
+    "MSI_GROUP": "Space Operations",
+    "SUB_CATEGORY": "Hazardous Warning Area",
+    "TYPE": "Commercial (Hazardous)",
+    "WTRW_UID": 100116385526,
+    "MRN": "urn:mrn:iala:wwy:us:navXII:dis11:secsandieexcecozon",
+    "WATERWAY_NAME": "Sector San Diego, Exclusive Economic Zone (EEZ)",
+    "CREATE_DATE": 1790010247000,
+    "MODIFIED_DATE": 1790630116000,
+    "BEGIN_DATE": 1789948800000,
+    "END_DATE": 1792367999000,
+    "DESCRIPTION": "Hazardous operations will be conducted for Space X, Starlink g15-25 Launch operations. Hazardous operation areas are bounded by the following coordinates and times:\nHazard Area A: \n29.8N                                       -117.65W \n34.46666667N                         -120.3W \n34.66666667N                         -120.6W \n34.65N                                     -120.65W \n34.5N                                       -120.65W \n29.58333333N                         -118.2W \n29.86666667N                         -117.9W \n(TO BEGINNING)\n\n102300Z OCT TO 110325Z OCT 2026---- (PRIMARY)\n112300Z OCT TO 120325Z OCT 2026---- (BACKUP DAY)\n122300Z OCT TO 130325Z OCT 2026---- (BACKUP DAY)\n132300Z OCT TO 140325Z OCT 2026---- (BACKUP DAY)\n142300Z OCT TO 150325Z OCT 2026---- (BACKUP DAY)\n152300Z OCT TO 160325Z OCT 2026---- (BACKUP DAY)\n162300Z OCT TO 170325Z OCT 2026---- (BACKUP DAY)\n\nHazard Area B:\n29.8N                                       -117.65W \n29.86666667N                         -117.9W \n29.58333333N                         -118.2W \n29.4N                                       -118.13333333W \n29.25N                                     -118.03333333W \n29.03333333N                         -117.98333333W \n28.2N                                       -117.31666667W \n28.83333333N                         -117.31666667W \n29.6N                                       -117.26666667W \n(TO BEGINNING)\n\n102300Z OCT TO 110343Z OCT 2026---- (PRIMARY)\n112300Z OCT TO 120343Z OCT 2026---- (BACKUP DAY)\n122300Z OCT TO 130343Z OCT 2026---- (BACKUP DAY)\n132300Z OCT TO 140343Z OCT 2026---- (BACKUP DAY)\n142300Z OCT TO 150343Z OCT 2026---- (BACKUP DAY)\n152300Z OCT TO 160343Z OCT 2026---- (BACKUP DAY)\n162300Z OCT TO 170343Z OCT 2026---- (BACKUP DAY)\n\nMariners are advised to remain clear of these areas for the duration of operations. For more details or comments contact Space X at regulatory@spacex.com or on VHF-FM Chan. 05, 06 or 16.",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-120.6,34.66667],[-120.65,34.65],[-120.65,34.5],[-117.98333,29.03333],[-117.31667,28.2],[-117.26667,29.6],[-120.3,34.46667],[-120.6,34.66667]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 54442,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -120.63332999999994,
+       34.66667000000007
+      ],
+      [
+       -120.69999999999999,
+       34.55000000000007
+      ],
+      [
+       -120.44999999999999,
+       29.866670000000056
+      ],
+      [
+       -120.38332999999994,
+       29.500000000000057
+      ],
+      [
+       -119.68332999999996,
+       28.93333000000007
+      ],
+      [
+       -119.26666999999998,
+       28.916670000000067
+      ],
+      [
+       -118.74999999999994,
+       29.416670000000067
+      ],
+      [
+       -120.44999999999999,
+       34.63333000000006
+      ],
+      [
+       -120.63332999999994,
+       34.66667000000007
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 54442,
+    "MSI_UID": 54442,
+    "ATU": 11,
+    "TITLE": "Sector San Diego, Exclusive Economic Zone (EEZ)/Space Operations/Hazardous Warning Area/Commercial (Hazardous)",
+    "STATUS": "Approved",
+    "MSI_GROUP": "Space Operations",
+    "SUB_CATEGORY": "Hazardous Warning Area",
+    "TYPE": "Commercial (Hazardous)",
+    "WTRW_UID": 100116385526,
+    "MRN": "urn:mrn:iala:wwy:us:navXII:dis11:secsandieexcecozon",
+    "WATERWAY_NAME": "Sector San Diego, Exclusive Economic Zone (EEZ)",
+    "CREATE_DATE": 1790369667000,
+    "MODIFIED_DATE": 1790369700000,
+    "BEGIN_DATE": 1790294400000,
+    "END_DATE": 1791849599000,
+    "DESCRIPTION": "Hazardous operations will be conducted for Space X, SDA-T1A Launch Operations. Hazardous operation areas are bounded by the following coordinates and times:\n\nHazard Area A: \n30.38333333N, -119.86666667W \n31.33333333N, -120.05W \n32.53333333N, -120.23333333W \n34.55N, -120.7W \n34.66666667N, -120.63333333W \n34.63333333N, -120.45W \n32.5N, -120.15W \n30.68333333N, -119.8W \n30.4N, -119.81666667W (TO BEGINNING)\n             \n050806Z OCT TO 050852Z OCT 2026---- (PRIMARY) \n060759Z OCT TO 060845Z OCT 2026---- (BACKUP DAY) \n070751Z OCT TO 070837Z OCT 2026---- (BACKUP DAY) \n080744Z OCT TO 080830Z OCT 2026---- (BACKUP DAY) \n090736Z OCT TO 090822Z OCT 2026---- (BACKUP DAY) \n100729Z OCT TO 100815Z OCT 2026---- (BACKUP DAY) \n110721Z OCT TO 110807Z OCT 2026---- (BACKUP DAY) \n\nHazard Area B:\n30.35N, -119.93333333W \n30.33333333N, -119.51666667W \n29.78333333N, -118.81666667W \n29.41666667N, -118.75W \n28.91666667N, -119.26666667W \n28.93333333N, -119.68333333W \n29.5N, -120.38333333W \n29.86666667N, -120.45W (TO BEGINNING)\n            \n050806Z OCT TO 050911Z OCT 2026---- (PRIMARY) \n060759Z OCT TO 060904Z OCT 2026---- (BACKUP DAY) \n070751Z OCT TO 070856Z OCT 2026---- (BACKUP DAY) \n080744Z OCT TO 080849Z OCT 2026---- (BACKUP DAY) \n090736Z OCT TO 090841Z OCT 2026---- (BACKUP DAY) \n100729Z OCT TO 100834Z OCT 2026---- (BACKUP DAY) \n110721Z OCT TO 110826Z OCT 2026---- (BACKUP DAY) \n\nMariners are advised to remain clear of these areas for the duration of operations. For more details or comments contact Space X at regulatory@spacex.com or on VHF-FM Chan. 05, 06 or 16.",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-120.63333,34.66667],[-120.7,34.55],[-120.45,29.86667],[-120.38333,29.5],[-119.68333,28.93333],[-119.26667,28.91667],[-118.75,29.41667],[-120.45,34.63333],[-120.63333,34.66667]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 54929,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -119.24999999999994,
+       33.783330000000035
+      ],
+      [
+       -119.29999999999995,
+       33.75000000000006
+      ],
+      [
+       -119.29999999999995,
+       33.60000000000008
+      ],
+      [
+       -119.23332999999997,
+       33.55000000000007
+      ],
+      [
+       -119.11666999999994,
+       33.55000000000007
+      ],
+      [
+       -119.03332999999998,
+       33.616670000000056
+      ],
+      [
+       -119.03332999999998,
+       33.75000000000006
+      ],
+      [
+       -119.08332999999999,
+       33.783330000000035
+      ],
+      [
+       -119.24999999999994,
+       33.783330000000035
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 54929,
+    "MSI_UID": 54929,
+    "ATU": 11,
+    "TITLE": "Sector Los Angeles, Territorial Sea/Space Operations/Hazardous Warning Area/Significant National Interest (Hazardous)",
+    "STATUS": "Approved",
+    "MSI_GROUP": "Space Operations",
+    "SUB_CATEGORY": "Hazardous Warning Area",
+    "TYPE": "Significant National Interest (Hazardous)",
+    "WTRW_UID": 100116385454,
+    "MRN": "urn:mrn:iala:wwy:us:navXII:dis11:seclosangexcecozon:seclosangtersea",
+    "WATERWAY_NAME": "Sector Los Angeles, Territorial Sea",
+    "CREATE_DATE": 1790903809000,
+    "MODIFIED_DATE": 1790903831000,
+    "BEGIN_DATE": 1790812800000,
+    "END_DATE": 1792540799000,
+    "DESCRIPTION": "Los Angeles Reentry Splashdown site\nHazardous operations for NASA Crew-12 Reentry, including splashdown in the Pacific Ocean, will occur between 05 OCT 2026, 16:35 UTC and 19 OCT 2026, 19:05 UTC. Hazardous operation areas are bounded by the following coordinates:\n\nHazard area:\n33.783333N, -119.25W\n33.75N, -119.3W\n33.6N, -119.3W\n33.55N, -119.233333W\n33.55N, -119.116667W\n33.616667N, -119.033333W\n33.75N, -119.033333W\n33.783333N, -119.083333W\n33.783333N, -119.25W\n\nMariners are advised to remain clear of these areas for the duration of operations. For more details or comments contact Space X at regulatory@spacex.com or on VHF-FM Chan. 05, 06 or 16.\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-119.25,33.78333],[-119.25,33.78333],[-119.3,33.75],[-119.3,33.6],[-119.23333,33.55],[-119.11667,33.55],[-119.03333,33.61667],[-119.03333,33.75],[-119.08333,33.78333],[-119.25,33.78333]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

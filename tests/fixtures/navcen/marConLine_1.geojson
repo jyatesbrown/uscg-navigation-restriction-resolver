@@ -1,0 +1,158 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 8491,
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -91.54911999999996,
+      29.184960000000046
+     ],
+     [
+      -91.43788999999998,
+      29.31051000000008
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 8491,
+    "MSI_UID": 8491,
+    "ATU": 8,
+    "TITLE": "Sector New Orleans, Submerged Land Act (SLA) - Atchafalaya Channel/General/Marine Construction (Excluding Bridges)/Dredging",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Dredging",
+    "WTRW_UID": 100116384918,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis8:secneworlexcecozon:secneworltersea:secneworlsublanact:atccha",
+    "WATERWAY_NAME": "Atchafalaya Channel",
+    "CREATE_DATE": 1736263768000,
+    "MODIFIED_DATE": 1773940426000,
+    "BEGIN_DATE": 1736208000000,
+    "END_DATE": 1798847999000,
+    "DESCRIPTION": "Atchafalaya Bar Channel - Dredge Operation --- From: 2025-01-07 To: 2026-12-31 --- The Agitation Dredge ARULAQ will be dredging in the Atchafalaya Bar Channel, between Miles 167.0 and 156.0, 24-hours a day, 7-days a week.  Mariners should coordinate passing arrangements with the M/V JOHN E. GRAHAM and transit the area at their slowest safe speed to minimize wake.  VHF-FM Channels: 13 and 16,  POC: USACE (504) 862-2360, (504) 862-2153 and (504) 862-2630",
+    "COORDINATES_JSON": "{\"type\":\"LineString\",\"coordinates\":[[-91.54912,29.18496],[-91.43789,29.31051]]}",
+    "COORDINATES_TYPE": "LineString",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 34393,
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -93.66608999999994,
+      29.417030000000068
+     ],
+     [
+      -93.66700999999995,
+      29.48201000000006
+     ],
+     [
+      -93.69435999999996,
+      29.505610000000047
+     ],
+     [
+      -93.80364999999995,
+      29.598400000000026
+     ],
+     [
+      -93.82573999999994,
+      29.644460000000038
+     ],
+     [
+      -93.83517999999998,
+      29.68608000000006
+     ],
+     [
+      -93.85073999999997,
+      29.70814000000007
+     ],
+     [
+      -93.86527999999998,
+      29.72733000000005
+     ],
+     [
+      -93.88323999999994,
+      29.748790000000042
+     ],
+     [
+      -93.89033999999998,
+      29.75714000000005
+     ],
+     [
+      -93.90818999999999,
+      29.762000000000057
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 34393,
+    "MSI_UID": 34393,
+    "ATU": 8,
+    "TITLE": "Sector Houston-Galveston, Submerged Land Act (SLA) - Sabine Pass/General/Marine Construction (Excluding Bridges)/Dredging",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Dredging",
+    "WTRW_UID": 100116385196,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis8:sechouexcecozon:sechoutersea:sechousublanact:sabpas",
+    "WATERWAY_NAME": "Sabine Pass",
+    "CREATE_DATE": 1767036729000,
+    "MODIFIED_DATE": 1791305685000,
+    "BEGIN_DATE": 1766966400000,
+    "END_DATE": 1806883199000,
+    "DESCRIPTION": "Sabine Bank Channel - Sabine Pass - Dredge Operation --- From: 2026-02-09 To: 2027-04-03 --- Dredging will be conducted throughout the Sabine Bank Channel and in Sabine Pass.  Operations will be conducted 24-hours a day, 7-days a week.  Dredged material will be disposed in offshore disposal sites located west of the channel.  On-scene vessels include the Dredges PADRE ISLAND and GALVESTON ISLAND, the Survey Vessels JONATHAN WOODWARD, LADY BECKY, FM BROWN, and OHIO RIVER, the Trawling Vessels MR. TOMMY, SIMPLE MAN, JESSICA MARIE, and ANNAMARIA ROSE, and the M/Vs SMITH INVADER and SMITH HUNTER.  Currently, the dredges are working in the following locations:\n\u2022 GALVESTON ISLAND: Between Sabine Bank Channel Lighted Buoy 12 (LLNR-22355) and Sabine Bank Channel Lighted Buoy 14 (LLNR-22365).\n\u2022 DODGE ISLAND: Between Sabine Bank Channel Lighted Buoy 17 (LLNR-22370) and Sabine Bank Channel Lighted Buoy 22 (LLNR-22385). \n\u2022 PADRE ISLAND and AMELIA ISLAND: Between Sabine Bank Channel Lighted Buoy 7 (LLNR-22335) and Sabine Bank Channel Lighted Buoy 12 (LLNR-22355).\n\u2022 ELLIS ISLAND: Past Sabine Bank Channel Lighted Buoy SB (LLNR-1085).  \nMariners are urged to transit at their slowest safe speed to minimize wake and proceed with caution after passing arrangements have been made.  VHF-FM Channels: 13 and 16",
+    "COORDINATES_JSON": "{\"type\":\"LineString\",\"coordinates\":[[-93.66609,29.41703],[-93.66701,29.48201],[-93.69436,29.50561],[-93.80365,29.5984],[-93.82574,29.64446],[-93.83518,29.68608],[-93.85074,29.70814],[-93.86528,29.72733],[-93.88324,29.74879],[-93.89034,29.75714],[-93.90819,29.762]]}",
+    "COORDINATES_TYPE": "LineString",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 38555,
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -90.16269999999997,
+      30.374240000000043
+     ],
+     [
+      -90.15965999999997,
+      30.37504000000007
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 38555,
+    "MSI_UID": 38555,
+    "ATU": 8,
+    "TITLE": "The Rigolets - Lakes Pontchartrain And Maurepas/General/Marine Construction (Excluding Bridges)/Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Construction (Excluding Bridges)",
+    "TYPE": "Facilities, Barriers, Manmade Reefs, Riprap, Jetties/Dikes",
+    "WTRW_UID": 100117410918,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis8:secneworlexcecozon:secneworltersea:secneworlsublanact:graislcha:lakbor:therig:lakponandmau",
+    "WATERWAY_NAME": "Lakes Pontchartrain And Maurepas",
+    "CREATE_DATE": 1772833826000,
+    "MODIFIED_DATE": 1775742755000,
+    "BEGIN_DATE": 1772755200000,
+    "END_DATE": 1792540799000,
+    "DESCRIPTION": "Lake Pontchartrain - Tchefuncte River - Breakwater Construction --- From: 2026-03-09 To: 2026-10-19 --- Breakwater construction will be conducted in Lake Pontchartrain at the mouth of the Lower Tchefuncte River, near approximate positions 30-22-30.16N 090-09-34.78W and 30-22-27.29N 090-09-45.73W.  Operations will be conducted daily, from 7:00 a.m. to 5:30 p.m.  Mariners are urged to transit the area at their slowest safe speed to minimize wake and proceed with caution. VHF-FM Channel: 16,  POC: (361) 533-3805",
+    "COORDINATES_JSON": "{\"type\":\"LineString\",\"coordinates\":[[-90.1627,30.37424],[-90.15966,30.37504]]}",
+    "COORDINATES_TYPE": "LineString",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+{
+    "title": "USCG Navigation Restriction Resolver input",
+    "description": "Provide exactly one of point, route or bbox (coordinates in WGS84 decimal degrees). Returns official USCG NAVCEN maritime safety information records that intersect the area. Not navigational advice.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "point": {
+            "title": "Point",
+            "type": "object",
+            "description": "A position {\"lat\": 27.9506, \"lon\": -80.4547}. Notices within radiusNm are returned.",
+            "editor": "json",
+            "prefill": {"lat": 40.70, "lon": -74.02}
+        },
+        "radiusNm": {
+            "title": "Radius (nautical miles)",
+            "type": "number",
+            "description": "Search radius around point. Default 5, range 0.1-50.",
+            "minimum": 0.1,
+            "maximum": 50
+        },
+        "route": {
+            "title": "Route",
+            "type": "array",
+            "description": "User-supplied route as 2-200 ordered positions [{\"lat\":..,\"lon\":..}, ...], up to 1500 nm. The Actor does not plan routes.",
+            "editor": "json"
+        },
+        "corridorNm": {
+            "title": "Corridor half-width (nautical miles)",
+            "type": "number",
+            "description": "Distance either side of the route. Default 1, range 0.1-25.",
+            "minimum": 0.1,
+            "maximum": 25
+        },
+        "bbox": {
+            "title": "Bounding box",
+            "type": "object",
+            "description": "{\"south\":..,\"west\":..,\"north\":..,\"east\":..}, at most 10 degrees per side; must not cross the antimeridian.",
+            "editor": "json"
+        },
+        "atTime": {
+            "title": "At time (UTC)",
+            "type": "string",
+            "description": "ISO 8601 time with timezone used to classify notices as active, upcoming or expired. Default: now.",
+            "editor": "textfield"
+        },
+        "categories": {
+            "title": "Categories",
+            "type": "array",
+            "description": "Limit to these categories. Default: all of safety_zone, hazard_to_navigation, marine_construction, marine_event, naval_activity, space_operation, temporary_change, tess_advisory, msib.",
+            "editor": "stringList"
+        }
+    }
+}

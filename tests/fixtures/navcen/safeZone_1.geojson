@@ -1,0 +1,38 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 53516,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.09499999999997,
+     41.35027000000008
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 53516,
+    "MSI_UID": 53516,
+    "ATU": 1,
+    "TITLE": "New London Harbor - Shaw Cove Entrance/General/LAA/RNA/Safety Zone",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "LAA/RNA",
+    "TYPE": "Safety Zone",
+    "WTRW_UID": 100116381562,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:seclonislsouexcecozon:seclonislsoutersea:seclonislsousublanact:bloislsouandgarbay:lonislsoueaspar:newlonhar:shacovent",
+    "WATERWAY_NAME": "Shaw Cove Entrance",
+    "CREATE_DATE": 1789134136000,
+    "MODIFIED_DATE": 1789134140000,
+    "BEGIN_DATE": 1789084800000,
+    "END_DATE": 1804982399000,
+    "DESCRIPTION": "General/LAA/RNA/Safety Zone\n\nFrom: 2026-09-11 To: 2027-03-13\n\nLocation:\n41-21-00.972N/072-05-42.000W\n\nThe Coast Guard is establishing a temporary safety zone on September 12, 2026 from 8:15 p.m. through 9:30 p.m. The safety zone will cover all navigable waters of the Thames River encompassing a 600-foot radius at approximate position 41\u00b0 21' 01\" N, 72\u00b0 05' 42\" W, in the vicinity of New London Waterfront Park in New London, CT. No vessel or person will be permitted to enter the safety zone without obtaining permission from the COTP or a designated representative. Mariners can contact the person in charge of the Drone Show Jeff Ward during the event at (516) 369-2107 \n",
+    "COORDINATES_JSON": "{\"type\":\"Point\",\"coordinates\":[-72.095,41.35027]}",
+    "COORDINATES_TYPE": "Point",
+    "DECIMAL_LONGITUDE": -72.095,
+    "DECIMAL_LATITUDE": 41.350269999999995
+   }
+  }
+ ]
+}

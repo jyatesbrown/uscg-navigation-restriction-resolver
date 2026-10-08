@@ -1,0 +1,62 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 43913,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -124.51792999999998,
+       48.53708000000006
+      ],
+      [
+       -124.51655999999997,
+       48.43695000000008
+      ],
+      [
+       -124.01393999999999,
+       48.295540000000074
+      ],
+      [
+       -123.83128999999997,
+       48.26538000000005
+      ],
+      [
+       -123.82441999999998,
+       48.34302000000008
+      ],
+      [
+       -124.51792999999998,
+       48.53708000000006
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 43913,
+    "MSI_UID": 43913,
+    "ATU": 13,
+    "TITLE": "Sector Puget Sound, Submerged Land Act (SLA) - Strait of Juan De Fuca/General/Threatened And Endangered Species Advisory (TESS Advisory)/Marine Wildlife Migration",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Threatened And Endangered Species Advisory (TESS Advisory)",
+    "TYPE": "Marine Wildlife Migration",
+    "WTRW_UID": 100116385929,
+    "MRN": "urn:mrn:iala:wwy:us:navXII:dis13:secpugsouexcecozon:secpugsoutersea:secpugsousublanact:strofjuadefuc",
+    "WATERWAY_NAME": "Strait of Juan De Fuca",
+    "CREATE_DATE": 1779121967000,
+    "MODIFIED_DATE": 1779121985000,
+    "BEGIN_DATE": 1779062400000,
+    "END_DATE": 1793577599000,
+    "DESCRIPTION": "Effective 01 Jun to 31 Oct 2026, the ECHO Program voluntary inshore route alteration is active for all tugs transiting the Canadian inshore area of the Strait of Juan de Fuca to reduce underwater noise for at-risk whales. If it is safe and operationally feasible to do so, tugs are requested to navigate either through the outbound shipping lane or the inshore route alteration zone, while maintaining a buffer distance of 1,000 meters from the traffic separation scheme (TSS). The inshore route alteration zone is 1,500 meters wide and occurs in the area between 123-52-21.192 W, 48-18-37.332 N and 124-31-33.378 W, 48-28-53.316 N, covering a distance of approximately 28 NM. \nFor more detailed information, visit the following web address:\nhttps://www.portvancouver.com/echo",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-124.51793,48.53708],[-124.51656,48.43695],[-124.01394,48.29554],[-123.83129,48.26538],[-123.82442,48.34302],[-124.51793,48.53708]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

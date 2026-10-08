@@ -1,0 +1,24 @@
+{
+    "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+    "actorSpecification": 1,
+    "name": "uscg-navigation-restriction-resolver",
+    "title": "USCG Navigation Restriction Resolver",
+    "description": "Check a point or vessel route against current official U.S. Coast Guard maritime safety information. Returns intersecting safety zones, navigation hazards, marine construction, events, naval activity, space-operation areas, and source provenance as structured data for AI agents and automation.",
+    "version": "1.0",
+    "buildTag": "latest",
+    "meta": {
+        "templateId": "python-start",
+        "generatedBy": "Devin (Cognition AI)"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "readme": "../README.md",
+    "dockerfile": "../Dockerfile",
+    "minMemoryMbytes": 128,
+    "maxMemoryMbytes": 1024,
+    "defaultMemoryMbytes": 256,
+    "usesStandbyMode": false
+}

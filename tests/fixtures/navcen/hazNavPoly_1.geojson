@@ -1,0 +1,111 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 59,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -74.54458999999997,
+       39.30690000000004
+      ],
+      [
+       -74.55213999999995,
+       39.30192000000005
+      ],
+      [
+       -74.54234999999994,
+       39.294610000000034
+      ],
+      [
+       -74.53445999999997,
+       39.299930000000074
+      ],
+      [
+       -74.54458999999997,
+       39.30690000000004
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 59,
+    "MSI_UID": 59,
+    "ATU": 5,
+    "TITLE": "Sector Delaware Bay, Submerged Land Act (SLA) - Great Egg Harbor Inlet/General/Hazards To Navigation/Shoaling Reported",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Hazards To Navigation",
+    "TYPE": "Shoaling Reported",
+    "WTRW_UID": 100116382912,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis5:secdelbayexcecozon:secdelbaytersea:secdelbaysublanact:greeggharinl",
+    "WATERWAY_NAME": "Great Egg Harbor Inlet",
+    "CREATE_DATE": 1722529595000,
+    "MODIFIED_DATE": 1757939363000,
+    "BEGIN_DATE": 1722470400000,
+    "END_DATE": 1877990399000,
+    "DESCRIPTION": "General/Hazards To Navigation/Shoaling Reported\n\nShoaling has been observed between Great Egg Harbor Inlet Buoy 7 (LLNR 1288) and the charted location of Buoy 9 (LLNR 1291) with a MLW depth of 4ft in the channel. See DB BNM 0062-24.\n\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-74.54459,39.3069],[-74.55214,39.30192],[-74.54235,39.29461],[-74.53446,39.29993],[-74.54459,39.3069]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 62,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -75.09880999999996,
+       38.63420000000008
+      ],
+      [
+       -75.09921999999995,
+       38.63376000000005
+      ],
+      [
+       -75.09393999999998,
+       38.63100000000003
+      ],
+      [
+       -75.09346999999997,
+       38.631590000000074
+      ],
+      [
+       -75.09880999999996,
+       38.63420000000008
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 62,
+    "MSI_UID": 62,
+    "ATU": 5,
+    "TITLE": "Indian River Inlet - Rehoboth Bay/General/Hazards To Navigation/Shoaling Reported",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Hazards To Navigation",
+    "TYPE": "Shoaling Reported",
+    "WTRW_UID": 100116382925,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis5:secdelbayexcecozon:secdelbaytersea:secdelbaysublanact:indrivinl:rehbay",
+    "WATERWAY_NAME": "Rehoboth Bay",
+    "CREATE_DATE": 1722533137000,
+    "MODIFIED_DATE": 1754923803000,
+    "BEGIN_DATE": 1722470400000,
+    "END_DATE": 1877990399000,
+    "DESCRIPTION": "General/Hazards To Navigation/Shoaling Reported\n\nDelaware Department of Natural Resources and Environmental Control (DNREC) reports shoaling in Baker\u2019s Channel between Baker\u2019s Channel Lighted Buoy 1A (LLNR 2136) and Baker\u2019s Channel Lighted Buoy 1B (LLNR 2137) as well as Baker\u2019s Channel Lighted Buoy 5 (LLNR 2137.04) and Baker\u2019s Channel Lighted Buoy 6 (LLNR 2137.05). DNREC has established two warning buoys worded \u201cDANGER SHOAL\u201d to mark the shoaling\n\nFrom: 2024-08-01 To: 2025-08-19\n\nLocation:\n38.6342\u00b0 N / 75.09881\u00b0 W\n38.63159\u00b0 N / 75.09347\u00b0 W\n38.631\u00b0 N / 75.09394\u00b0 W\n38.63376\u00b0 N / 75.09922\u00b0 W\n38.6342\u00b0 N / 75.09881\u00b0 W\n\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-75.09881,38.6342],[-75.09922,38.63376],[-75.09394,38.631],[-75.09347,38.63159],[-75.09881,38.6342]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}

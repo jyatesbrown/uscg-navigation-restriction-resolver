@@ -1,0 +1,14 @@
+{
+    "$schema": "https://apify.com/schemas/v1/output.ide.json",
+    "actorOutputSchemaVersion": 1,
+    "title": "USCG navigation area check",
+    "description": "Exactly one dataset item per run: official USCG NAVCEN MSI records intersecting the queried point, route or bbox, with per-dataset coverage. Zero matches means no matching records were found in the official datasets successfully checked. It is not a statement that navigation is hazard-free or unrestricted. Not navigational advice.",
+    "properties": {
+        "result": {
+            "type": "string",
+            "title": "Navigation area check record",
+            "description": "The single record: status, query, coverage (categoriesChecked, completeForRequestedLayers, sourceFailures), summary counts and notices with official text, validity, geometry and relationshipToQuery.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items"
+        }
+    }
+}

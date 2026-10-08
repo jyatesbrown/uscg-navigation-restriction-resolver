@@ -1,0 +1,192 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 52676,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.83804999999995,
+       42.51350000000008
+      ],
+      [
+       -70.85486999999995,
+       42.495780000000025
+      ],
+      [
+       -70.85555999999997,
+       42.49160000000006
+      ],
+      [
+       -70.84662999999995,
+       42.491730000000075
+      ],
+      [
+       -70.82791999999995,
+       42.508560000000045
+      ],
+      [
+       -70.83804999999995,
+       42.51350000000008
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 52676,
+    "MSI_UID": 52676,
+    "ATU": 1,
+    "TITLE": "Marblehead Channel - Marblehead Harbor/General/Marine Events/Regatta (Race)",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Events",
+    "TYPE": "Regatta (Race)",
+    "WTRW_UID": 100116382030,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:secbosexcecozon:secbostersea:secbossublanact:marcha:marhar",
+    "WATERWAY_NAME": "Marblehead Harbor",
+    "CREATE_DATE": 1788257050000,
+    "MODIFIED_DATE": null,
+    "BEGIN_DATE": 1791417600000,
+    "END_DATE": 1806969599000,
+    "DESCRIPTION": "MA \u2013 MARBLEHEAD \u2013 MARBLEHEAD HARBOR \u2013 BYC TECH DINGHY FROSTBITING SERIES \u2013 REGATTA \u2013 The Boston Yacht Club is hosting the BYC MIT Tech Dinghy Frostbiting Series every Sunday, from November 08, 2026, to April 4, 2027, from 12:00 PM to 2:00 PM in Marblehead Harbor.  The event will consist of approximately 15 sailing vessels varying all 14\u2019 in length.  The person responsible for on-scene safety can be reached at 617-548-9333.  For more information, please contact Karen Tenenbaum at 617-548-9333.\nChart 13275\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-70.83805,42.5135],[-70.85487,42.49578],[-70.85556,42.4916],[-70.84663,42.49173],[-70.82792,42.50856],[-70.83805,42.5135]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 35689,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.87366999999995,
+       42.54487000000006
+      ],
+      [
+       -70.87907999999999,
+       42.53893000000005
+      ],
+      [
+       -70.88293999999996,
+       42.541390000000035
+      ],
+      [
+       -70.88773999999995,
+       42.54019000000005
+      ],
+      [
+       -70.88602999999995,
+       42.52988000000005
+      ],
+      [
+       -70.87795999999997,
+       42.531400000000076
+      ],
+      [
+       -70.86473999999998,
+       42.537090000000035
+      ],
+      [
+       -70.87366999999995,
+       42.54487000000006
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 35689,
+    "MSI_UID": 35689,
+    "ATU": 1,
+    "TITLE": "Salem Channel - Beverly Channel/General/Marine Events/Other",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Events",
+    "TYPE": "Other",
+    "WTRW_UID": 100116382020,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:secbosexcecozon:secbostersea:secbossublanact:salcha:bevcha",
+    "WATERWAY_NAME": "Beverly Channel",
+    "CREATE_DATE": 1769190678000,
+    "MODIFIED_DATE": null,
+    "BEGIN_DATE": 1788998400000,
+    "END_DATE": 1791849599000,
+    "DESCRIPTION": "MA \u2013 BEVERLY HARBOR \u2013 INDEPENDENCE PARK \u2013 BEVERLY 400th BATTLE REENACTMENT\nThe Beverly 400 is hosting the Beverly 400 \u2013 Battle of the Hannah and Nautilus Reenactment on October 10th, 2026, from 9:00 AM to 11:00 AM in Beverly Harbor off Independence Park.  The event will consist of two sailing vessels approximately 38.5\u2019 and 50\u2019 in length.  The person responsible for on scene safety can be reached at 347-424-3173.  For more information, please contact Scott White at 347-424-3173.\nChart 13276\t\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-70.87367,42.54487],[-70.87908,42.53893],[-70.88294,42.54139],[-70.88774,42.54019],[-70.88603,42.52988],[-70.87796,42.5314],[-70.86474,42.53709],[-70.87367,42.54487]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 36841,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -70.84164999999996,
+       42.52678000000003
+      ],
+      [
+       -70.84147999999993,
+       42.51033000000007
+      ],
+      [
+       -70.85555999999997,
+       42.49300000000005
+      ],
+      [
+       -70.84576999999996,
+       42.49135000000007
+      ],
+      [
+       -70.83306999999996,
+       42.50553000000008
+      ],
+      [
+       -70.81881999999996,
+       42.50072000000006
+      ],
+      [
+       -70.80147999999997,
+       42.51577000000003
+      ],
+      [
+       -70.84164999999996,
+       42.52678000000003
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "ESRI_OID": 36841,
+    "MSI_UID": 36841,
+    "ATU": 1,
+    "TITLE": "Marblehead Channel - Marblehead Harbor/General/Marine Events/Regatta (Race)",
+    "STATUS": "Approved",
+    "MSI_GROUP": "General",
+    "SUB_CATEGORY": "Marine Events",
+    "TYPE": "Regatta (Race)",
+    "WTRW_UID": 100116382030,
+    "MRN": "urn:mrn:iala:wwy:us:navIV:dis1:secbosexcecozon:secbostersea:secbossublanact:marcha:marhar",
+    "WATERWAY_NAME": "Marblehead Harbor",
+    "CREATE_DATE": 1770736467000,
+    "MODIFIED_DATE": null,
+    "BEGIN_DATE": 1786579200000,
+    "END_DATE": 1795478399000,
+    "DESCRIPTION": "MA \u2013 MARBLEHEAD \u2013 FALL LASER ILCA SERIES \u2013 REGATTA \u2013 The Eastern Yacht Club is hosting the Fall Laser ILCA Series Regatta Series every Sunday from September 13, 2026, to November 22, 2026, from 1:00 PM to 3:00 PM in the vicinity of Marblehead Harbor.  The event will consist of approximately 15 vessels, all of which are 14\u2019 in length. The person responsible for on scene safety can be reached at 781-475-4120.  For more information, please contact Jud Smith at 781-475-2140.\nChart 13275\n",
+    "COORDINATES_JSON": "{\"type\":\"Polygon\",\"coordinates\":[[[-70.84165,42.52678],[-70.84148,42.51033],[-70.85556,42.493],[-70.84577,42.49135],[-70.83307,42.50553],[-70.81882,42.50072],[-70.80148,42.51577],[-70.84165,42.52678]]]}",
+    "COORDINATES_TYPE": "Polygon",
+    "DECIMAL_LONGITUDE": null,
+    "DECIMAL_LATITUDE": null
+   }
+  }
+ ]
+}
