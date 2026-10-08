@@ -8,6 +8,8 @@ class SourceState(StrEnum):
     UNAVAILABLE = "unavailable"
     TIMEOUT = "timeout"
     INVALID_FORMAT = "invalid_format"
+    LISTED_BUT_NOT_PUBLISHED = "listed_but_not_published"
+    NOT_FOUND = "not_found"
     NOT_QUERIED = "not_queried"
 
 

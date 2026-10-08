@@ -127,7 +127,6 @@ async def test_success_zero_matches_is_billable_and_complete(navcen, client):
     ("response", "state"),
     [
         (httpx.Response(503), "unavailable"),
-        (httpx.Response(404), "unavailable"),
         (httpx.Response(200, content=b"<html>maintenance</html>"), "invalid_format"),
         (httpx.Response(200, json={"type": "Feature"}), "invalid_format"),
         (httpx.Response(200, json={"type": "FeatureCollection", "features": [{"properties": {}}]}), "invalid_format"),
@@ -147,6 +146,28 @@ async def test_failed_layer_is_never_zero_hazards(navcen, client, response, stat
     assert not failed.billing.billable
     assert failed.to_record() != ok.to_record()
     assert ok.status == "success"
+
+
+async def test_index_listed_404_is_listed_but_not_published(navcen, client):
+    idx = index_fixture()
+    idx["safeZoneLine_"]["counter"] = 1
+    navcen.get(url__startswith=INDEX_URL).mock(return_value=httpx.Response(200, json=idx))
+    navcen.get(BASE + "safeZoneLine_1.geojson").mock(return_value=httpx.Response(404))
+    r = await run(client, OPEN_OCEAN)
+    assert r.status == "partial"
+    assert r.coverage.categories_incomplete == ["safety_zone"]
+    assert r.coverage.categories_failed == []
+    assert "safety_zone" not in r.coverage.categories_checked
+    assert r.coverage.source_failures == []
+    assert [d.dataset for d in r.coverage.unpublished_datasets] == ["safeZoneLine_1"]
+    assert next(d for d in r.coverage.datasets if d.dataset == "safeZoneLine_1").feature_count is None
+    assert not r.coverage.complete_for_requested_layers
+    assert "does not mean no records exist" in r.coverage.coverage_note
+    assert not r.billing.billable
+    assert not FORBIDDEN.search(json.dumps(r.to_record()))
+    other = await run(client, {**OPEN_OCEAN, "categories": ["hazard_to_navigation"]})
+    assert other.status == "success"
+    assert other.billing.billable
 
 
 async def test_partial_with_matches_is_billable(navcen, client):

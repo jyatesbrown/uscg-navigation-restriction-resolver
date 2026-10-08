@@ -91,7 +91,12 @@ def validate_features(raw: Any, dataset: str) -> tuple[list[dict[str, Any]], int
 
 
 async def fetch_index(client: httpx.AsyncClient) -> dict[str, tuple[int, int | None]]:
-    return parse_index(await get_json(client, INDEX_URL))
+    try:
+        return parse_index(await get_json(client, INDEX_URL))
+    except SourceError as exc:
+        if exc.state == SourceState.NOT_FOUND:
+            raise SourceError(SourceState.UNAVAILABLE, exc.detail) from exc
+        raise
 
 
 async def fetch_dataset(
@@ -105,7 +110,9 @@ async def fetch_dataset(
     try:
         features, skipped = validate_features(await get_json(client, url), dataset)
     except SourceError as exc:
-        return DatasetResult(category, dataset, url, exc.state, published, detail=exc.detail)
+        # NAVCEN's file index lists the file but it is not served; NAVCEN's own map skips it silently.
+        state = SourceState.LISTED_BUT_NOT_PUBLISHED if exc.state == SourceState.NOT_FOUND else exc.state
+        return DatasetResult(category, dataset, url, state, published, detail=exc.detail)
     if cache and published:
         await cache.put(dataset, published, features)
     return DatasetResult(category, dataset, url, SourceState.SUCCESS, published, features, skipped)

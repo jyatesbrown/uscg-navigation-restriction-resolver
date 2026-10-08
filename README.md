@@ -24,8 +24,12 @@ Point / route / bbox → official USCG NAVCEN Maritime Safety Information layers
 - **Time:** each notice is classified `active`, `upcoming` or `unknown` (no dates published) at `atTime`
   (default: now). Expired notices are excluded and counted.
 - **Coverage:** every dataset file checked is listed with its status (`success`, `unavailable`, `timeout`,
-  `invalid_format`) and publication time. A failed layer makes the result `partial`; it never looks like zero
-  notices.
+  `invalid_format`, `listed_but_not_published`) and publication time. A failed layer makes the result
+  `partial`; it never looks like zero notices.
+- **Listed but not published:** if NAVCEN's file index lists a file that NAVCEN does not serve (HTTP 404),
+  it is reported in `coverage.unpublishedDatasets` and its category in `categoriesIncomplete`. It is not
+  treated as checked or empty, so coverage is incomplete and `coverage.coverageNote` says records there were
+  not checked.
 
 ## Input
 
@@ -58,7 +62,7 @@ Named places (e.g. "Port Canaveral") are not resolved in v1; pass coordinates.
 | Field | Meaning |
 |---|---|
 | `status` | `success` (all requested layers checked), `partial` (some layers failed), `source_unavailable`, `invalid_input`. |
-| `coverage` | `categoriesChecked`, `categoriesFailed`, `completeForRequestedLayers`, `sourceFailures`, per-file `datasets`, `notCovered`. |
+| `coverage` | `categoriesChecked`, `categoriesFailed`, `categoriesIncomplete`, `completeForRequestedLayers`, `coverageNote`, `sourceFailures`, `unpublishedDatasets`, per-file `datasets`, `notCovered`. |
 | `summary` | `matchedNoticeCount`, `activeCount`, `upcomingCount`, `unknownValidityCount`, `expiredExcludedCount`, `categoriesMatched`, `byCategory`. |
 | `notices[]` | `category`, `title`, `validity`, `effectiveWindow`, official GeoJSON `geometry`, `relationshipToQuery` (`intersectsQueryGeometry`, `withinSearchArea`, `minimumDistanceNm`, `routePosition`), verbatim `officialText`, `source` (dataset URL, record dates). |
 | `scopeNote` | What a zero-match result does and does not mean. |
@@ -84,7 +88,7 @@ Pay per event: `navigation-area-check` **$0.05** per query, plus a $0.00005 star
 
 - Charged when all requested layers were checked, **including zero matches**.
 - Charged when some layers failed but matching notices were still found (status `partial`).
-- **Not charged** for invalid input, or when layers fail and nothing was found.
+- **Not charged** for invalid input, or when coverage is incomplete (failed or unpublished layers) and nothing was found.
 
 ## Limitations
 

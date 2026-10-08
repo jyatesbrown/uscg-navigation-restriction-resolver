@@ -41,6 +41,8 @@ async def get_json(client: httpx.AsyncClient, url: str) -> Any:
             status = response.status_code
             if status in TRANSIENT_STATUSES:
                 last = SourceError(SourceState.UNAVAILABLE, f"{url}: HTTP {status}")
+            elif status == 404:
+                raise SourceError(SourceState.NOT_FOUND, f"{url}: HTTP 404")
             elif status >= 400:
                 raise SourceError(SourceState.UNAVAILABLE, f"{url}: HTTP {status}")
             else:
