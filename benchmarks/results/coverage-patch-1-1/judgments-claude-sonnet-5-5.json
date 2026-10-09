@@ -1,0 +1,113 @@
+{
+ "interp|directed|u01": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "wrong count of intersecting notices (says 5; the record has 6: survey, swim, and four regattas)",
+   "claims all notices share the same footprint, which is false",
+   "swapped Reach 02 and Reach 06 distances (Reach 06 is 0.003 nm, Reach 02 is 0.027 nm)",
+   "says a regatta needs attention today, but today is Friday and none of the regatta schedules cover Fridays"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer handles the partial coverage correctly: it uses the matches, names the unpublished safeZoneLine_1, and makes no safety claims. It misreports the intersecting-notice count and shared footprint, swaps the Trevcon Reach 02 and Reach 06 distances, and wrongly says a regatta applies today.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|u05": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports all three active matches with correct distances (0.085, 0.103 and 2.571 nm), correct windows, and correctly says none contain the point. It also flags the unpublished safeZoneLine_1 dataset and the unchecked BNMs. Its remark that the fireworks event date has passed is drawn from the record's own text, and it still notes that the record shows the notice as active.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|u06": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": null,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports zero matches for the point and polygon datasets within 0.1 nm. It flags that safeZoneLine_1 was listed but not published (404) and not checked, so line-based coverage is incomplete. It makes no safety claim. The 5 nm default radius and the Apify tool name are not in the record, but they do not change the interpretation.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|u13": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer accurately reports both active marine construction notices, their distances, effective windows and provenance. It makes no safety claims and notes the uncovered sources. The only flaw is the loose phrase 'polygon or line'.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|u16": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer matches the record on both notices: two active hazard-to-navigation shoaling notices at 0.151 nm and 2.746 nm, with the correct categories, details and effective windows. It makes no safety claims and correctly notes the scope limits. The second notice's official text says 'To: 2025-08-19' while its structured effectiveWindow ends 2029-07-05 and validity is 'active'; the answer follows the structured fields without flagging this conflict, which is a minor omission.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|u18": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "wrong point relationship: VTS directive described as intersecting the query point"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer says the Morgans Point–Exxon VTS directive (msiUid 27034) \"intersects your point\", but the record gives intersectsQueryGeometry=false with a minimum distance of 0.082 nm; it is only within the search area. The rest of the answer is accurate, including the NIMITZ date discrepancy, the other notice distances and dates, and the note that safety-zone coverage is incomplete.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|u19": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "wrong record count (53 vs 9 matched)",
+   "reports categories not in record (safety zones, hazards, marine construction)",
+   "fabricated truncation of 19 of 30 construction notices",
+   "claims a safety-zone line dataset was listed but not published, but record shows all datasets success and coverage complete",
+   "omits the actual marine events and temporary change notice",
+   "misstates coverage as incomplete"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The record is status success with 9 matched notices (8 marine_event, 1 temporary_change) and complete coverage for the requested layers. The answer describes unrelated categories, invented counts, and an unpublished dataset that does not exist in this record, and omits the real swim, regatta, fireworks, and UN buoy notices.",
+  "judgeModel": "claude-sonnet-5-5"
+ },
+ "interp|directed|z02": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": null,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports zero matches and identifies safeZoneLine_1 as listed but unpublished (HTTP 404). It explicitly says the result does not mean the route is clear, and it correctly lists the uncovered sources. The phrase 'on each side' for the 1 nm corridor is a minor unsupported detail that does not change the interpretation.",
+  "judgeModel": "claude-sonnet-5-5"
+ }
+}

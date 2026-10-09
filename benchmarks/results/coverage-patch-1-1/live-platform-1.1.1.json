@@ -1,0 +1,110 @@
+{
+ "sz_positive_new_rochelle": {
+  "runId": "RZaJVBrNZIduU7aRm",
+  "build": "1.1.1",
+  "status": "partial",
+  "matched": 2,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 0
+  },
+  "usd": 0.0002594908878273434,
+  "schema": "1.1",
+  "sz": {
+   "status": "partial",
+   "checked": [
+    "safeZone_1",
+    "safeZonePoly_1"
+   ],
+   "unavailable": [],
+   "listedButNotPublished": [
+    "safeZoneLine_1"
+   ]
+  },
+  "partial": [
+   "safety_zone"
+  ],
+  "note": "Safety-zone point and polygon datasets were checked successfully. The NAVCEN index lists safeZoneLine_1, but that dataset was not published at retrieval time, so line-based safety-zone coverage is incomplete. The returned notices come from datasets that were checked; records in the datasets not checked could not be evaluated.",
+  "mem": 256,
+  "timeout": 120
+ },
+ "positive_partial_nyc_bbox": {
+  "runId": "595BUzEgwIqSofWB9",
+  "build": "1.1.1",
+  "status": "partial",
+  "matched": 53,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 0
+  },
+  "usd": 5e-05,
+  "schema": "1.1",
+  "sz": {
+   "status": "partial",
+   "checked": [
+    "safeZone_1",
+    "safeZonePoly_1"
+   ],
+   "unavailable": [],
+   "listedButNotPublished": [
+    "safeZoneLine_1"
+   ]
+  },
+  "partial": [
+   "safety_zone"
+  ],
+  "note": "Safety-zone point and polygon datasets were checked successfully. The NAVCEN index lists safeZoneLine_1, but that dataset was not published at retrieval time, so line-based safety-zone coverage is incomplete. The returned notices come from datasets that were checked; records in the datasets not checked could not be evaluated.",
+  "mem": 256,
+  "timeout": 120
+ },
+ "zero_all_layers_open_atlantic": {
+  "runId": "4Qm6LeP6nvAf6zGSz",
+  "build": "1.1.1",
+  "status": "partial",
+  "matched": 0,
+  "billable": false,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 0
+  },
+  "usd": 0.00013515749306148954,
+  "schema": "1.1",
+  "sz": {
+   "status": "partial",
+   "checked": [
+    "safeZone_1",
+    "safeZonePoly_1"
+   ],
+   "unavailable": [],
+   "listedButNotPublished": [
+    "safeZoneLine_1"
+   ]
+  },
+  "partial": [
+   "safety_zone"
+  ],
+  "note": "Safety-zone point and polygon datasets were checked successfully. The NAVCEN index lists safeZoneLine_1, but that dataset was not published at retrieval time, so line-based safety-zone coverage is incomplete. No matches were found in the datasets successfully checked, but coverage is incomplete: this does not mean no records exist in the datasets that were not checked.",
+  "mem": 256,
+  "timeout": 120
+ },
+ "hazards_only_open_atlantic": {
+  "runId": "tafUaZaA95vcoGob7",
+  "build": "1.1.1",
+  "status": "success",
+  "matched": 0,
+  "billable": true,
+  "charged": {
+   "apify-actor-start": 1,
+   "navigation-area-check": 0
+  },
+  "usd": 0.00013410768589708542,
+  "schema": "1.1",
+  "sz": null,
+  "partial": [],
+  "note": null,
+  "mem": 256,
+  "timeout": 120
+ }
+}
