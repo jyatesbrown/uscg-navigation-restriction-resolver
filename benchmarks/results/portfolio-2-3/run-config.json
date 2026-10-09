@@ -1,0 +1,73 @@
+{
+  "campaignStartedAt": "2026-10-08T20:54:25Z",
+  "agentModel": "claude-sonnet-5-5",
+  "provider": "anthropic",
+  "mcpServer": "https://mcp.apify.com/ (apify-mcp-server; version recorded per episode)",
+  "harness": "benchmarks/portfolio-2-3/agent_harness.py (adapted from official-travel-advisory-comparator benchmarks/agent_harness.py @ bcd2f0e)",
+  "harnessBaseCommit": "c20254f6c49a50b80262be6c3945a3c1202feabd",
+  "promptSets": {
+    "actor2": {
+      "file": "benchmarks/portfolio-2-3/actor2_prompts.json",
+      "sourceRepo": "jyatesbrown/federal-rule-lifecycle-resolver",
+      "commit": "1914a0c3e03e8c48142bd2afb45af797a73862fe",
+      "relevant": 22,
+      "controls": 17
+    },
+    "actor3": {
+      "file": "benchmarks/portfolio-2-3/actor3_prompts.json",
+      "sourceRepo": "jyatesbrown/uscg-navigation-restriction-resolver",
+      "commit": "227c019924061cf63fa09d3b9da2eb93f30e8195",
+      "relevant": 20,
+      "controls": 17
+    }
+  },
+  "actors": {
+    "actor2": {
+      "name": "rhincodontypus/federal-rule-lifecycle-resolver",
+      "id": "k5WrcveaXwWLmTnl2",
+      "build": "1.0.2",
+      "buildId": "MIXJ8LYJhnSjXxcfN",
+      "pricing": {
+        "apify-actor-start": 5e-05,
+        "rule-resolution": 0.05
+      }
+    },
+    "actor3": {
+      "name": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "id": "OCbjQ4jQhPeTh9VnF",
+      "build": "1.0.1",
+      "buildId": "gNLnpGLQfcSCyznem",
+      "pricing": {
+        "apify-actor-start": 5e-05,
+        "navigation-area-check": 0.05
+      }
+    }
+  },
+  "arms": {
+    "default": {
+      "tools": "all hosted MCP default tools except report-problem/abort-actor-run; web-fetch and rag-web-browser executed",
+      "system": "brief's neutral instruction (You are an autonomous assistant...)"
+    },
+    "directed": {
+      "tools": "default minus apify--web-fetch and apify--rag-web-browser",
+      "system": "Actor #1 established DIRECTED_PROMPT"
+    }
+  },
+  "limits": {
+    "maxTurns": 14,
+    "maxTokensPerTurn": 4096,
+    "toolResultCharsToModel": 60000,
+    "freshContextPerPrompt": true
+  },
+  "interception": "Calls to any Actor other than the two portfolio Actors and Apify's generic web-fetch/rag-web-browser are recorded and not executed; the episode ends there.",
+  "judging": {
+    "routineJudgeModel": "claude-sonnet-5-5",
+    "routineJudgmentsFile": "judgments-claude-sonnet-5-5.json",
+    "archivedJudgeModel": "claude-opus-5-5",
+    "archivedJudgmentsFile": "judgments-claude-opus-5-5.json (superseded on user instruction; not used for metrics)",
+    "disputeJudgeModel": "claude-opus-5-5 (only where Sonnet grading and manual review genuinely disagree)",
+    "manualReview": "every failed or ambiguous Sonnet judgment plus a seeded random 10% of passing judgments; see manual-review.json",
+    "rubric": "unchanged (analyze_portfolio.py prompts)"
+  },
+  "futureAgentModel": "claude-haiku-5-5 (applies to benchmark runs after this campaign)"
+}
