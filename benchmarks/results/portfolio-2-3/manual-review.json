@@ -1,0 +1,827 @@
+{
+ "judgeModel": "claude-sonnet-5-5",
+ "seed": 20261008,
+ "counts": {
+  "failed": 12,
+  "ambiguous": 14,
+  "pass": 35,
+  "passSample": 4
+ },
+ "items": {
+  "bypass|default|r01": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "materially_inferior",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent ran a web search and fetched the reginfo.gov Unified Agenda page, which only listed agenda editions. It then gave a plausible timeline (proposed, comment extension, supplemental proposal, final rule, August 2024 correction) with no verification against Federal Register or Regulations.gov records. It called the rule 'completed' without checking later actions such as reconsideration or compliance-date changes, and gave no effective dates. The caveats are honest, but the current-status question is not answered reliably.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u05": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "materially_inferior",
+    "factualErrors": true,
+    "safetyLanguage": false,
+    "notes": "The agent searched the Federal Register and the web and found only the Glen Island Bridge zone. It missed the second New Rochelle COTP restriction and the active Larchmont Harbor safety zone, both in the reference record. It also said the tentative full-channel closure ran Oct 2 to Oct 29, 2026, but the rule's windows are for 2025–2026 (Oct 2, 2025 to Apr 29, 2026), so the 'would cover today' claim is wrong. It did caveat that it could not check the live Local Notice to Mariners and could not confirm enforcement.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u09": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "generic_web_browsing",
+    "substitute": "failed",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent ran a generic web search and only reached the NAVCEN SOLAR chart page, which is a static description with no launch hazard data. It never checked the route against any geometry or notice, and the final answer is empty, so the user's question went unanswered.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u11": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "generic_web_browsing",
+    "substitute": "failed",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent used a web-browsing actor, an NGA NAVAREA IV API fetch, and third-party SeaLagom pages instead of the NAVCEN GeoJSON layers. The only launch warning it retrieved (NAVAREA IV 951/26) was archived and expired. No final answer was given and no geometric intersection of the route with any area was done, so the user got nothing usable.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u12": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "generic_web_browsing",
+    "substitute": "materially_inferior",
+    "factualErrors": true,
+    "safetyLanguage": false,
+    "notes": "The agent used generic web search and secondary sources (Waterway Guide, Instagram) and never reached the NAVCEN GeoJSON layers. It reported a Grace Industries crane notice that is not in the reference and missed both official active notices (the IPCP Montgomery St–E 14th St reconstruction and the Phoenix Marine diver operations at E. 34th St). Its claim of 'one active notice' in the box is therefore wrong, though it did disclose that coverage was incomplete.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u15": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "materially_inferior",
+    "factualErrors": true,
+    "safetyLanguage": false,
+    "notes": "The agent fetched NAVCEN and NGA pages but never reached the geospatial MSI layers. It missed the reference's 17 matches, including active Little Egg Inlet shoaling about 0.34 nm away and nearby dredging. It also misplaced the position as off Atlantic City near Absecon Inlet, when the reference puts it at Little Egg Inlet, and it said it found no active warning. It did caveat that the result was not an all-clear.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u18": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "materially_inferior",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "Homeport and the NAVCEN search pages failed or returned no listings, so the agent fell back on Federal Register rule text. It missed every active notice the reference found within 5 nm of the point: the Houston Ship Channel dredging notices, the Morgans Point/USI Canal MSIB, and the temporary aid discontinuations. It was honest about its gaps, said nothing was verified as current, and made no safe or clear claims.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u19": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "failed",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched NAVCEN pages directly but never reached the geospatial MSI layers. It returned only national MSIBs, which are not area-specific, and pointers to other sources. The reference record shows 53 intersecting notices (safety zones, hazards, construction, events), none of which the agent delivered. It did say plainly that it could not get area notices, and it made no safety claims.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|u20": {
+   "reason": "failed",
+   "judge": {
+    "behavior": "generic_web_browsing",
+    "substitute": "materially_inferior",
+    "factualErrors": true,
+    "safetyLanguage": false,
+    "notes": "The agent could not read NAVCEN's geospatial layers and relied on a SeaLagom mirror (page 1 of 2) plus manual reasoning. It stated that no current USCG notice sits on the track, but the reference record shows an active TESS advisory (ECHO Program voluntary tug route alteration, Strait of Juan de Fuca) that intersects the route. The agent did caveat that its check was partial, but the headline answer was wrong and missed that notice.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "interp|default|u06": {
+   "reason": "failed",
+   "judge": {
+    "correct": false,
+    "failureClass": "agent_reasoning_error",
+    "errors": [
+     "definitive 'no zone covers' despite incomplete coverage",
+     "overrides record's active validity with own inference that the enforcement period passed",
+     "unsupported claims beyond the record (33 CFR 165 permanent zones, Sector Long Island Sound)"
+    ],
+    "safetyLanguage": true,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The record lists one active safety-zone notice at 0.227 nm, withinSearchArea true and intersectsQueryGeometry false, with safeZoneLine_1 unpublished. The answer opens with a flat 'No USCG safety zone currently covers' this point, which is an absence claim the partial coverage cannot support. It also dismisses the record's 'active' status (window to 2027-03-13) as only a posting window, based on its own reading of the notice text.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Unqualified headline \"No USCG safety zone currently covers\" despite partial coverage; overrides record validity."
+   }
+  },
+  "interp|directed|u07": {
+   "reason": "failed",
+   "judge": {
+    "correct": false,
+    "failureClass": "agent_reasoning_error",
+    "errors": [
+     "misstated coverage: claims line features for all other categories were not checked"
+    ],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The counts, validity states, distances, categories and the safeZoneLine_1 gap are all reported correctly, and zero-match layers are not turned into an absence of hazards. However, the answer says line features were not checked for any other category. The record shows hazNavLine_1, marConLine_1, marEventLine_1, navalActLine_1 and msibLine_1 all succeeded, so only safeZoneLine_1 was unpublished.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Generalises the missing line layer to every category; record shows the other line datasets succeeded."
+   }
+  },
+  "interp|directed|u19": {
+   "reason": "failed",
+   "judge": {
+    "correct": false,
+    "failureClass": "agent_reasoning_error",
+    "errors": [
+     "Reports 53 notices and 52 active, but the record shows 9 matched (8 active, 1 unknown)",
+     "Invents unpublished safeZoneLine_1 gap; record shows no unpublished datasets and completeCoverage true",
+     "Includes safety zones, hazards to navigation and marine construction categories not in the record (only marine_event and temporary_change were requested)",
+     "Claims 'Naval activity, space operations, TESS, MSIB returned no matches' though these categories were never checked",
+     "Describes the output as truncated and offers to re-run, which is not in the record",
+     "Says some notices lie outside the box, contradicting withinSearchArea true for all notices"
+    ],
+    "safetyLanguage": false,
+    "partialHandling": null,
+    "notes": "The record is status success with 9 matches (8 marine events, 1 temporary change) and complete coverage for the requested layers. The answer fabricates counts, categories, an unpublished dataset and a truncation, and misstates which categories were checked.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree_pairing",
+    "notes": "Judge was given the second (category-filtered) record; the answer describes the first broad bbox run ZNNazBlaFfx8UOzV8. Re-graded by Sonnet against run 1 (judgment key interp|directed|u19#run1): still incorrect (fireworks temporal state wrong), agent_reasoning_error. Agree with that re-grade.",
+    "final": {
+     "correct": false,
+     "failureClass": "agent_reasoning_error",
+     "errors": [
+      "fireworks temporal state wrong",
+      "claims notices lie outside the box although all are marked withinSearchArea",
+      "only 15 of 30 marine construction notices listed"
+     ],
+     "notes": "The answer correctly flags the unpublished safeZoneLine_1 layer, uses the matches, and avoids safety claims. It says the 2026-10-11 fireworks 'may already be over', but the record was checked on 2026-10-08, so that event is still ahead. It also says some notices lie outside the box, though every record is marked withinSearchArea, and it lists only half of the marine construction notices that the record contains."
+    }
+   }
+  },
+  "bypass|default|r02": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent read the reginfo.gov Unified Agenda entry directly and reported the rule as not finalized, with proposal details and an October 2026 target. It never checked the Federal Register or Regulations.gov for a published final rule, and its one search for a final rule returned only the energy.gov homepage. The 'not finalized' answer therefore rests on a projected agenda date, and it cites a pubId=202510 page while calling it the '2026 edition'. It hedged appropriately and sent the user to the Federal Register for verification, but it gave no lifecycle record, docket relationships or confirmed effective date.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r03": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API's docket filter directly and got a plausible five-document list, then added later related actions from a keyword search, flagging the 2026 rule as unread and litigation as unchecked. It did not query Regulations.gov, and it gave no RIN linkage, comment deadlines, effective dates or confidence, so it lacks the structured lifecycle record. Nothing in the visible trace contradicts the answer, though part of the fetched output is truncated, so some of the later items are unverified.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r04": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API directly and found the withdrawal (2026-20523). It took the NPRM number and the Aug 1, 2025 deadline from search snippets, because the regulations.gov page loaded empty. The API returned only the withdrawal and not the NPRM, so its claim that there was no extension or other document is not well verified. The agent also gave no confidence level, and the '11:59 p.m. ET' detail doesn't appear in the visible trace.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r06": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched the Federal Register API record for 2022-24675 directly and correctly reported the Feb 13, 2023 deadline. It also correctly separated the Jan 5, 2023 comments_close_on field, which is the OMB PRA date. It did not search for later extension or reopening notices, and its Regulations.gov comment-period claim (ending Feb 14) has no matching fetch in the trace. So the 'no extension' finding is less certain and lacks the provenance a lifecycle record would give.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r07": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API directly, found the 2025-12314 proposal and the 2026-20523 withdrawal under the same RIN, and correctly concluded it was never finalized. It lacked structured provenance, confidence and limitations, and did not read the withdrawal text. Details such as the comment deadline and the CFR parts list appear to come from the fetched record, but the RIN search was a keyword search and not a docket/regulations.gov reconciliation.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r08": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched the Federal Register API for the proposal and ran a search that surfaced the final rule withdrawing Appendix B, so the 'finalized' answer is well supported. It did not read the full final rule or check effective date, comment deadlines, RIN/docket linkage or later corrections. The answer was based on a search match and abstract, which is less structured and has less provenance than the lifecycle record, though it was candid about those gaps.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r10": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API and fetched the official FR notice, correctly spotting that RIN 1903-AA23 is a DOE rule rather than OSHA, and gave a delay chain ending in a Dec 24, 2026 effective date. It lacks the structured provenance, confidence, and limitations a lifecycle record provides, and it did not check Regulations.gov or note that litigation status is not covered. No reference record was available, so the answer could not be checked against one, but nothing in it appears contradicted by the fetched pages.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r11": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched EPA's official actions page and gave a reasonable status summary (2024 rule, Nov 2025 interim final rule, April 2026 narrow reconsideration). It did not check the Federal Register or Regulations.gov, so it gives no RIN/docket linkage, no exact effective or extended dates, and no FR citations. It disclosed these gaps. No reference record was available, so no factual errors could be identified.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r12": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "generic_web_browsing",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent used a generic RAG web browser and got EPA's own pages, which gave a reasonable summary of the rule's status. It did not query the Federal Register or Regulations.gov for a structured lifecycle record. It gave no FR document numbers, RINs, comment deadlines, or exact effective dates, and it did not open the regulatory timeline PDF, so provenance and certainty are weaker. No reference record was available, and I found no clear factual errors.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r13": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "generic_web_browsing",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent ran a generic web search and relied on secondary sources (a hospital association, a consulting briefing, LinkedIn) to say the FY2027 IPPS rule is final, released July 31, 2026. That answers the immediate question and the agent disclosed the limitation. It did not check the Federal Register or CMS, so it has no FR document number, publication date, effective-date confirmation, or provenance. No reference record was available, and nothing in the fetched snippets contradicts the answer.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r15": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API by docket and by RIN, then reconciled the two result sets, and gave a usable list of related documents (the docket search returned 5 documents, the RIN search 4). It did not use the Regulations.gov API and gave no structured lifecycle data (comment deadlines, effective dates, withdrawal status). Its labels for the supplemental proposal and final rule were inferred rather than read from the documents, which it disclosed. No reference record was available, so accuracy could not be checked against one.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "For \"what other documents are part of the same rulemaking\", the FR API docket list (5 documents, verified) is the complete answer; equivalent.",
+    "final": {
+     "substitute": "equivalent"
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "bypass|default|r16": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched the Federal Register API JSON for 2021-24202 and gave the correct extension (Jan 14 to Feb 1, 2022, a real EPA extension). It did not retrieve the extension notice itself, relied partly on memory and linked docket data, and did not give the extension notice's document number, so provenance is weaker than a structured lifecycle record. The answer is usable but not fully verified.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Verified against the FR API: extension notice 2021-27312 sets comments_close_on 2022-01-31. Agent said February 1 (from docket data and memory) and never found the notice. Factual error; Sonnet wrongly called it correct.",
+    "final": {
+     "substitute": "materially_inferior",
+     "factualErrors": true
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "bypass|default|r20": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched the Federal Register page and API records directly, plus web searches. It correctly separated the effective date from the delayed compliance deadlines and traced the Jul 2025 interim final rule and the Dec 2025 final rule. It leaned on industry summaries for the 2026 rule and the January 2027 date, did not give the comment-deadline extension dates or confirm the May 7, 2024 effective date from fetched text, and did not build a structured lifecycle record with provenance and confidence. It disclosed these gaps, so the answer is usable but less rigorous.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Sonnet grade supported by the trace notes and spot checks; no change."
+   }
+  },
+  "bypass|default|r21": {
+   "reason": "ambiguous",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "inferior_but_usable",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent's search surfaced the Federal Register withdrawal notice 2026-20523, and its core answer matches the reference record: withdrawn, published 2026-10-07, proposal of 2025-07-02, docket WHD-2025-0002. It gives no structured lifecycle record, comment deadlines or provenance/confidence. Some details (91 FR 64129, Oct 6 effective date, comment counts, signer) could not be checked against the truncated trace output or the reference.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Simple withdrawal yes/no answered correctly with the official FR withdrawal notice; equivalent.",
+    "final": {
+     "substitute": "equivalent"
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "bypass|default|r14": {
+   "reason": "pass_sample",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "equivalent",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API directly by RIN and listed all 3 documents (proposed rule, final rule, correction) with citations and URLs. It disclosed that the correction_of link fields were empty and that documents without the RIN tag would be missed. For a simple 'list all documents' request this matches the specialised tool; it lacks the lifecycle extras (deadlines, effective dates), but the user did not ask for them.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "FR API by RIN shows exactly 3 documents including correction 2026-20134; equivalent."
+   }
+  },
+  "interp|default|u14": {
+   "reason": "pass_sample",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": null,
+    "notes": "The answer matches the record: status success, 0 matches, all four marine_construction datasets checked, 2 nm corridor, route length about 10.8 nm. It does not treat zero matches as proof of no hazards and lists the notCovered items. The District 8 mention and the Actor name are not in the record, but they do not change the interpretation.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Complete zero-match handled correctly; explicitly not proof route is clear."
+   }
+  },
+  "interp|directed|r21": {
+   "reason": "pass_sample",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "enforceabilityOverclaim": false,
+    "notes": "The answer matches the record: currentStage is withdrawn, the withdrawal was published 2026-10-07 (FR Doc. 2026-20523), the proposal was published 2025-07-02, comments closed 2025-08-01 with no extension, and there is no final rule. It states the match was by RIN with high confidence, notes the record's scope limits, and makes no enforceability claim.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Matches record: withdrawn 2026-10-07, no final rule, scope limits stated."
+   }
+  },
+  "interp|directed|u13": {
+   "reason": "pass_sample",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": null,
+    "notes": "The answer matches the record. Both notices are active, the distances are 0.157 nm and 0.968 nm, and the point is outside the polygon. All four datasets succeeded with complete coverage. The answer lists the not-covered items, does not claim the area is safe or clear, and describes the work consistently with the official text.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Complete positive result reported accurately."
+   }
+  },
+  "interp|default|u01": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer reports all 16 active notices with correct categories, distances, route relationships and validity windows. It also says that safeZoneLine_1 was unpublished (404) and that other line-drawn safety zones may exist. Minor flaws: it lists the 8 Oct swim as 'remaining' although it had already finished by the check time, and it adds a mild 'stay in the main channel' remark that the record doesn't support. Neither amounts to safe or clear language.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Safety-zone gap framed correctly (line-drawn zones may exist). Stale swim start and main-channel remark are minor."
+   }
+  },
+  "interp|directed|u05": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer reports all three matches with correct distances, windows and categories, and flags the unpublished safeZoneLine_1 layer as a coverage gap. It labels the Larchmont fireworks zone 'expired in practice' even though the record's validity is active, but it states this openly and the notice text (enforced only July 3, 2026) supports it. It also lists the 22–26 June 2026 closure as 'scheduled' although that date had already passed, which is a minor imprecision.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "\"Expired in practice\" is drawn from the official text and the record's active state is disclosed; minor date tense slip."
+   }
+  },
+  "interp|directed|u06": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer matches the record on distance (0.227 nm, inside the search area but not intersecting), active validity, effective window, provenance and the safeZoneLine_1 404 gap. Its 600-ft versus 0.23 nm comparison is labeled as its own estimate, and it does not call the area safe or clear.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Absence statement is qualified in the same sentence by the incomplete-coverage statement."
+   }
+  },
+  "bypass|default|r05": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "equivalent",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent queried the Federal Register API directly by RIN and got a single proposed rule with a comments_close_on of 2026-11-12 and a publication date of 2026-09-28. It judged 'still open' from the run date of 2026-10-08 and warned that the deadline could be extended. The answer fully covers the simple question. It lacks Regulations.gov docket cross-checking and an explicit extension check, but the single-document result makes this low risk.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "FR comments_close_on 2026-11-12 matches; extension risk disclosed. Equivalent."
+   }
+  },
+  "bypass|default|r09": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "behavior": "direct_official_source_lookup",
+    "substitute": "equivalent",
+    "factualErrors": false,
+    "safetyLanguage": false,
+    "notes": "The agent fetched the Federal Register API JSON for 2024-00366 and reported the effective date of May 7, 2024 for the EPA oil and gas climate review rule (89 FR 16820), which matches what I know of the rule. The question was a single-document lookup, so the direct fetch gives the same answer as the lifecycle tool. The agent did not check for later delays or litigation, but I know of no delay to this effective date.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "agree",
+    "notes": "Effective May 7, 2024 per DATES section; later 2024-13206 is a correction. Equivalent."
+   }
+  },
+  "interp|default|u02": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer matches the record: 25 notices, 14 active, 11 unknown-validity, a 2 nm corridor and a 30.5 nm route. It flags the Nimitz dredge date discrepancy (record start Oct 5, text Oct 14) and discloses the unpublished safeZoneLine_1 layer. Minor looseness: 'None is a full closure' is an inference the record does not state, and the safety-zone gap is worded as if all safety-zone files were unchecked, though safeZone_1 and safeZonePoly_1 were checked.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Answer says safety zones as a whole were not checked; the record shows safeZone_1 and safeZonePoly_1 succeeded and only safeZoneLine_1 was listed_but_not_published. Coverage state is misreported. Classed as actor_output_ambiguity because the record moves the whole safety_zone category into categoriesIncomplete.",
+    "final": {
+     "correct": false,
+     "failureClass": "actor_output_ambiguity",
+     "errors": [
+      "misreports safety_zone coverage scope"
+     ]
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "interp|default|u03": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer reports all five matched notices with the correct categories, validity states (upcoming, active, unknown), distances and route positions. It flags the unpublished safeZoneLine_1 dataset and says zero safety-zone matches mean nothing, and it makes no safe or clear claim. The remark about Hampton Roads security zones is outside context but does not contradict the record.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Answer says safety zones as a whole were not checked; the record shows safeZone_1 and safeZonePoly_1 succeeded and only safeZoneLine_1 was listed_but_not_published. Coverage state is misreported. Classed as actor_output_ambiguity because the record moves the whole safety_zone category into categoriesIncomplete.",
+    "final": {
+     "correct": false,
+     "failureClass": "actor_output_ambiguity",
+     "errors": [
+      "misreports safety_zone coverage scope"
+     ]
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "interp|default|u04": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer reports all 12 active notices (1 hazard, 3 construction, 8 marine events) with distances, route positions, coordinates and dates that match the record. It flags the unpublished safeZoneLine_1 dataset and the frostbiting record's Oct 8 versus Nov 8 start-date mismatch, and makes no safety claims. Its wording that safety zones 'were not checked' slightly overstates the gap, since safeZone_1 and safeZonePoly_1 were checked and returned zero matches.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Answer says safety zones as a whole were not checked; the record shows safeZone_1 and safeZonePoly_1 succeeded and only safeZoneLine_1 was listed_but_not_published. Coverage state is misreported. Classed as actor_output_ambiguity because the record moves the whole safety_zone category into categoriesIncomplete.",
+    "final": {
+     "correct": false,
+     "failureClass": "actor_output_ambiguity",
+     "errors": [
+      "misreports safety_zone coverage scope"
+     ]
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "interp|directed|u04": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer reports all 12 active notices with correct category counts, distances, locations, dates and the Bass River 2039 end date. It flags the Oct 17 \"Sunday\" and Nov 8 vs Oct 8 start discrepancies, correctly says safeZoneLine_1 was unpublished and safety zones were not checked, and makes no safety claims.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Answer says safety zones as a whole were not checked; the record shows safeZone_1 and safeZonePoly_1 succeeded and only safeZoneLine_1 was listed_but_not_published. Coverage state is misreported. Classed as actor_output_ambiguity because the record moves the whole safety_zone category into categoriesIncomplete.",
+    "final": {
+     "correct": false,
+     "failureClass": "actor_output_ambiguity",
+     "errors": [
+      "misreports safety_zone coverage scope"
+     ]
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  },
+  "interp|directed|u18": {
+   "reason": "sonnet_pass_divergent_from_archived_opus",
+   "judge": {
+    "correct": true,
+    "failureClass": null,
+    "errors": [],
+    "safetyLanguage": false,
+    "partialHandling": {
+     "usesMatches": true,
+     "statesMissingCoverage": true,
+     "rejectsWhole": false,
+     "assumesComplete": false
+    },
+    "notes": "The answer matches the record on counts (13 notices: 10 active, 3 unknown), distances, categories, dates and provenance. It flags the unpublished safeZoneLine_1 dataset and warns that a 'no safety zones' result would be unreliable. It overstates slightly by saying the whole safety-zone layer was unchecked, when safeZone_1 and safeZonePoly_1 were checked and matched nothing. That imprecision is minor and doesn't change the conclusion, and the answer makes no safety claims.",
+    "judgeModel": "claude-sonnet-5-5"
+   },
+   "review": {
+    "reviewer": "Devin (manual)",
+    "verdict": "disagree",
+    "notes": "Answer says safety zones as a whole were not checked; the record shows safeZone_1 and safeZonePoly_1 succeeded and only safeZoneLine_1 was listed_but_not_published. Coverage state is misreported. Classed as actor_output_ambiguity because the record moves the whole safety_zone category into categoriesIncomplete.",
+    "final": {
+     "correct": false,
+     "failureClass": "actor_output_ambiguity",
+     "errors": [
+      "misreports safety_zone coverage scope"
+     ]
+    },
+    "dispute": {
+     "model": "claude-opus-5-5",
+     "source": "archived same-rubric, same-input judgment (judgments-claude-opus-5-5.json); no new Opus call",
+     "opusAgreesWithReview": true
+    }
+   }
+  }
+ },
+ "opusDisputeCalls": {
+  "new": 0,
+  "note": "All disputes already had an archived Opus judgment with the identical rubric and input; reused instead of new calls."
+ }
+}

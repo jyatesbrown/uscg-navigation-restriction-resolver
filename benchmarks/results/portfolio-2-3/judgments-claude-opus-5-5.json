@@ -1,0 +1,595 @@
+{
+ "bypass|default|r01": {
+  "behavior": "generic_web_browsing",
+  "substitute": "materially_inferior",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent ran a web search and fetched one reginfo.gov Unified Agenda page, which yielded little; the detailed FR timeline appears to come from search snippets or model memory rather than verified Federal Register or Regulations.gov records. It calls the rulemaking 'completed' without checking post-2024 actions such as reconsideration or compliance-deadline extensions, which is what 'current status' requires, though it does disclose this limitation."
+ },
+ "bypass|default|r02": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent read the reginfo.gov Unified Agenda entry for the RIN and reported the proposed-rule details and the October 2026 final-action target, hedging appropriately. It never queried the Federal Register or Regulations.gov directly (its second search returned only the energy.gov homepage), so the claim that the rule is not finalized is unverified, which matters because the target month is the current month."
+ },
+ "bypass|default|r03": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API's docket filter directly and listed the five documents, then used an FR term search to find later reconsideration and deadline-extension actions in other dockets. It did not check Regulations.gov and gave no comment deadlines or original vs. current effective dates, and it openly says it did not verify what the 2026 reconsideration rule changes."
+ },
+ "bypass|default|r04": {
+  "behavior": "manual_multi_source_reconstruction",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent combined Google snippets from regulations.gov (NPRM FR number, Aug 1, 2025 deadline, CFR parts) with a Federal Register API query that returned only the Oct 7, 2026 withdrawal, then stitched the lifecycle together itself. That docket query omitted even the NPRM, so the confident statement that no extension or other documents exist is unverified, and the 11:59 p.m. ET detail is unsourced."
+ },
+ "bypass|default|r05": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "After a mostly unhelpful web search, the agent queried the Federal Register API by RIN and got a single proposed rule with comments closing 2026-11-12, which correctly answers the question as of the run date. It did not cross-check the Regulations.gov docket or confirm whether an extension or reopening exists beyond what the term search returned, though it flagged that limitation to the user."
+ },
+ "bypass|default|r06": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent fetched the Federal Register API record and correctly read the February 13, 2023 deadline from the Dates section, separating it from the PRA comments_close_on date. It did not search for later extension or reopening notices or related documents, which the question specifically asked about. It openly stated this limitation, so the 'no extension' conclusion lacks the lifecycle reconciliation the specialised tool provides."
+ },
+ "bypass|default|r07": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API for the document and ran a full-text search on its RIN, which surfaced the October 2026 withdrawal and correctly showed no final rule was issued. It did not cross-check the Regulations.gov docket or reconcile documents linked by RIN, so completeness depends on a term search, though it was candid that it had not read the withdrawal's text."
+ },
+ "bypass|default|r08": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API directly: it fetched the proposal JSON, then ran a keyword search that found the final withdrawal rule (2026-20517). It answered the core question but linked the two documents by topic rather than by RIN or docket, and it did not obtain the effective date or check Regulations.gov, though it disclosed these limitations."
+ },
+ "bypass|default|r09": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent fetched the Federal Register API record for 2024-00366 and correctly reported the effective date of May 7, 2024, with publication details for the EPA oil and gas rule. It did not check related later documents for delays or amendments, such as the 2025 compliance-deadline extensions, so it lacks the tool's lifecycle reconciliation of original versus current status."
+ },
+ "bypass|default|r10": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API and reginfo.gov directly and corrected the user's false premise: the RIN belongs to DOE, not OSHA. It traced the effective-date delays to Dec 24, 2026 and flagged the stale metadata field, but it did not check Regulations.gov and the full delay chain cannot be verified from the truncated trace, so it lacks the tool's structured provenance and confidence."
+ },
+ "bypass|default|r11": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent mainly relied on EPA's official actions page, plus a supporting web search, to give a dated status summary of the OOOOb/OOOOc changes, and it openly said it had not checked the Federal Register or dockets. It lacks the structured lifecycle record the tool would give: FR document numbers, RIN/docket links, comment deadlines, and original vs. current effective dates."
+ },
+ "bypass|default|r12": {
+  "behavior": "generic_web_browsing",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent ran a web search that surfaced EPA's own pages and gave a plausible, caveated timeline of the OOOOb/OOOOc actions, including the interim final rule, the April 2026 technical reconsideration and the pending broader reconsideration. It lacks a structured lifecycle record: no FR document numbers, RIN or docket linkage, comment deadlines or effective-date reconciliation, and no Regulations.gov or Federal Register API cross-check. No reference record was available to verify its details."
+ },
+ "bypass|default|r13": {
+  "behavior": "generic_web_browsing",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent used a general web search and relied on secondary sources (a hospital association, a policy briefing and LinkedIn) to confirm that the final rule was released July 31, 2026. It gave no Federal Register citation, document number, docket/RIN linkage or official effective-date provenance, though it disclosed this limitation. No reference record was available, and nothing it stated contradicts the fetched snippets."
+ },
+ "bypass|default|r14": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API directly by RIN and correctly listed the proposed rule, final rule and correction with citations. It openly caveated the empty correction-link fields and the risk of untagged corrections; for this narrow listing request that matches what the specialised tool would give."
+ },
+ "bypass|default|r15": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API directly by document, RIN and docket, reconciled the two result sets (the docket search also found the 2024 correction), and listed all five documents with citations while disclosing that it inferred the stage labels. For this narrow related-documents question, the answer matches what the specialised tool would give, though it lacks Regulations.gov cross-checking and a formal lifecycle structure."
+ },
+ "bypass|default|r16": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "materially_inferior",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent fetched the Federal Register API record but never retrieved the separate extension notice. It inferred the new deadline (Feb 1, 2022) from regulations.gov docket metadata and its own recollection, so the extended date is unverified and may differ from the date stated in the official extension notice, though it caveated this honestly."
+ },
+ "bypass|default|r17": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API directly by document number, RIN and docket ID, rebuilt the full chain of six delays to Dec 24, 2026, and flagged the anomalous effective_on value against the notice text. It did not check Regulations.gov or note limitations such as litigation status, but it answered the immediate question with good provenance."
+ },
+ "bypass|default|r18": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API by RIN, sorted newest first, and correctly identified the October 7, 2026 withdrawal (2026-20523) of the July 2, 2025 NPRM. It also noted that only two documents exist under the RIN, which fully answers this narrow 'most recent action' question without needing docket or deadline reconciliation."
+ },
+ "bypass|default|r19": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API directly by docket_id and by full-text term. It correctly identified the Aug 1, 2024 interim final correction (2024-13206) as the latest document filed under the docket, and it separated that from later related rules filed under other dockets that only cite this docket. It did not cross-check Regulations.gov, but nothing in its answer conflicts with the fetched official data."
+ },
+ "bypass|default|r20": {
+  "behavior": "manual_multi_source_reconstruction",
+  "substitute": "inferior_but_usable",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent pieced the lifecycle together from the FR page, FR API searches and lookups (July 2025 IFR, Dec 2025 final rule) and third-party summaries, and correctly separated the unchanged effective date from the extended compliance deadlines. It leaned on an industry summary for the April 2026 reconsideration and the state-plan date, and it did not link the Regulations.gov docket. It flagged those gaps, so the answer is usable but less certain and less structured than the tool's record."
+ },
+ "bypass|default|r21": {
+  "behavior": "generic_web_browsing",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "A web search surfaced the official Federal Register withdrawal notice 2026-20523, and the answer matches the reference on every key fact: withdrawn on 2026-10-07, proposal published 2025-07-02, docket WHD-2025-0002. For this simple yes/no question it matches the tool's quality, though it lacks the tool's structured provenance and Regulations.gov cross-check, and some details (an effective date of Oct 6, the comment counts) cannot be checked against the reference."
+ },
+ "bypass|default|r22": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "equivalent",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent queried the Federal Register API directly and correctly reported the RIN (0938-AV77) and docket ID (CMS-1847-F) exactly as the official record lists them. This simple identifier lookup needs none of the lifecycle reconciliation the specialised tool adds. Note that CMS-1847-F is the FR-listed docket designation; the Regulations.gov docket may be formatted differently, but nothing fetched contradicts the answer."
+ },
+ "interp|directed|r21": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "enforceabilityOverclaim": false,
+  "notes": "The answer matches the record: the stage is withdrawn via FR Doc. 2026-20523 on 2026-10-07; the proposal was published 2025-07-02 with an unextended comment deadline of 2025-08-01; no final rule appears; the docket is WHD-2025-0002; and it was a high-confidence RIN match. It correctly notes the record's scope limits and makes no claim about legal enforceability."
+ },
+ "interp|directed|u01": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer accounts for all 16 active notices and gets the category split right (1 safety zone, 1 hazard, 9 construction, 5 events). It also correctly separates intersecting from nearby notices and reports distances and route positions that match the record. It flags that the safeZoneLine_1 dataset was listed but not published, so coverage is incomplete, and it avoids clearance or safety claims."
+ },
+ "interp|directed|u02": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports all 14 corridor matches with the correct categories, distances, route positions, active windows and caveats, uses no safe or clear language, and flags the unchecked safety-zone data and other uncovered sources. One minor imprecision: it says the whole safety-zone layer was unpublished, when only safeZoneLine_1 was missing and safeZone_1 and safeZonePoly_1 were checked with zero matches."
+ },
+ "interp|directed|u03": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly reports both intersecting notices: the upcoming dredging notice at the route's end point (effective Oct 9, with work starting about Oct 21) and the active, administrative District 5 marine-event notice. It flags the unpublished safeZoneLine_1 layer and other coverage gaps, and does not treat zero matches as an absence of hazards. Its remark that neither notice should restrict the transit refers to these specific notices, not a claim that the route is clear."
+ },
+ "interp|directed|u04": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "overstates missing coverage: claims the whole safety_zone category was unchecked, but only safeZoneLine_1 was unpublished; safeZone_1 and safeZonePoly_1 were checked successfully"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The 12 active notices, their categories, distances, coordinates and dates are reported accurately, and the partial status is acknowledged. However, the answer wrongly says safety zones were not checked at all, when two of the three safety-zone datasets (point and polygon) were checked and only the line dataset was missing."
+ },
+ "interp|directed|u05": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "overrides active validity to expired",
+   "headline count contradicts activeCount=3",
+   "past closure dates presented as scheduled"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The record marks all three safety zones active (activeCount 3), but the answer relabels the Larchmont zone 'expired in practice' and says only two are in effect, overriding the resolver's validity window that runs to 2026-12-22. It also calls the 22–26 June 2026 closures 'scheduled' although that date had passed by the 2026-10-08 check; the distances, provenance and unpublished safeZoneLine_1 coverage gap are reported correctly."
+ },
+ "interp|directed|u06": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "unqualified absence claim despite partial coverage",
+   "overstates certainty that point is outside all safety zones"
+  ],
+  "safetyLanguage": true,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports the Shaw Cove notice accurately: active per the record, 0.227 nm away, within the 5 nm search area and not intersecting the point. It also notes the unpublished safeZoneLine_1 dataset. However, it opens by flatly stating that no active USCG safety zone covers the coordinate, which turns non-intersection in the checked layers into an absence claim even though line-type safety zones were not checked."
+ },
+ "interp|directed|u07": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "overstates missing coverage: claims line datasets for all categories were unchecked"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The notices, distances, dates and active/upcoming states are reported correctly, and the answer correctly flags safeZoneLine_1 as listed but not published. However, it wrongly says line features for every other category were not checked; hazNavLine_1, marConLine_1, marEventLine_1, navalActLine_1 and msibLine_1 all loaded successfully."
+ },
+ "interp|directed|u08": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "All four active notices are reported with the correct categories, distances (0, 0.54, 1.46 and 1.61 nm), effective windows, official text summaries and NAVCEN provenance. The answer correctly flags the unpublished safeZoneLine_1 safety-zone layer as a coverage gap and makes no claim that the area is safe or clear."
+ },
+ "interp|directed|u10": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports both active space-operation notices: within the search area but not containing the point, at about 2.34 nm and 24.7 nm, with accurate windows, types and official provenance. It also correctly states the scope limits (no BNM, NAVAREA or geometry-less records) without claiming the area is safe."
+ },
+ "interp|directed|u12": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports both active marine construction notices (MSI 913 and 26111) that intersect the query box, with accurate dates, work details, equipment, VHF channels and guidance from official USCG NAVCEN data. It accurately states the not-covered sources and makes no claim that the area is safe or clear."
+ },
+ "interp|directed|u13": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports both active marine construction notices with accurate distances (0.157 and 0.968 nm), dates, and the point being outside the polygon. It also correctly states that all four datasets succeeded, preserves official provenance, and notes the coverage limits without any safety or clearance language."
+ },
+ "interp|directed|u14": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports zero matches within the 2 nm corridor of the 10.82 nm route, all four marine construction datasets checked, publication dates of Oct 7–8, and the not-covered sources. It explicitly avoids treating zero matches as an absence of hazards."
+ },
+ "interp|directed|u15": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly lists all 17 matched notices with accurate categories, distances and validity states, and it flags the MSI 24653 date discrepancy. It discloses the unpublished safeZoneLine_1 layer and avoids implying absence of hazards, though 'Safety zones weren't checked' slightly overstates the gap, since safeZone_1 and safeZonePoly_1 were checked successfully."
+ },
+ "interp|directed|u16": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly reports both active hazard-to-navigation shoaling notices with accurate distances (0.15 nm and 2.7 nm), correctly flags the date conflict in MSI #62, and correctly describes the dredging and marine event notices. It also notes the unpublished safeZoneLine_1 dataset and the out-of-scope sources, and uses no safe/clear language."
+ },
+ "interp|directed|u17": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports both upcoming Sector New Orleans obstruction notices inside the box, with accurate positions, effective window and official advice. It also correctly describes complete coverage of all three hazard datasets and the listed exclusions, without implying the area is hazard-free."
+ },
+ "interp|directed|u18": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "overstates missing coverage: whole safety_zone category described as unpublished/unchecked, but only safeZoneLine_1 was unpublished"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports all 13 matches accurately, including distances, validity states and dates. It wrongly says the safety-zone layer was not published and safety zones were not checked; safeZone_1 and safeZonePoly_1 were checked successfully with zero matches, and only the safeZoneLine_1 dataset was listed but not published."
+ },
+ "interp|directed|u19": {
+  "correct": false,
+  "failureClass": "store_positioning_problem",
+  "errors": [
+   "notice count mismatch (53 vs 9)",
+   "fabricated categories not in record (safety zones, hazards, marine construction)",
+   "false claim of unpublished safeZoneLine_1 dataset",
+   "false claim of incomplete coverage when status is success and completeForRequestedLayers is true",
+   "claims 52 active vs record's 8",
+   "claims checks of unrequested categories (naval, space, TESS, MSIB)"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The marine-event and temporary-change sections match the record's 9 notices, but most of the answer describes a broader, partial result that does not exist in this record (success, 2 categories, 8 active plus 1 unknown). This suggests the answer was paired with a different stored record."
+ },
+ "interp|directed|u20": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly reports the single active TESS advisory: the route crosses its polygon at about 40% of the way along, and the dates, bounds and official text match the record. It also states that the unpublished safeZoneLine_1 layer and the other listed sources were not covered, and it does not claim the route is clear."
+ },
+ "interp|default|u01": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "stale_swim_start_listed_as_remaining",
+   "fabricated_coverage_gap_rna_security_zones",
+   "unsupported_navigation_inference_main_channel"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "Distances, categories, active states and the unpublished safeZoneLine_1 gap are reported correctly. However, the answer lists the 8 Oct 6:14 am swim as remaining, although it ended at 2:44 pm, before the 21:27 UTC check (about 5:27 pm EDT). It also invents a 'not checked: RNA/security zones' limitation that the record does not state, and adds an unsupported claim that staying in the main channel avoids the safety zone."
+ },
+ "interp|default|u02": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "overstates safety_zone coverage gap",
+   "'most are dredging/construction' inaccurate (10 of 25)"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer reports the 25 matched notices accurately, including their temporal states, the Nimitz date discrepancy and provenance. However, it says safety zones could not be checked at all, when only safeZoneLine_1 was unpublished; safeZone_1 and safeZonePoly_1 were checked and returned zero matches."
+ },
+ "interp|default|u03": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "misstates safety_zone coverage: says safety zones weren't checked, but safeZone_1 and safeZonePoly_1 were checked successfully; only safeZoneLine_1 is unpublished",
+   "adds unsourced claim about Hampton Roads security/moving zones"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The five notices, their temporal states (MSI 53466 upcoming and effective 9 Oct, intersecting at the destination), distances, route positions and the administrative nature of MSI 45232 are all handled correctly, without safe or clear language. However, the answer says the safety zone category wasn't checked at all and that zero matches 'means nothing'. In fact only the line dataset safeZoneLine_1 was unpublished, while the point and polygon safety zone files were checked."
+ },
+ "interp|default|u04": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "overstates_missing_coverage_scope"
+  ],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "All 12 notices, categories, distances, route positions, dates and coordinates are reported accurately, and the BYC frostbiting date discrepancy is correctly flagged. However, the answer says 'any safety zones near the route were not checked', while the record shows only the safeZoneLine_1 layer was unpublished; safeZone_1 and safeZonePoly_1 were checked successfully with zero matches, so the coverage gap is misdescribed."
+ },
+ "bypass|default|u05": {
+  "behavior": "manual_multi_source_reconstruction",
+  "substitute": "materially_inferior",
+  "factualErrors": true,
+  "safetyLanguage": false,
+  "notes": "The agent pieced together Federal Register API results, a web search and an FR rule page instead of the NAVCEN MSI layers, and correctly found the Glen Island bridge zone. It misstated the closure window as Oct 2–Oct 29, 2026 (the rule lists Oct 2, 2025–Apr 29, 2026), missed the Larchmont record and NAVCEN coverage gaps, and approximated the distance itself."
+ },
+ "interp|default|u06": {
+  "correct": false,
+  "failureClass": "agent_reasoning_error",
+  "errors": [
+   "definitive absence claim despite partial coverage",
+   "headline contradicts unchecked safeZoneLine_1 layer",
+   "overrides record's active validity with own inference"
+  ],
+  "safetyLanguage": true,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": true
+  },
+  "notes": "The answer reports the nearby 600-ft zone accurately: it is 0.227 nm away, does not intersect the point, and is approved in District 1. It also mentions the unpublished safeZoneLine_1 file. However, its headline 'No USCG safety zone currently covers' the point is a definitive clearance claim, even though the line-zone layer went unchecked, and it overrides the record's 'active' validity with its own reading of the enforcement time."
+ },
+ "interp|default|u07": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly reports all 8 active matches with accurate categories, distances, validity windows and official provenance, and it rightly frames the district-wide marine event notice as administrative. It flags the unpublished safeZoneLine_1 layer and the not-covered sources, and it limits zero-match categories to 'not found in the layers checked' without claiming the area is safe."
+ },
+ "interp|default|u08": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly reports all four active matches with accurate categories, distances (including that the point lies inside the 3943 zone), validity windows and official text, and flags the unpublished safeZoneLine_1 as incomplete coverage. The quoted run cost is not in the record but is incidental and does not affect the interpretation."
+ },
+ "bypass|default|u09": {
+  "behavior": "generic_web_browsing",
+  "substitute": "failed",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent ran a generic RAG web search that reached the NAVCEN SOLAR chart page and a third-party NAVAREA XII page, but it retrieved no hazard-area geometry and did no route intersection. It gave no final answer."
+ },
+ "interp|default|u10": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports the one active space-operation notice: 24.7 nm away, outside the polygon but inside the 25 nm radius, with official USCG provenance and the scheduled hazard windows from the official text. It also notes the uncovered sources without claiming any area is safe."
+ },
+ "bypass|default|u11": {
+  "behavior": "cannot_complete",
+  "substitute": "failed",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent browsed the NGA broadcast-warn API, which returned stale 2024 data, and a third-party SeaLagom NAVAREA IV page, where it found only an archived 1–7 Oct rocket-launch warning. It returned an empty final answer, with no route intersection analysis and no USCG NAVCEN layer coverage."
+ },
+ "bypass|default|u12": {
+  "behavior": "generic_web_browsing",
+  "substitute": "materially_inferior",
+  "factualErrors": true,
+  "safetyLanguage": false,
+  "notes": "Web search surfaced only a republished Grace Industries crane notice. The agent placed it 'inside your box', but its longitude (-73.983) lies west of the box edge (-73.98), and it missed both active official notices in the reference: IPCP esplanade work from Montgomery St to E 14th St, and Phoenix Marine diver operations at E 34th St. It did disclose that it could not load NAVCEN or the LNM and made no safe or clear claims."
+ },
+ "interp|default|u13": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports the two active marine construction notices with accurate distances, effective windows, activity details, Coast Guard provenance and complete coverage of all four checked layers, without claiming the point is inside either notice. It also states the check's limits and makes no safety or clearance claims."
+ },
+ "interp|default|u14": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer correctly reports zero marine construction matches within the 2 nm corridor of the 10.8 nm route, with all four datasets successful and complete coverage. It explicitly says zero matches is not proof the route is clear and lists the scope limits. The Light List omission and the Actor and District 8 references (not in the record) are minor and harmless."
+ },
+ "bypass|default|u15": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "failed",
+  "factualErrors": true,
+  "safetyLanguage": false,
+  "notes": "The agent fetched NAVCEN pages and the NGA NAVAREA IV API but got a 404, an unsubmitted search form and a 2024-dated feed, so it reported no hazards. The reference shows 17 nearby notices, including Little Egg Inlet shoaling 0.34 nm away and active NJICW dredging. It also misplaced the position as near the Absecon Inlet approaches off Atlantic City, when it is at Little Egg Inlet, but it explicitly warned against reading the result as all clear."
+ },
+ "interp|default|u16": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": {
+   "usesMatches": true,
+   "statesMissingCoverage": true,
+   "rejectsWhole": false,
+   "assumesComplete": false
+  },
+  "notes": "The answer correctly reports both active shoaling hazards (MSI 61 at 0.151 nm, MSI 62 at 2.746 nm south), flags the conflict between the record's end date and the dates in the notice text, and accurately describes the dredging and administrative marine-event notices. It notes that safeZoneLine_1 was not published and lists the other sources not covered, without implying the area is clear."
+ },
+ "interp|default|u17": {
+  "correct": true,
+  "failureClass": null,
+  "errors": [],
+  "safetyLanguage": false,
+  "partialHandling": null,
+  "notes": "The answer reports both matched hazard notices (55334, 55335) with correct positions, obstruction type, provenance and upcoming status (effective 2026-10-10), and correctly says all three layers were checked with complete coverage. The listed limits match the record's notCovered items, and it makes no safety or clearance claims."
+ },
+ "bypass|default|u18": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "materially_inferior",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent tried NAVCEN and Homeport pages, which failed or returned no listings, then relied mainly on the Federal Register API, so it surfaced a Beltway 8 safety zone about 7 miles away and older vessel-specific zones. It missed all 13 NAVCEN notices near the point, including the active Dredge NIMITZ operation 0.4 nm away, the VTS Morgans Point/USI Canal directive and the Menhaden MSIB, though it openly said live notices were not checked."
+ },
+ "bypass|default|u19": {
+  "behavior": "direct_official_source_lookup",
+  "substitute": "failed",
+  "factualErrors": false,
+  "safetyLanguage": false,
+  "notes": "The agent fetched NAVCEN pages directly (MSI landing page, BNM search form, national MSIBs, LNM index) but returned no area-specific notices; the reference found 53 intersecting notices (safety zones, hazards, construction, events). It correctly said it could not get them, offered only non-local national MSIBs and pointers, and made no safety claims."
+ },
+ "bypass|default|u20": {
+  "behavior": "generic_web_browsing",
+  "substitute": "materially_inferior",
+  "factualErrors": true,
+  "safetyLanguage": false,
+  "notes": "The NAVCEN pages returned 404 or no content, so the agent relied on a third-party mirror (SeaLagom) and read only page 1 of 2, with no geometric intersection. It said no current USCG notice sits on the track, but the reference shows an active TESS advisory (ECHO voluntary tug route alteration) intersecting the route in the Strait of Juan de Fuca."
+ }
+}

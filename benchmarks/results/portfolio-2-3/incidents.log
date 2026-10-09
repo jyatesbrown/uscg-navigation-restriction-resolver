@@ -1,0 +1,6 @@
+2026-10-08T20:56:38Z resumed after Anthropic credit exhaustion (both arms halted at default r02 / directed r12; no partial episodes written)
+2026-10-08T21:04:06Z directed arm: harness executed apify/rag-web-browser reached via call-actor in r20,c01,c02,c17 (first selection already recorded; Actor #1 methodology intercepts these). Harness fixed so generic web tools execute only in the default arm; directed restarted, remaining episodes intercept them. Recorded episodes kept unchanged.
+2026-10-08T21:33:19Z default arm halted again: Anthropic credit balance too low (no partial episode written)
+2026-10-09T12:09:58Z default arm resumed at u07 after second credit top-up
+2026-10-09T12:41:26Z user instruction: routine judge changed claude-opus-5-5 -> claude-sonnet-5-5 (same rubric); whole campaign rescored with Sonnet; Opus judgments archived as judgments-claude-opus-5-5.json and not used for metrics; manual review of all failed/ambiguous + seeded 10% of passes; Opus reserved for genuine Sonnet-vs-review disputes. Future agent model: claude-haiku-5-5.
+2026-10-09T12:46:30Z default arm complete (76/76); full analysis started with routine judge claude-sonnet-5-5
