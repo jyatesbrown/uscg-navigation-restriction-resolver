@@ -45,3 +45,21 @@ LABELS: dict[Category, str] = {
     "tess_advisory": "TESS Advisories",
     "msib": "Marine Safety Information Bulletins (geospatial)",
 }
+
+SINGULAR: dict[Category, str] = {
+    "safety_zone": "safety-zone",
+    "hazard_to_navigation": "hazard-to-navigation",
+    "marine_construction": "marine-construction",
+    "marine_event": "marine-event",
+    "naval_activity": "naval-activity",
+    "space_operation": "space-operation",
+    "temporary_change": "temporary-change",
+    "tess_advisory": "TESS-advisory",
+    "msib": "MSIB",
+}
+
+
+def geometry_kind(dataset: str) -> str:
+    """`safeZoneLine_1` -> line, `safeZonePoly_1` -> polygon, `safeZone_1` -> point."""
+    stem = dataset.rsplit("_", 1)[0]
+    return "line" if stem.endswith("Line") else "polygon" if stem.endswith("Poly") else "point"

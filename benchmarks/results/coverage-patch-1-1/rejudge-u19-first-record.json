@@ -1,0 +1,21 @@
+{
+ "correct": false,
+ "failureClass": "agent_reasoning_error",
+ "errors": [
+  "invented or double-counted third safety zone",
+  "COTP restriction folded into the Glen Island zone, so the three safety zones are mis-itemised",
+  "answer cuts off at the hazards heading, so the 'all' request is not met",
+  "claims 19 marine construction notices missing, but the record contains all 30"
+ ],
+ "safetyLanguage": false,
+ "partialHandling": {
+  "usesMatches": true,
+  "statesMissingCoverage": true,
+  "rejectsWhole": false,
+  "assumesComplete": false
+ },
+ "notes": "The record has three safety zones: two at Glen Island (Temporary Regulated Navigation Zone and COTP Restriction) and one on the Hudson River. The answer folds the COTP restriction into Glen Island, then lists a vague 'third' Hudson River zone that duplicates the one it already described. The answer correctly notes the unpublished safeZoneLine_1 dataset and makes no safety claims, but it ends right after the hazards heading with no content.",
+ "judgeModel": "claude-sonnet-5-5",
+ "recordRunId": "Waf60QOsivyFsblVR",
+ "note": "re-judged against the record the answer describes (first of two calls); default analyzer pairs with the last call"
+}

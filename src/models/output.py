@@ -8,8 +8,9 @@ from pydantic.alias_generators import to_camel
 from ..normalization.categories import Category
 from ..normalization.dates import Validity
 
-SCHEMA_VERSION = "1.0"
+SCHEMA_VERSION = "1.1"
 ResultStatus = Literal["success", "partial", "source_unavailable", "invalid_input"]
+CategoryStatus = Literal["complete", "partial", "unavailable"]
 DatasetState = Literal["success", "unavailable", "timeout", "invalid_format", "listed_but_not_published", "not_queried"]
 
 SCOPE_NOTE = (
@@ -96,19 +97,47 @@ class DatasetStatus(_Model):
     from_cache: bool = False
 
 
+class CategoryCoverage(_Model):
+    status: CategoryStatus = Field(
+        description="complete: every indexed dataset file for the category was checked. partial: at least one file "
+        "was checked and at least one was not. unavailable: no file in the category could be checked."
+    )
+    checked: list[str] = Field(default_factory=list, description="Dataset files retrieved and evaluated.")
+    unavailable: list[str] = Field(
+        default_factory=list, description="Dataset files that were unavailable, timed out or malformed."
+    )
+    listed_but_not_published: list[str] = Field(
+        default_factory=list,
+        description="Dataset files listed in NAVCEN's file index but not served (HTTP 404). Not checked, not empty.",
+    )
+
+
 class Coverage(_Model):
     official_sources_checked: list[str] = Field(default_factory=list)
     categories_requested: list[Category] = Field(default_factory=list)
     categories_checked: list[Category] = Field(
-        default_factory=list, description="Categories whose every listed dataset file loaded and validated."
+        default_factory=list,
+        description="Categories with at least one dataset file checked (fully or partially; see categories).",
+    )
+    categories_partially_checked: list[Category] = Field(
+        default_factory=list,
+        description="Checked categories where some dataset files could not be checked; see categories.",
+    )
+    categories_unavailable: list[Category] = Field(
+        default_factory=list, description="Categories where no dataset file could be checked."
     )
     categories_failed: list[Category] = Field(
-        default_factory=list, description="Categories with a dataset file that was unavailable, timed out or malformed."
+        default_factory=list,
+        description="Categories with at least one dataset file that was unavailable, timed out or malformed. "
+        "Other files in the category may still have been checked; see categories.",
     )
     categories_incomplete: list[Category] = Field(
         default_factory=list,
-        description="Categories with a dataset file listed in NAVCEN's file index but not published (HTTP 404). "
-        "Not checked and not treated as empty.",
+        description="Categories with at least one dataset file listed in NAVCEN's file index but not published "
+        "(HTTP 404). Other files in the category may still have been checked; see categories.",
+    )
+    categories: dict[Category, CategoryCoverage] = Field(
+        default_factory=dict, description="Per requested category: status and dataset files by outcome."
     )
     complete_for_requested_layers: bool
     coverage_note: str | None = Field(None, description="Present when coverage is incomplete.")

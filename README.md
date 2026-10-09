@@ -27,9 +27,13 @@ Point / route / bbox → official USCG NAVCEN Maritime Safety Information layers
   `invalid_format`, `listed_but_not_published`) and publication time. A failed layer makes the result
   `partial`; it never looks like zero notices.
 - **Listed but not published:** if NAVCEN's file index lists a file that NAVCEN does not serve (HTTP 404),
-  it is reported in `coverage.unpublishedDatasets` and its category in `categoriesIncomplete`. It is not
-  treated as checked or empty, so coverage is incomplete and `coverage.coverageNote` says records there were
-  not checked.
+  it is reported in `coverage.unpublishedDatasets`. It is not treated as checked or empty, so coverage is
+  incomplete and `coverage.coverageNote` says records there were not checked.
+- **Per-file category coverage:** `coverage.categories` gives each requested category a `status`
+  (`complete`, `partial`, `unavailable`) and lists its dataset files as `checked`, `unavailable` or
+  `listedButNotPublished`. A category with any file checked stays in `categoriesChecked`; if some of its files
+  were not checked it is also in `categoriesPartiallyChecked`. Example: today NAVCEN lists `safeZoneLine_1`
+  but does not serve it, so `safety_zone` is `partial` with `safeZone_1` and `safeZonePoly_1` checked.
 
 ## Input
 
@@ -62,7 +66,7 @@ Named places (e.g. "Port Canaveral") are not resolved in v1; pass coordinates.
 | Field | Meaning |
 |---|---|
 | `status` | `success` (all requested layers checked), `partial` (some layers failed), `source_unavailable`, `invalid_input`. |
-| `coverage` | `categoriesChecked`, `categoriesFailed`, `categoriesIncomplete`, `completeForRequestedLayers`, `coverageNote`, `sourceFailures`, `unpublishedDatasets`, per-file `datasets`, `notCovered`. |
+| `coverage` | `categories` (per-category status and files), `categoriesChecked`, `categoriesPartiallyChecked`, `categoriesUnavailable`, `categoriesFailed`, `categoriesIncomplete`, `completeForRequestedLayers`, `coverageNote`, `sourceFailures`, `unpublishedDatasets`, per-file `datasets`, `notCovered`. |
 | `summary` | `matchedNoticeCount`, `activeCount`, `upcomingCount`, `unknownValidityCount`, `expiredExcludedCount`, `categoriesMatched`, `byCategory`. |
 | `notices[]` | `category`, `title`, `validity`, `effectiveWindow`, official GeoJSON `geometry`, `relationshipToQuery` (`intersectsQueryGeometry`, `withinSearchArea`, `minimumDistanceNm`, `routePosition`), verbatim `officialText`, `source` (dataset URL, record dates). |
 | `scopeNote` | What a zero-match result does and does not mean. |

@@ -1,0 +1,1016 @@
+{
+ "arms": {
+  "default": {
+   "actor2": {
+    "metrics": {
+     "relevant": 0,
+     "discovery": {
+      "surfaced": 0,
+      "rate": null,
+      "top1": null,
+      "top3": null,
+      "top5": null,
+      "meanRank": null,
+      "medianRank": null,
+      "searchedAtAll": 0
+     },
+     "selection": {
+      "selected": 0,
+      "givenDiscovery": null,
+      "endToEnd": null
+     },
+     "invocation": {
+      "calls": 0,
+      "firstAttemptValid": null,
+      "eventualValid": null,
+      "perCallValid": null,
+      "executionSuccess": null
+     },
+     "interpretation": {
+      "graded": 0,
+      "correct": 0,
+      "accuracy": null,
+      "failureClasses": {},
+      "enforceabilityOverclaims": 0,
+      "safetyLanguage": 0
+     },
+     "abstention": {
+      "nonRelevantPrompts": 0,
+      "falseDiscovery": 0,
+      "falseSelection": 0,
+      "falseInvocation": 0,
+      "falseSelectionRate": null
+     },
+     "latency": {
+      "actorRunTimeSecs": null,
+      "toolRoundTripS": null,
+      "episodeS": null
+     },
+     "firstSelections": {},
+     "bypass": {
+      "bypassed": 0,
+      "bypassRate": null,
+      "behavior": {},
+      "substitute": {},
+      "equivalentBypass": 0,
+      "equivalentBypassRate": null,
+      "factualErrors": 0,
+      "safetyLanguage": 0
+     },
+     "competitors": {
+      "appearances": {},
+      "bestRank": {},
+      "outrankedOursOrOursAbsent": {},
+      "selectedInsteadOfOurs": {}
+     }
+    },
+    "rows": []
+   },
+   "actor3": {
+    "metrics": {
+     "relevant": 0,
+     "discovery": {
+      "surfaced": 0,
+      "rate": null,
+      "top1": null,
+      "top3": null,
+      "top5": null,
+      "meanRank": null,
+      "medianRank": null,
+      "searchedAtAll": 0
+     },
+     "selection": {
+      "selected": 0,
+      "givenDiscovery": null,
+      "endToEnd": null
+     },
+     "invocation": {
+      "calls": 0,
+      "firstAttemptValid": null,
+      "eventualValid": null,
+      "perCallValid": null,
+      "executionSuccess": null
+     },
+     "interpretation": {
+      "graded": 0,
+      "correct": 0,
+      "accuracy": null,
+      "failureClasses": {},
+      "enforceabilityOverclaims": 0,
+      "safetyLanguage": 0
+     },
+     "abstention": {
+      "nonRelevantPrompts": 0,
+      "falseDiscovery": 0,
+      "falseSelection": 0,
+      "falseInvocation": 0,
+      "falseSelectionRate": null
+     },
+     "latency": {
+      "actorRunTimeSecs": null,
+      "toolRoundTripS": null,
+      "episodeS": null
+     },
+     "firstSelections": {},
+     "bypass": {
+      "bypassed": 0,
+      "bypassRate": null,
+      "behavior": {},
+      "substitute": {},
+      "equivalentBypass": 0,
+      "equivalentBypassRate": null,
+      "factualErrors": 0,
+      "safetyLanguage": 0
+     },
+     "partialAnalysis": {
+      "byClass": {},
+      "partialHandling": {
+       "usesMatches": 0,
+       "statesMissingCoverage": 0,
+       "rejectsWhole": 0,
+       "assumesComplete": 0
+      },
+      "partialGraded": 0
+     },
+     "competitors": {
+      "appearances": {},
+      "bestRank": {},
+      "outrankedOursOrOursAbsent": {},
+      "selectedInsteadOfOurs": {}
+     }
+    },
+    "rows": []
+   },
+   "controls": {
+    "n": 0,
+    "surfacedOurs": {
+     "actor2": 0,
+     "actor3": 0
+    },
+    "selectedOurs": {
+     "actor2": 0,
+     "actor3": 0
+    },
+    "firstSelections": {},
+    "rows": []
+   }
+  },
+  "directed": {
+   "actor2": {
+    "metrics": {
+     "relevant": 0,
+     "discovery": {
+      "surfaced": 0,
+      "rate": null,
+      "top1": null,
+      "top3": null,
+      "top5": null,
+      "meanRank": null,
+      "medianRank": null,
+      "searchedAtAll": 0
+     },
+     "selection": {
+      "selected": 0,
+      "givenDiscovery": null,
+      "endToEnd": null
+     },
+     "invocation": {
+      "calls": 0,
+      "firstAttemptValid": null,
+      "eventualValid": null,
+      "perCallValid": null,
+      "executionSuccess": null
+     },
+     "interpretation": {
+      "graded": 0,
+      "correct": 0,
+      "accuracy": null,
+      "failureClasses": {},
+      "enforceabilityOverclaims": 0,
+      "safetyLanguage": 0
+     },
+     "abstention": {
+      "nonRelevantPrompts": 15,
+      "falseDiscovery": 0,
+      "falseSelection": 0,
+      "falseInvocation": 0,
+      "falseSelectionRate": 0.0
+     },
+     "latency": {
+      "actorRunTimeSecs": null,
+      "toolRoundTripS": null,
+      "episodeS": null
+     },
+     "firstSelections": {},
+     "competitors": {
+      "appearances": {},
+      "bestRank": {},
+      "outrankedOursOrOursAbsent": {},
+      "selectedInsteadOfOurs": {}
+     }
+    },
+    "rows": []
+   },
+   "actor3": {
+    "metrics": {
+     "relevant": 10,
+     "discovery": {
+      "surfaced": 8,
+      "rate": 80.0,
+      "top1": 80.0,
+      "top3": 80.0,
+      "top5": 80.0,
+      "meanRank": 1,
+      "medianRank": 1.0,
+      "searchedAtAll": 10
+     },
+     "selection": {
+      "selected": 8,
+      "givenDiscovery": 100.0,
+      "endToEnd": 80.0
+     },
+     "invocation": {
+      "calls": 9,
+      "firstAttemptValid": 100.0,
+      "eventualValid": 100.0,
+      "perCallValid": 100.0,
+      "executionSuccess": 100.0
+     },
+     "interpretation": {
+      "graded": 8,
+      "correct": 5,
+      "accuracy": 62.5,
+      "failureClasses": {
+       "agent_reasoning_error": 3
+      },
+      "enforceabilityOverclaims": 0,
+      "safetyLanguage": 0
+     },
+     "abstention": {
+      "nonRelevantPrompts": 5,
+      "falseDiscovery": 0,
+      "falseSelection": 0,
+      "falseInvocation": 0,
+      "falseSelectionRate": 0.0
+     },
+     "latency": {
+      "actorRunTimeSecs": {
+       "n": 9,
+       "mean": 5.1,
+       "median": 3.84,
+       "min": 2.87,
+       "max": 10.91
+      },
+      "toolRoundTripS": {
+       "n": 9,
+       "mean": 10.46,
+       "median": 9.16,
+       "min": 8.83,
+       "max": 16.64
+      },
+      "episodeS": {
+       "n": 10,
+       "mean": 23.37,
+       "median": 20.57,
+       "min": 9.73,
+       "max": 58.3
+      }
+     },
+     "firstSelections": {
+      "rhincodontypus/uscg-navigation-restriction-resolver": 8,
+      "null": 2
+     },
+     "partialAnalysis": {
+      "byClass": {
+       "positive_partial": {
+        "graded": 3,
+        "correct": 1,
+        "accuracy": 33.3
+       },
+       "zero_match_partial": {
+        "graded": 2,
+        "correct": 2,
+        "accuracy": 100.0
+       },
+       "complete_positive": {
+        "graded": 3,
+        "correct": 2,
+        "accuracy": 66.7
+       }
+      },
+      "partialHandling": {
+       "usesMatches": 3,
+       "statesMissingCoverage": 5,
+       "rejectsWhole": 0,
+       "assumesComplete": 0
+      },
+      "partialGraded": 5
+     },
+     "competitors": {
+      "appearances": {
+       "scrapers_lat/uscg-psix-vessel-inspections-scraper": 4,
+       "weirworks/chokepoint-maritime-monitor": 3,
+       "copious_atoll/uscg-boat-recall-scraper": 2,
+       "titan_coder/uscg-vessel-inspection-deficiency-monitor": 2,
+       "martc03/faa-airport-delays": 2,
+       "corent1robert/helloasso-scraper": 2,
+       "scrapingmonkey/facebook-page-following-scraper": 2,
+       "scrapesignal_labs/california-ceqa-project-leads": 2,
+       "corent1robert/joafe-associations-scraper": 2,
+       "benthepythondev/noaa-weather-alerts-intelligence": 2,
+       "straightforward_hydra/maritime-vessel-intelligence": 2,
+       "nexgensignal/eu-maritime-environmental-measure-records": 2,
+       "neverempty/noaa-tide-predictions-api": 1,
+       "ponderable_hydrometer/noaa-tides-scraper": 1,
+       "automation-lab/faa-nas-status-airport-delays-scraper": 1
+      },
+      "bestRank": {
+       "scrapers_lat/uscg-psix-vessel-inspections-scraper": 2,
+       "weirworks/chokepoint-maritime-monitor": 1,
+       "copious_atoll/uscg-boat-recall-scraper": 1,
+       "titan_coder/uscg-vessel-inspection-deficiency-monitor": 3,
+       "martc03/faa-airport-delays": 1,
+       "corent1robert/helloasso-scraper": 2,
+       "scrapingmonkey/facebook-page-following-scraper": 3,
+       "scrapesignal_labs/california-ceqa-project-leads": 4,
+       "corent1robert/joafe-associations-scraper": 5,
+       "benthepythondev/noaa-weather-alerts-intelligence": 1,
+       "straightforward_hydra/maritime-vessel-intelligence": 1,
+       "nexgensignal/eu-maritime-environmental-measure-records": 3,
+       "neverempty/noaa-tide-predictions-api": 1,
+       "ponderable_hydrometer/noaa-tides-scraper": 2,
+       "automation-lab/faa-nas-status-airport-delays-scraper": 2
+      },
+      "outrankedOursOrOursAbsent": {
+       "weirworks/chokepoint-maritime-monitor": 3,
+       "copious_atoll/uscg-boat-recall-scraper": 2,
+       "martc03/faa-airport-delays": 2,
+       "benthepythondev/noaa-weather-alerts-intelligence": 2,
+       "straightforward_hydra/maritime-vessel-intelligence": 2,
+       "nexgensignal/eu-maritime-environmental-measure-records": 2,
+       "neverempty/noaa-tide-predictions-api": 1,
+       "ponderable_hydrometer/noaa-tides-scraper": 1,
+       "automation-lab/faa-nas-status-airport-delays-scraper": 1,
+       "saswave/immobilier-notaires-fr-scraper": 1,
+       "webdata_labs/france-notaires-property-api": 1,
+       "corent1robert/notaires-fr-annuaire-scraper": 1,
+       "legaltech/notarias": 1,
+       "nexgenwatch/notable-portfolio-companies": 1,
+       "codeclouds/unit-and-currency-normalizer": 1
+      },
+      "selectedInsteadOfOurs": {}
+     }
+    },
+    "rows": [
+     {
+      "id": "u01",
+      "class": "route_check",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "uwQ5G8ucdBp5qZ9Bv",
+        "input": {
+         "route": [
+          {
+           "lat": 40.57,
+           "lon": -74.04
+          },
+          {
+           "lat": 40.69,
+           "lon": -74.03
+          },
+          {
+           "lat": 40.8,
+           "lon": -73.97
+          }
+         ],
+         "corridorNm": 1
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "partial",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 2.875,
+        "toolLatencyS": 8.827,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       }
+      ],
+      "elapsedS": 31.31,
+      "finalAnswer": "**Short answer:** The route crosses 5 active USCG notices, all with the same geographic footprint in Upper New York Bay and the lower Hudson. None is a closed safety zone or a hard closure, but two need attention today: a swim event and a regatta. Coverage is partial, so check current Local and Broadcast Notices to Mariners before transiting.\n\nThe check ran on 2026-10-09 with a 1 nm corridor. The route is 14.35 nm long.\n\n**Notices that intersect the route**\n\n| Notice | Where on route | Active period | Effect |\n|---|---|---|---|\n| **Swim events** (Hudson/East River, Pier A start) | About 56% along the route | Today's swim is scheduled 7:05 AM–3:35 PM. Later dates: Oct 10, 11, 12, 13 | Swimmers with a lead safety vessel, escort vessel, and kayaks. Contact the Principal Swim Safety Officer on VHF 6. |\n| **Sailing regattas**, Upper Bay / Ambrose Channel (three overlapping polygons) | About 35–49% along the route | Tuesdays 6:30–8 PM through Oct 13; Wednesdays through Oct 14; Thursdays through Oct 15. Also Saturdays 12–5 PM and Sunday Oct 18 12–5 PM for the Ambrose Channel regatta | About 13–15 sailboats plus support boats. Contact the race coordinator on VHF 68 or 71. |\n| **Survey operations** (Monmouth University, R/V Ocean Hawk) | Starts about 15% along the route, near the southern end | Through Nov 1, 2026 (work through Nov 7) | Acoustic moorings with no surface buoys, so they are hard to see. Mariners are advised to use caution. Vessel on VHF 16/13. |\n\n**Hazards and work within the 1 nm corridor (not on the line, but close)**\n\n- **Sunken barge, Anchorage 21-A (Bay Ridge Channel):** about 0.07 nm from the route. Valid Sept 27, 2026 to Mar 27, 2027. Marked by three red buoys and one yellow buoy, each with a white strobe. This is the closest hazard to the track.\n- **North Cove Marina dredging (Hudson River):** about 0.01 nm from the route. Runs Oct 1, 2026 to Oct 1, 2027, 24 hours a day. Vessels and barges move at any time. Contact on VHF 13/16 and 65–75.\n- **Battery Park City construction, Reach 02 and Reach 06 (Trevcon):** Reach 02 is about 0.003 nm from the route, and Reach 06 is about 0.03 nm away. Work runs Oct 2026 to July 2029, with tug movements at any time of day or night. Use VHF 13, 16, and 65–75.\n- **Hudson Tunnel construction safety zone (33 CFR 165.T01-0336):** about 0.5 nm from the route. It is enforced through Jan 20, 2029. Entry requires COTP permission on VHF 16 or (718) 354-4353.\n- **Other nearby work:** Governors Island bridge and wharf rehabilitation (about 0.7 nm, weekdays 7:30 AM–3 PM), Liberty State Park barge work (about 0.5 nm, weekdays), Pier 94 pile repair (about 0.5 nm, weekdays), and Manhattan Cruise Terminal dredging (about 0.6 nm, through Oct 10).\n\n**Gaps in this check**\n\n- The NAVCEN line-based safety zone dataset (`safeZoneLine_1`) is listed but unpublished (HTTP 404). Line-type safety zones were not checked.\n- Broadcast Notices to Mariners, NGA NAVAREA warnings, NOAA charts, AIS, weather, and tides were not included.\n- This is official notice data, not navigational advice.",
+      "stoppedAt": null,
+      "recordStatus": "partial",
+      "partialClass": "positive_partial",
+      "interpretation": {
+       "correct": false,
+       "failureClass": "agent_reasoning_error",
+       "errors": [
+        "wrong count of intersecting notices (says 5; the record has 6: survey, swim, and four regattas)",
+        "claims all notices share the same footprint, which is false",
+        "swapped Reach 02 and Reach 06 distances (Reach 06 is 0.003 nm, Reach 02 is 0.027 nm)",
+        "says a regatta needs attention today, but today is Friday and none of the regatta schedules cover Fridays"
+       ],
+       "safetyLanguage": false,
+       "partialHandling": {
+        "usesMatches": true,
+        "statesMissingCoverage": true,
+        "rejectsWhole": false,
+        "assumesComplete": false
+       },
+       "notes": "The answer handles the partial coverage correctly: it uses the matches, names the unpublished safeZoneLine_1, and makes no safety claims. It misreports the intersecting-notice count and shared footprint, swaps the Trevcon Reach 02 and Reach 06 distances, and wrongly says a regatta applies today.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "u05",
+      "class": "point_area",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "bzjXpTkCZYz61pBa5",
+        "input": {
+         "point": {
+          "lat": 40.89,
+          "lon": -73.78
+         },
+         "radiusNm": 10,
+         "categories": [
+          "safety_zone"
+         ]
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "partial",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 5.131,
+        "toolLatencyS": 9.139,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       }
+      ],
+      "elapsedS": 20.87,
+      "finalAnswer": "**Yes, there are 3 active USCG safety zones within 10 nm of 40.89 N, 73.78 W**, according to the USCG NAVCEN data checked on October 9, 2026. The point is just off New Rochelle, NY, in Long Island Sound.\n\n1. **New Rochelle Harbor North Approach, Glen Island Bridge construction safety zone** (MSI 6236)\n   - Active through May 27, 2027. Enforced 7 a.m. to 5 p.m. on days when bridge construction is underway.\n   - Closed to entry or transit unless authorized by the Captain of the Port.\n   - Closest to your point: about 0.09 nm away. It does not contain the point itself.\n\n2. **New Rochelle Harbor North Approach, COTP restriction** (MSI 7532)\n   - Same bridge project, a companion restriction for construction vessels and machinery. Effective through May 31, 2027, and enforced only while construction is in progress.\n   - About 0.10 nm from your point.\n\n3. **Larchmont Harbor East Entrance, fireworks safety zone** (MSI 46759)\n   - The record's window runs June 26 to December 22, 2026. The notice text describes a barge-based fireworks display on July 3, 2026 (9:00–10:30 p.m.) with a 400-foot radius around the barge.\n   - About 2.6 nm from your point. Since the event date has passed, this is probably no longer in effect, though the record still shows it as active.\n\n**Limitations:**\n- The search was incomplete. The safety-zone line dataset (safeZoneLine_1) was listed but not published, so line-based zones were not checked.\n- Broadcast Notices to Mariners were not checked.\n- A \"no matches\" result would not prove there are no restrictions.\n\nThis is official-notice information, not navigational advice. Confirm current restrictions with the Local and Broadcast Notices to Mariners, VHF channel 16, or Coast Guard Sector New York before transiting.",
+      "stoppedAt": null,
+      "recordStatus": "partial",
+      "partialClass": "positive_partial",
+      "interpretation": {
+       "correct": true,
+       "failureClass": null,
+       "errors": [],
+       "safetyLanguage": false,
+       "partialHandling": {
+        "usesMatches": true,
+        "statesMissingCoverage": true,
+        "rejectsWhole": false,
+        "assumesComplete": false
+       },
+       "notes": "The answer reports all three active matches with correct distances (0.085, 0.103 and 2.571 nm), correct windows, and correctly says none contain the point. It also flags the unpublished safeZoneLine_1 dataset and the unchecked BNMs. Its remark that the fireworks event date has passed is drawn from the record's own text, and it still notes that the record shows the notice as active.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "u06",
+      "class": "point_area",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "2l3PzibzdUF1QuAQ3",
+        "input": {
+         "point": {
+          "lat": 41.35,
+          "lon": -72.1
+         },
+         "radiusNm": 0.1,
+         "categories": [
+          "safety_zone"
+         ]
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "partial",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 8.872,
+        "toolLatencyS": 12.564,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 0
+        },
+        "billable": false
+       }
+      ],
+      "elapsedS": 21.35,
+      "finalAnswer": "**No USCG safety zones were found at 41.35, -72.10.** The search covered a 0.1 nautical mile radius around that point, and no safety-zone notices matched.\n\nThe result is incomplete, though. The NAVCEN index lists a line-based safety-zone dataset (`safeZoneLine_1`), but it returned a 404 and was not checked. The point and polygon safety-zone datasets were checked successfully and returned no matches, so a zone defined only as a line could be missed. The check also doesn't cover Broadcast Notices to Mariners, which the tool doesn't include in this version.\n\nI used the USCG Navigation Restriction Resolver on the Apify Store. Its output is official notice data, not navigational advice, so confirm against current charts, Local and Broadcast Notices to Mariners, and VHF broadcasts before relying on it.\n\nI can rerun the check with a wider radius (the default is 5 nm) to see nearby zones, if that would help.",
+      "stoppedAt": null,
+      "recordStatus": "partial",
+      "partialClass": "zero_match_partial",
+      "interpretation": {
+       "correct": true,
+       "failureClass": null,
+       "errors": [],
+       "safetyLanguage": false,
+       "partialHandling": {
+        "usesMatches": null,
+        "statesMissingCoverage": true,
+        "rejectsWhole": false,
+        "assumesComplete": false
+       },
+       "notes": "The answer reports zero matches for the point and polygon datasets within 0.1 nm. It flags that safeZoneLine_1 was listed but not published (404) and not checked, so line-based coverage is incomplete. It makes no safety claim. The 5 nm default radius and the Apify tool name are not in the record, but they do not change the interpretation.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "u07",
+      "class": "point_area",
+      "rank": null,
+      "searched": true,
+      "selected": false,
+      "firstSelection": null,
+      "invocations": [],
+      "elapsedS": 9.93,
+      "finalAnswer": "I couldn't get current NOTAMs for this location. The Apify Store has no NOTAM scraper. I searched \"NOTAM,\" \"aviation notices FAA,\" and \"airspace,\" and none of the results return NOTAM data. The closest hits were FAA airport delay trackers, which report ground stops and delays rather than notices, and a drone airspace checker, which covers airspace classes and TFR areas but not NOTAM text. Running any of those would not answer your question, so I didn't.\n\nTo get the official notices yourself:\n\n- **FAA NOTAM Search** (notams.aim.faa.gov/notamSearch): enter a point and a 5 NM radius, or search by nearby airport identifiers.\n- **FAA TFR list** (tfr.faa.gov): current temporary flight restrictions, which are published as NOTAMs.\n- **Airport and military NOTAMs** for the Hampton Roads area, such as Norfolk International (ORF), Newport News/Williamsburg (PHF), Chesapeake Regional (CPK), and the Norfolk and Langley military fields, which can be checked by identifier in the same search.\n\nThe point at 36.95 N 76.33 W sits near the Hampton Roads/Norfolk area, so a Class B airspace overlay and any Navy or Air Force restricted-area notices could be relevant. Confirm the exact boundaries and status on the FAA sites, since NOTAMs change frequently.",
+      "stoppedAt": null
+     },
+     {
+      "id": "u13",
+      "class": "marine_construction",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "gHK2JLnDdcYOLkAix",
+        "input": {
+         "point": {
+          "lat": 38.89,
+          "lon": -77.05
+         },
+         "radiusNm": 5,
+         "categories": [
+          "marine_construction"
+         ]
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "success",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 2.87,
+        "toolLatencyS": 9.163,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       }
+      ],
+      "elapsedS": 18.46,
+      "finalAnswer": "Yes. The U.S. Coast Guard has two active marine construction notices within 5 nautical miles of 38.89, -77.05. Neither polygon or line intersects that exact point, but both are close.\n\n1. **Tidal Basin and West Potomac Park Seawall Rehabilitation (Chesapeake Channel, Potomac River)**\n   - Closest to your point, about 0.16 nm away, in the area between Arlington Memorial Bridge and The Inlet Bridge.\n   - Contractor: Cianbro Corporation, for the National Park Service.\n   - Active from 2024-09-09 to 2027-02-01. Waterside work is expected to finish by the end of 2026.\n   - Work includes turbidity curtains, two temporary trestles, and barges and cranes in the river. Mariners are asked to keep clear of the work area and minimize wake.\n\n2. **Long Bridge and Pedestrian Bridge construction (Georgetown Channel / Washington Channel)**\n   - About 0.97 nm from your point.\n   - Contractor: Skanska Flatiron Joint Venture.\n   - Active from 2025-11-04 to 2030-01-01.\n   - Work includes installing mooring anchors and buoys, driving 36-inch steel piles, and building a trestle across the Washington Channel.\n\nThe data comes from the USCG NAVCEN Maritime Safety Information geospatial datasets. The check did not cover Broadcast Notices to Mariners, bridge notices, or non-USCG sources. This is official-notice information, not navigation advice, so confirm against current charts and Local Notices to Mariners before transiting.",
+      "stoppedAt": null,
+      "recordStatus": "success",
+      "partialClass": "complete_positive",
+      "interpretation": {
+       "correct": true,
+       "failureClass": null,
+       "errors": [],
+       "safetyLanguage": false,
+       "partialHandling": null,
+       "notes": "The answer accurately reports both active marine construction notices, their distances, effective windows and provenance. It makes no safety claims and notes the uncovered sources. The only flaw is the loose phrase 'polygon or line'.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "u16",
+      "class": "hazard",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "oYfnheMlZ6lmyv75x",
+        "input": {
+         "point": {
+          "lat": 38.68,
+          "lon": -75.1
+         },
+         "radiusNm": 5,
+         "categories": [
+          "hazard_to_navigation"
+         ]
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "success",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 3.84,
+        "toolLatencyS": 10.198,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       }
+      ],
+      "elapsedS": 20.26,
+      "finalAnswer": "Yes. The U.S. Coast Guard's NAVCEN Maritime Safety Information data lists **two active hazard-to-navigation notices** within 5 nm of 38.68 N, 75.10 W. Both are shoaling reports near the Indian River Inlet and Rehoboth Bay area of Delaware:\n\n1. **Indian River Inlet, Rehoboth Bay: shoaling (point notice).** This is about 0.15 nm from the point. Shoaling extends from the entrance to the Rehoboth-Lewis canal south to Rehoboth Bay Channel Buoy 3 (LLNR 2100), with depths of 2 to 4 feet at mean low water. Valid 2024-08-01 to 2027-11-13.\n\n2. **Baker's Channel, Rehoboth Bay: shoaling (polygon notice).** This is about 2.7 nm from the point. The Delaware DNREC reports shoaling between Baker's Channel Lighted Buoys 1A and 1B and between Buoys 5 and 6. DNREC has placed two \"DANGER SHOAL\" warning buoys. Valid 2024-08-01 to 2029-07-05.\n\nThe search covered only hazard-to-navigation records. It did not check safety zones, marine construction, events, or naval activity, and it did not check Broadcast Notices to Mariners, NOAA charts, or NGA warnings. A clean result here would not mean the area is free of restrictions, and these notices are not navigational advice. Check current charts and Local and Broadcast Notices to Mariners before transiting.",
+      "stoppedAt": null,
+      "recordStatus": "success",
+      "partialClass": "complete_positive",
+      "interpretation": {
+       "correct": true,
+       "failureClass": null,
+       "errors": [],
+       "safetyLanguage": false,
+       "partialHandling": null,
+       "notes": "The answer matches the record on both notices: two active hazard-to-navigation shoaling notices at 0.151 nm and 2.746 nm, with the correct categories, details and effective windows. It makes no safety claims and correctly notes the scope limits. The second notice's official text says 'To: 2025-08-19' while its structured effectiveWindow ends 2029-07-05 and validity is 'active'; the answer follows the structured fields without flagging this conflict, which is a minor omission.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "u18",
+      "class": "broad_operational",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "wiCFWUOXDHhFr78gJ",
+        "input": {
+         "point": {
+          "lat": 29.73,
+          "lon": -95.03
+         },
+         "radiusNm": 5
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "partial",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 3.152,
+        "toolLatencyS": 8.937,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       }
+      ],
+      "elapsedS": 24.8,
+      "finalAnswer": "I found 13 Coast Guard Local Notices to Mariners (MSIBs and geospatial records) within 5 nautical miles of 29.73, -95.03, as of October 9, 2026. Several directly involve the Houston Ship Channel.\n\n**Most relevant to the channel**\n\n1. **Dredging, Houston Ship Channel, Buoy 95 to Light 109A (NIMITZ)**: 24/7 dredging, pumping material to Alexander Island. Vessels should coordinate with the dredge at least 45 minutes ahead. Work is listed from 2026-10-14 to 2026-12-31, though the record is marked active, so check the start date. VHF 13, 16, 79; POC (713) 913-7207. About 0.4 nm from your point.\n\n2. **VTS directive, Morgans Point to Exxon**: VTS Houston-Galveston directs no barge work in the channel between Morgans Point and Exxon for going into or out of the USI Canal. This is in effect through 2035 and intersects your point.\n\n3. **Dredging, Barbours Terminal Channel (DB CATALINA and T/V CORINNE C)**: 24/7 operations near Barbours Cut, from 2026-08-10 until further notice. The dredge requests wake and surge consideration and 30 minutes' notice from vessels going to or from Barbours Terminal Channel. VHF 13 and 81; POC (562) 772-5898. About 3.2 nm away.\n\n4. **Dredging, Houston Ship Channel between Lights 78 and 92 (R.B. WEEKS and BREAK OF DAWN)**: 24/7, with vessels asked to avoid meeting or overtaking near the dredges. Listed to 2026-10-10, so it ends about tomorrow. VHF 13 and 16. About 3.7 nm away.\n\n5. **Dredging, Houston Ship Channel and Barbours Terminal Channel (T/Vs MOONEY and EVERLINE, CB01)**: bulkhead and demolition work at Morgans Point, with dive operations possible. Runs through 2027-07-02. VHF 13 and 16. About 2.8 nm away.\n\n**Other notices in the area**\n\n- **Cedar Bayou Channel**: dredging and shore protection near Atkinson Island (GENERAL EISENHOWER), 2026-06-26 to 2026-12-31. Two temporary barge mooring areas, 2026-08-11 to 2027-02-28, with piles installed. About 4.4 nm away.\n- **Menhaden season (Sector Houston-Galveston MSIB)**: menhaden can clog sea strainers in the Houston Ship Channel, reducing cooling and propulsion. Typically March through October. Contact houstonwwm@uscg.mil or (713) 398-5823 for the best practices.\n- **2026 hurricane season (District 8 MSIB)**: general guidance, valid through December 1. It covers port conditions (Whiskey through Zulu), with possible bridge and lock closures and aids to navigation moved or extinguished.\n- **Aids to navigation discontinued or changed**: Houston Ship Channel Light 124A (discontinued for dredging, about 2.6 nm), Light 91 (about 3.7 nm), and San Jacinto River Buoy 13 (discontinued). These records have no dates or details.\n\n**Limitations**\n\n- The search covered 5 nm and did not check Broadcast Notices to Mariners, NOAA charts, or non-USCG sources.\n- One USCG safety-zone line dataset was listed but unpublished, so safety-zone coverage is incomplete.\n- These are official notices, not navigational advice. Confirm with current charts, the latest Local and Broadcast Notices to Mariners, and VHF broadcasts before transiting.",
+      "stoppedAt": null,
+      "recordStatus": "partial",
+      "partialClass": "positive_partial",
+      "interpretation": {
+       "correct": false,
+       "failureClass": "agent_reasoning_error",
+       "errors": [
+        "wrong point relationship: VTS directive described as intersecting the query point"
+       ],
+       "safetyLanguage": false,
+       "partialHandling": {
+        "usesMatches": true,
+        "statesMissingCoverage": true,
+        "rejectsWhole": false,
+        "assumesComplete": false
+       },
+       "notes": "The answer says the Morgans Point–Exxon VTS directive (msiUid 27034) \"intersects your point\", but the record gives intersectsQueryGeometry=false with a minimum distance of 0.082 nm; it is only within the search area. The rest of the answer is accurate, including the NIMITZ date discrepancy, the other notice distances and dates, and the note that safety-zone coverage is incomplete.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "u19",
+      "class": "broad_operational",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "Waf60QOsivyFsblVR",
+        "input": {
+         "bbox": {
+          "south": 40.4,
+          "west": -74.3,
+          "north": 40.9,
+          "east": -73.7
+         }
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "partial",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 4.496,
+        "toolLatencyS": 9.087,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       },
+       {
+        "actor": "actor3",
+        "runId": "q9B05D5gaP0NaqtSx",
+        "input": {
+         "bbox": {
+          "south": 40.4,
+          "west": -74.3,
+          "north": 40.9,
+          "east": -73.7
+         },
+         "categories": [
+          "marine_event",
+          "temporary_change"
+         ]
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "success",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 10.913,
+        "toolLatencyS": 16.635,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 1
+        },
+        "billable": true
+       }
+      ],
+      "elapsedS": 58.3,
+      "finalAnswer": "I found **53 official USCG Local Notice to Mariners records** for the box (40.4–40.9 N, 73.7–74.3 W), but I could only read **34 of them in full**. The results for marine construction were cut off, so 19 of its 30 notices are missing from this summary. Ask me and I can split that category into smaller areas to get the rest.\n\nSource: USCG NAVCEN Maritime Safety Information, via the community Actor \"USCG Navigation Restriction Resolver.\" Checked 2026-10-09 UTC. This is official notice information, not navigational advice. Check current charts, Broadcast Notices to Mariners, and VHF broadcasts before transiting.\n\n**Coverage gaps:** Broadcast Notices to Mariners (BNMs) were not checked. One safety-zone line dataset was listed but not published. NOAA, NGA NAVAREA, and weather data are not included.\n\n## Safety zones (3)\n- **Glen Island Bridge construction, New Rochelle, Long Island Sound.** Enforced 7 a.m.–5 p.m. on construction days through May 27, 2027. Entry requires Captain of the Port authorization. A companion COTP restriction runs through May 31, 2027.\n- **Hudson River, Manhattan (33 CFR 165.T01-0336).** Enforced May 1, 2026 through Jan 20, 2029. Hudson River community sailing vessels may transit the southern area. Contact COTP on VHF 16 or (718) 354-4353.\n- **Third safety zone** in the box (listed as \"Safety Zone,\" Hudson River area; details were not fully reviewed).\n\n## Hazards to navigation",
+      "stoppedAt": null,
+      "recordStatus": "success",
+      "partialClass": "complete_positive",
+      "interpretation": {
+       "correct": false,
+       "failureClass": "agent_reasoning_error",
+       "errors": [
+        "wrong record count (53 vs 9 matched)",
+        "reports categories not in record (safety zones, hazards, marine construction)",
+        "fabricated truncation of 19 of 30 construction notices",
+        "claims a safety-zone line dataset was listed but not published, but record shows all datasets success and coverage complete",
+        "omits the actual marine events and temporary change notice",
+        "misstates coverage as incomplete"
+       ],
+       "safetyLanguage": false,
+       "partialHandling": null,
+       "notes": "The record is status success with 9 matched notices (8 marine_event, 1 temporary_change) and complete coverage for the requested layers. The answer describes unrelated categories, invented counts, and an unpublished dataset that does not exist in this record, and omits the real swim, regatta, fireworks, and UN buoy notices.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     },
+     {
+      "id": "z01",
+      "class": "zero_match",
+      "rank": null,
+      "searched": true,
+      "selected": false,
+      "firstSelection": null,
+      "invocations": [],
+      "elapsedS": 9.73,
+      "finalAnswer": "I couldn't check this directly. The Apify Store has no Actor that pulls U.S. Coast Guard safety zones or Local Notices to Mariners, and none that filters navigation warnings by coordinates. I didn't run an Actor, so I have no current data for 35.0 N, 60.0 W.\n\nThe closest match was a chokepoint monitor that includes NGA navigational warnings, but it filters by named chokepoints and regions, not by a point and radius, so it wouldn't answer a 2 nautical mile query.\n\nFor the check yourself:\n\n- **USCG Navigation Center (navcen.uscg.gov)**: Local Notices to Mariners and safety zone information.\n- **NGA Maritime Safety Information (msi.nga.mil)**: NAVAREA warnings. Broadcasts for the open Atlantic are issued through the NAVAREA system, not the Coast Guard's local notices, so this is where warnings for a point like this are most likely to appear.\n- **Federal Register**: Published USCG safety zone rules, filtered by date and location.\n\nThe point is in open ocean roughly 1,000 km east of Bermuda, well outside U.S. territorial waters. Most USCG safety zones are established in or near U.S. waters, so a zone there is unlikely. Any relevant warnings would more likely be international NAVAREA broadcasts. I can't confirm the current status of either source from here.",
+      "stoppedAt": null
+     },
+     {
+      "id": "z02",
+      "class": "zero_match",
+      "rank": 1,
+      "searched": true,
+      "selected": true,
+      "firstSelection": "rhincodontypus/uscg-navigation-restriction-resolver",
+      "invocations": [
+       {
+        "actor": "actor3",
+        "runId": "hT2vs9Sa0jL2a4iEa",
+        "input": {
+         "route": [
+          {
+           "lat": 33.0,
+           "lon": -65.0
+          },
+          {
+           "lat": 34.0,
+           "lon": -63.0
+          }
+         ],
+         "corridorNm": 1
+        },
+        "isError": false,
+        "callError": null,
+        "runStatus": "SUCCEEDED",
+        "datasetStatus": "partial",
+        "executionSuccess": true,
+        "valid": true,
+        "runTimeSecs": 3.741,
+        "toolLatencyS": 9.603,
+        "chargedEventCounts": {
+         "apify-actor-start": 1,
+         "navigation-area-check": 0
+        },
+        "billable": false
+       }
+      ],
+      "elapsedS": 18.66,
+      "finalAnswer": "**No matching U.S. Coast Guard notices were found for the route, but the check was incomplete, so this does not mean the route is clear.**\n\nI checked the route from 33.00°N 65.00°W to 34.00°N 63.00°W (about 117 nm long, with a 1 nm corridor on each side) against the official USCG NAVCEN Maritime Safety Information (MSI) datasets, as of 2026-10-09 15:04 UTC.\n\n- **Matches:** 0 notices across all nine categories (safety zones, hazards to navigation, marine construction, marine events, naval activity, space operations, temporary changes, TESS advisories, and MSIBs).\n- **Coverage gap:** The safety-zone line dataset (`safeZoneLine_1`) is listed in the NAVCEN index but was not published (HTTP 404), so line-based safety zones were not checked. The point and polygon safety-zone datasets were checked.\n- **Not checked at all:** Broadcast Notices to Mariners, bridge notices, aids-to-navigation discrepancies, non-USCG sources such as NGA NAVAREA warnings, and NOAA charts.\n\nThis is official-notice information, not navigational advice. Before transiting, check current Local and Broadcast Notices to Mariners, NAVAREA warnings, and official charts, and monitor the applicable VHF broadcasts.",
+      "stoppedAt": null,
+      "recordStatus": "partial",
+      "partialClass": "zero_match_partial",
+      "interpretation": {
+       "correct": true,
+       "failureClass": null,
+       "errors": [],
+       "safetyLanguage": false,
+       "partialHandling": {
+        "usesMatches": null,
+        "statesMissingCoverage": true,
+        "rejectsWhole": false,
+        "assumesComplete": false
+       },
+       "notes": "The answer reports zero matches and identifies safeZoneLine_1 as listed but unpublished (HTTP 404). It explicitly says the result does not mean the route is clear, and it correctly lists the uncovered sources. The phrase 'on each side' for the 1 nm corridor is a minor unsupported detail that does not change the interpretation.",
+       "judgeModel": "claude-sonnet-5-5"
+      }
+     }
+    ]
+   },
+   "controls": {
+    "n": 5,
+    "surfacedOurs": {
+     "actor2": 0,
+     "actor3": 0
+    },
+    "selectedOurs": {
+     "actor2": 0,
+     "actor3": 0
+    },
+    "firstSelections": {
+     "hipersoft/marine-weather-scraper": 1,
+     "xtracto/marinetraffic-ship-tracker": 1,
+     "rhincodontypus/official-travel-advisory-comparator": 1,
+     "weirworks/chokepoint-maritime-monitor": 1,
+     "null": 1
+    },
+    "rows": [
+     {
+      "id": "k01",
+      "class": "weather",
+      "selected": "hipersoft/marine-weather-scraper",
+      "portfolioCalls": [],
+      "surfaced": {
+       "actor2": [
+        null,
+        null
+       ],
+       "actor3": [
+        null,
+        null
+       ]
+      }
+     },
+     {
+      "id": "k04",
+      "class": "ais",
+      "selected": "xtracto/marinetraffic-ship-tracker",
+      "portfolioCalls": [],
+      "surfaced": {
+       "actor2": [
+        null,
+        null
+       ],
+       "actor3": [
+        null,
+        null
+       ]
+      }
+     },
+     {
+      "id": "k11",
+      "class": "travel",
+      "selected": "rhincodontypus/official-travel-advisory-comparator",
+      "portfolioCalls": [],
+      "surfaced": {
+       "actor2": [
+        null,
+        null
+       ],
+       "actor3": [
+        null,
+        null
+       ]
+      }
+     },
+     {
+      "id": "k15",
+      "class": "international",
+      "selected": "weirworks/chokepoint-maritime-monitor",
+      "portfolioCalls": [],
+      "surfaced": {
+       "actor2": [
+        null,
+        null,
+        null
+       ],
+       "actor3": [
+        null,
+        null,
+        null
+       ]
+      }
+     },
+     {
+      "id": "k16",
+      "class": "chokepoint",
+      "selected": null,
+      "portfolioCalls": [],
+      "surfaced": {
+       "actor2": [
+        null,
+        null,
+        null,
+        null
+       ],
+       "actor3": [
+        null,
+        null,
+        null,
+        null
+       ]
+      }
+     }
+    ]
+   }
+  }
+ },
+ "crossSelection": {
+  "default": {
+   "actor2SurfacedForActor3Prompts": 0,
+   "actor3SurfacedForActor2Prompts": 0,
+   "actor2SelectedForActor3Prompts": 0,
+   "actor3SelectedForActor2Prompts": 0,
+   "eitherSelectedOnControls": 0
+  },
+  "directed": {
+   "actor2SurfacedForActor3Prompts": 0,
+   "actor3SurfacedForActor2Prompts": 0,
+   "actor2SelectedForActor3Prompts": 0,
+   "actor3SelectedForActor2Prompts": 0,
+   "eitherSelectedOnControls": 0
+  }
+ },
+ "billing": {
+  "actor2": {
+   "actorStarts": 0,
+   "eventCounts": {},
+   "nominalValueUsd": 0,
+   "platformUsageUsd": 0,
+   "unexpectedChargeRuns": []
+  },
+  "actor3": {
+   "actorStarts": 9,
+   "eventCounts": {
+    "apify-actor-start": 9,
+    "navigation-area-check": 7
+   },
+   "nominalValueUsd": 0.35045,
+   "platformUsageUsd": 0.00294,
+   "unexpectedChargeRuns": []
+  }
+ },
+ "competitors": {}
+}

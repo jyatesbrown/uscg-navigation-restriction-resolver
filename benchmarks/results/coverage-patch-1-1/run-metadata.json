@@ -1,0 +1,15 @@
+{
+ "campaign": "coverage-patch-1-1",
+ "purpose": "Reduced verification that per-file category coverage (schema 1.1, build 1.1.1) removes the safety-zone coverage ambiguity",
+ "actor": "rhincodontypus/uscg-navigation-restriction-resolver",
+ "actorBuild": "1.1.1",
+ "agentModel": "claude-haiku-5-5",
+ "judgeModel": "claude-sonnet-5-5",
+ "opusCalls": 0,
+ "arm": "directed",
+ "rubric": "unchanged from benchmarks/portfolio-2-3/analyze_portfolio.py RUBRIC['actor3']",
+ "promptIds": {"relevant": ["u01","u05","u06","u07","u13","u16","u18","u19","z01","z02"], "controls": ["k01","k04","k11","k15","k16"]},
+ "addedPrompts": "z01, z02 (zero-match, all layers) added because no frozen u-prompt returned zero matches on all layers at run time; both verified zero live before the run",
+ "passSampleSeed": 20261009,
+ "runDate": "2026-10-09"
+}

@@ -1,0 +1,23 @@
+{
+ "judgeModel": "claude-sonnet-5-5",
+ "seed": 20261009,
+ "policy": "every failed or ambiguous Sonnet judgment plus a random 10% of passes",
+ "items": {
+  "interp|directed|u01": {"sonnet": "fail", "manual": "fail", "agree": true, "coverageMisstatement": false,
+    "checked": "record has 6 notices with intersectsQueryGeometry=true (1 construction/survey, 4 Ambrose regattas, 1 swim); answer says 5. Coverage handling correct (names safeZoneLine_1, uses matches).",
+    "class": "agent_reasoning_error"},
+  "interp|directed|u18": {"sonnet": "fail", "manual": "fail", "agree": true, "coverageMisstatement": false,
+    "checked": "msiUid 27034 relationshipToQuery = intersectsQueryGeometry false, minimumDistanceNm 0.082; answer says it intersects the point. Safety-zone coverage described correctly.",
+    "class": "agent_reasoning_error"},
+  "interp|directed|u19": {"sonnet": "fail (graded against wrong record)", "sonnetRejudge": "fail", "manual": "fail", "agree": true, "coverageMisstatement": false,
+    "checked": "Agent made two calls; the answer describes the first (53 notices, partial, safeZoneLine_1 listed-but-not-published) but analyze_portfolio.py pairs with the last (9 notices, success). Re-judged by Sonnet against the first record (rejudge-u19-first-record.json): still fail for mis-itemised safety zones and an answer that stops at the hazards heading. Its coverage statement ('One safety-zone line dataset was listed but not published') is correct. The '19 of 30 construction notices cut off' claim reflects the harness's 60,000-character tool-result clip, not the Actor output.",
+    "class": "agent_reasoning_error / harness_truncation"},
+  "interp|directed|u06": {"sonnet": "pass", "manual": "pass", "agree": true, "sampledPass": true, "coverageMisstatement": false,
+    "checked": "Zero-match safety-zone-only query. Answer: point and polygon safety-zone datasets checked with no matches; safeZoneLine_1 listed but returned 404, so a line-defined zone could be missed. Exactly the intended semantics."}
+ },
+ "notSelected": {
+  "u07": "Haiku read 'navigation notices' as aviation NOTAMs and searched NOTAM/FAA terms; unrelated to the patch.",
+  "z01": "Searches 'Coast Guard navigation warnings', 'NAVAREA safety zones', 'maritime', 'NOAA' did not surface the Actor; discovery/positioning, unrelated to the patch."
+ },
+ "opusDisputeCalls": 0
+}

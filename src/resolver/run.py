@@ -9,8 +9,8 @@ import httpx
 from ..billing import billing_decision
 from ..geo.geometry import QueryArea, bbox_area, point_area, route_area
 from ..models.input import DEFAULT_CORRIDOR_NM, DEFAULT_RADIUS_NM, ActorInput
-from ..models.output import Coverage, DatasetStatus, QueryInfo, QueryResult, Summary
-from ..normalization.categories import ALL_CATEGORIES
+from ..models.output import CategoryCoverage, Coverage, DatasetStatus, QueryInfo, QueryResult, Summary
+from ..normalization.categories import ALL_CATEGORIES, SINGULAR, geometry_kind
 from ..normalization.dates import iso
 from ..sources.navcen import INDEX_URL, Cache, fetch_categories, fetch_index
 from ..utils.errors import SourceError, SourceState
@@ -20,25 +20,53 @@ from .intersections import match
 SOURCE_ID = "USCG_NAVCEN_MSI"
 
 
-def coverage_note(
-    failed: list[str], incomplete: list[str], unpublished: list[DatasetStatus], failures: list[DatasetStatus]
-) -> str | None:
-    if not failed and not incomplete:
+def _join(items: list[str]) -> str:
+    items = list(dict.fromkeys(items))
+    return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1]
+
+
+def coverage_note(categories: dict[str, CategoryCoverage], states: dict[str, str], matched: int) -> str | None:
+    gaps = {c: v for c, v in categories.items() if v.status != "complete"}
+    if not gaps:
         return None
-    parts = []
-    if failures:
-        parts.append("could not be retrieved or validated: " + ", ".join(s.dataset for s in failures))
-    if unpublished:
-        parts.append(
-            "are listed in NAVCEN's file index but not published: " + ", ".join(s.dataset for s in unpublished)
+    sentences = []
+    for cat, cov in gaps.items():
+        label = SINGULAR[cat]
+        if cov.checked:
+            kinds = _join([geometry_kind(d) for d in cov.checked])
+            sentences.append(f"{label[0].upper() + label[1:]} {kinds} datasets were checked successfully.")
+        reasons = []
+        if cov.listed_but_not_published:
+            verb = "that dataset was" if len(cov.listed_but_not_published) == 1 else "those datasets were"
+            reasons.append(
+                f"the NAVCEN index lists {_join(cov.listed_but_not_published)}, "
+                f"but {verb} not published at retrieval time"
+            )
+        if cov.unavailable:
+            reasons.append(
+                ("the official dataset file " if len(cov.unavailable) == 1 else "the official dataset files ")
+                + _join([f"{d} ({states[d]})" for d in cov.unavailable])
+                + " could not be retrieved or validated"
+            )
+        missing = cov.listed_but_not_published + cov.unavailable
+        consequence = (
+            f"{_join([geometry_kind(d) for d in missing])}-based {label} coverage is incomplete"
+            if cov.checked
+            else f"no {label} dataset could be checked"
         )
-    return (
-        "Coverage is incomplete. These official dataset files "
-        + "; ".join(parts)
-        + ". Records in them were not checked, so zero matches in "
-        + ", ".join(failed + incomplete)
-        + " does not mean no records exist there."
-    )
+        text = "; ".join(reasons)
+        sentences.append(f"{text[0].upper() + text[1:]}, so {consequence}.")
+    if matched:
+        sentences.append(
+            "The returned notices come from datasets that were checked; records in the datasets not checked "
+            "could not be evaluated."
+        )
+    else:
+        sentences.append(
+            "No matches were found in the datasets successfully checked, but coverage is incomplete: this does not "
+            "mean no records exist in the datasets that were not checked."
+        )
+    return " ".join(sentences)
 
 
 @dataclass
@@ -93,7 +121,9 @@ async def resolve(inp: ActorInput, client: httpx.AsyncClient, now: datetime, cac
             query=query,
             coverage=Coverage(
                 categories_requested=cats,
+                categories_unavailable=cats,
                 categories_failed=cats,
+                categories={c: CategoryCoverage(status="unavailable") for c in cats},
                 complete_for_requested_layers=False,
                 source_failures=[failure],
                 datasets=[failure],
@@ -116,18 +146,25 @@ async def resolve(inp: ActorInput, client: httpx.AsyncClient, now: datetime, cac
         for r in results
     ]
     unpublished_state = SourceState.LISTED_BUT_NOT_PUBLISHED
-    failed = [
-        c for c in cats if any(r.category == c and r.state not in ("success", unpublished_state) for r in results)
-    ]
-    incomplete = [
-        c for c in cats if c not in failed and any(r.category == c and r.state == unpublished_state for r in results)
-    ]
-    checked = [c for c in cats if c not in failed and c not in incomplete]
+    categories: dict[str, CategoryCoverage] = {}
+    for c in cats:
+        rs = [r for r in results if r.category == c]
+        ok = [r.dataset for r in rs if r.state == "success"]
+        lbnp = [r.dataset for r in rs if r.state == unpublished_state]
+        bad = [r.dataset for r in rs if r.state not in ("success", unpublished_state)]
+        state = "complete" if not lbnp and not bad else "partial" if ok else "unavailable"
+        categories[c] = CategoryCoverage(status=state, checked=ok, unavailable=bad, listed_but_not_published=lbnp)
+    failed = [c for c in cats if categories[c].unavailable]
+    incomplete = [c for c in cats if categories[c].listed_but_not_published]
+    unavailable_cats = [c for c in cats if categories[c].status == "unavailable"]
+    partially = [c for c in cats if categories[c].status == "partial"]
+    checked = [c for c in cats if c not in unavailable_cats]
+    complete = all(v.status == "complete" for v in categories.values())
     unpublished = [s for s in statuses if s.status == unpublished_state]
     failures = [s for s in statuses if s.status not in ("success", unpublished_state)]
     notices, expired = match(area, [r for r in results if r.state == "success"], at)
     any_success = any(r.state == "success" for r in results)
-    status = "success" if not failed and not incomplete else "partial" if any_success else "source_unavailable"
+    status = "success" if complete else "partial" if any_success else "source_unavailable"
     by_cat = {c: sum(1 for n in notices if n.category == c) for c in ALL_CATEGORIES}
     summary = Summary(
         matched_notice_count=len(notices),
@@ -146,10 +183,13 @@ async def resolve(inp: ActorInput, client: httpx.AsyncClient, now: datetime, cac
             official_sources_checked=[SOURCE_ID] if checked else [],
             categories_requested=cats,
             categories_checked=checked,
+            categories_partially_checked=partially,
+            categories_unavailable=unavailable_cats,
             categories_failed=failed,
             categories_incomplete=incomplete,
-            complete_for_requested_layers=not failed and not incomplete,
-            coverage_note=coverage_note(failed, incomplete, unpublished, failures),
+            categories=categories,
+            complete_for_requested_layers=complete,
+            coverage_note=coverage_note(categories, {s.dataset: s.status for s in statuses}, len(notices)),
             source_failures=failures,
             unpublished_datasets=unpublished,
             datasets=statuses,
