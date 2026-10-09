@@ -3,7 +3,7 @@
     "fields": {
         "properties": {
             "schemaVersion": {
-                "default": "1.0",
+                "default": "1.1",
                 "type": "string"
             },
             "status": {
@@ -132,7 +132,43 @@
                         "type": "array"
                     },
                     "categoriesChecked": {
-                        "description": "Categories whose every listed dataset file loaded and validated.",
+                        "description": "Categories with at least one dataset file checked (fully or partially; see categories).",
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "categoriesPartiallyChecked": {
+                        "description": "Checked categories where some dataset files could not be checked; see categories.",
+                        "items": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ],
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "categoriesUnavailable": {
+                        "description": "Categories where no dataset file could be checked.",
                         "items": {
                             "enum": [
                                 "safety_zone",
@@ -150,7 +186,7 @@
                         "type": "array"
                     },
                     "categoriesFailed": {
-                        "description": "Categories with a dataset file that was unavailable, timed out or malformed.",
+                        "description": "Categories with at least one dataset file that was unavailable, timed out or malformed. Other files in the category may still have been checked; see categories.",
                         "items": {
                             "enum": [
                                 "safety_zone",
@@ -168,7 +204,7 @@
                         "type": "array"
                     },
                     "categoriesIncomplete": {
-                        "description": "Categories with a dataset file listed in NAVCEN's file index but not published (HTTP 404). Not checked and not treated as empty.",
+                        "description": "Categories with at least one dataset file listed in NAVCEN's file index but not published (HTTP 404). Other files in the category may still have been checked; see categories.",
                         "items": {
                             "enum": [
                                 "safety_zone",
@@ -184,6 +220,61 @@
                             "type": "string"
                         },
                         "type": "array"
+                    },
+                    "categories": {
+                        "additionalProperties": {
+                            "properties": {
+                                "status": {
+                                    "description": "complete: every indexed dataset file for the category was checked. partial: at least one file was checked and at least one was not. unavailable: no file in the category could be checked.",
+                                    "enum": [
+                                        "complete",
+                                        "partial",
+                                        "unavailable"
+                                    ],
+                                    "type": "string"
+                                },
+                                "checked": {
+                                    "description": "Dataset files retrieved and evaluated.",
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "unavailable": {
+                                    "description": "Dataset files that were unavailable, timed out or malformed.",
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "listedButNotPublished": {
+                                    "description": "Dataset files listed in NAVCEN's file index but not served (HTTP 404). Not checked, not empty.",
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "required": [
+                                "status"
+                            ],
+                            "type": "object"
+                        },
+                        "description": "Per requested category: status and dataset files by outcome.",
+                        "propertyNames": {
+                            "enum": [
+                                "safety_zone",
+                                "hazard_to_navigation",
+                                "marine_construction",
+                                "marine_event",
+                                "naval_activity",
+                                "space_operation",
+                                "temporary_change",
+                                "tess_advisory",
+                                "msib"
+                            ]
+                        },
+                        "type": "object"
                     },
                     "completeForRequestedLayers": {
                         "type": "boolean"
@@ -807,6 +898,7 @@
                     "summary.activeCount",
                     "summary.categoriesMatched",
                     "coverage.completeForRequestedLayers",
+                    "coverage.categoriesPartiallyChecked",
                     "coverage.categoriesFailed",
                     "billing.billable",
                     "checkedAt"
@@ -838,6 +930,10 @@
                     "coverage.completeForRequestedLayers": {
                         "label": "All layers checked",
                         "format": "boolean"
+                    },
+                    "coverage.categoriesPartiallyChecked": {
+                        "label": "Partially checked categories",
+                        "format": "array"
                     },
                     "coverage.categoriesFailed": {
                         "label": "Failed categories",

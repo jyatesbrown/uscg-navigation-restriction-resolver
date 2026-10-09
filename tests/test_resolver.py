@@ -148,26 +148,121 @@ async def test_failed_layer_is_never_zero_hazards(navcen, client, response, stat
     assert ok.status == "success"
 
 
-async def test_index_listed_404_is_listed_but_not_published(navcen, client):
+def unpublish_safe_zone_line(navcen):
     idx = index_fixture()
     idx["safeZoneLine_"]["counter"] = 1
     navcen.get(url__startswith=INDEX_URL).mock(return_value=httpx.Response(200, json=idx))
     navcen.get(BASE + "safeZoneLine_1.geojson").mock(return_value=httpx.Response(404))
+
+
+async def test_index_listed_404_is_listed_but_not_published(navcen, client):
+    unpublish_safe_zone_line(navcen)
     r = await run(client, OPEN_OCEAN)
     assert r.status == "partial"
     assert r.coverage.categories_incomplete == ["safety_zone"]
     assert r.coverage.categories_failed == []
-    assert "safety_zone" not in r.coverage.categories_checked
     assert r.coverage.source_failures == []
     assert [d.dataset for d in r.coverage.unpublished_datasets] == ["safeZoneLine_1"]
     assert next(d for d in r.coverage.datasets if d.dataset == "safeZoneLine_1").feature_count is None
     assert not r.coverage.complete_for_requested_layers
-    assert "does not mean no records exist" in r.coverage.coverage_note
-    assert not r.billing.billable
-    assert not FORBIDDEN.search(json.dumps(r.to_record()))
     other = await run(client, {**OPEN_OCEAN, "categories": ["hazard_to_navigation"]})
     assert other.status == "success"
     assert other.billing.billable
+
+
+# --- per-file category coverage (cases A-G) ------------------------------------
+
+
+async def test_a_all_category_files_checked_is_complete(navcen, client):
+    r = await run(client, OPEN_OCEAN)
+    cov = r.coverage
+    assert set(cov.categories) == set(cov.categories_requested)
+    assert all(v.status == "complete" for v in cov.categories.values())
+    assert cov.categories_partially_checked == cov.categories_unavailable == []
+    assert cov.categories_checked == cov.categories_requested
+    assert cov.categories["safety_zone"].checked == ["safeZone_1", "safeZonePoly_1"]
+    assert cov.coverage_note is None
+
+
+async def test_b_unpublished_line_file_makes_category_partial_not_unchecked(navcen, client):
+    unpublish_safe_zone_line(navcen)
+    cov = (await run(client, OPEN_OCEAN)).coverage
+    sz = cov.categories["safety_zone"]
+    assert sz.status == "partial"
+    assert sz.checked == ["safeZone_1", "safeZonePoly_1"]
+    assert sz.listed_but_not_published == ["safeZoneLine_1"]
+    assert sz.unavailable == []
+    assert "safety_zone" in cov.categories_checked
+    assert cov.categories_partially_checked == ["safety_zone"]
+    assert cov.categories_unavailable == []
+    assert cov.coverage_note.startswith(
+        "Safety-zone point and polygon datasets were checked successfully. The NAVCEN index lists safeZoneLine_1, "
+        "but that dataset was not published at retrieval time, so line-based safety-zone coverage is incomplete."
+    )
+
+
+async def test_c_whole_category_unavailable(navcen, client, monkeypatch):
+    monkeypatch.setattr("src.utils.http.BACKOFF_BASE_SECONDS", 0)
+    for name in ("safeZone_1", "safeZonePoly_1"):
+        navcen.get(BASE + f"{name}.geojson").mock(return_value=httpx.Response(503))
+    r = await run(client, OPEN_OCEAN)
+    sz = r.coverage.categories["safety_zone"]
+    assert sz.status == "unavailable"
+    assert sz.checked == []
+    assert sz.unavailable == ["safeZone_1", "safeZonePoly_1"]
+    assert r.coverage.categories_unavailable == ["safety_zone"]
+    assert "safety_zone" not in r.coverage.categories_checked
+    assert "no safety-zone dataset could be checked" in r.coverage.coverage_note
+    assert r.status == "partial"
+    assert not r.billing.billable
+
+
+async def test_d_positive_result_with_partial_category(navcen, client):
+    unpublish_safe_zone_line(navcen)
+    r = await run(client, {"point": {"lat": 40.8895, "lon": -73.7825}, "radiusNm": 0.5})
+    assert r.summary.matched_notice_count > 0
+    assert any(n.category == "safety_zone" for n in r.notices)
+    assert r.status == "partial"
+    assert r.coverage.categories["safety_zone"].status == "partial"
+    assert not r.coverage.complete_for_requested_layers
+    assert "returned notices come from datasets that were checked" in r.coverage.coverage_note
+    assert r.billing.billable
+
+
+async def test_e_zero_matches_with_partial_category_is_partial_and_not_billed(navcen, client):
+    unpublish_safe_zone_line(navcen)
+    r = await run(client, OPEN_OCEAN)
+    assert r.summary.matched_notice_count == 0
+    assert r.status == "partial"
+    assert not r.billing.billable
+    note = r.coverage.coverage_note
+    assert "No matches were found in the datasets successfully checked, but coverage is incomplete" in note
+    assert "does not mean no records exist" in note
+    text = json.dumps(r.to_record())
+    assert not FORBIDDEN.search(text)
+    assert "no hazards exist" not in text.lower()
+
+
+async def test_f_zero_matches_all_categories_complete_is_success_and_billable(navcen, client):
+    r = await run(client, {**OPEN_OCEAN, "categories": ["hazard_to_navigation", "marine_event"]})
+    assert r.status == "success"
+    assert r.summary.matched_notice_count == 0
+    assert all(v.status == "complete" for v in r.coverage.categories.values())
+    assert r.billing.billable
+
+
+async def test_g_file_failure_never_reads_as_empty_file(navcen, client, monkeypatch):
+    monkeypatch.setattr("src.utils.http.BACKOFF_BASE_SECONDS", 0)
+    navcen.get(BASE + "safeZonePoly_1.geojson").mock(return_value=httpx.Response(503))
+    r = await run(client, OPEN_OCEAN)
+    sz = r.coverage.categories["safety_zone"]
+    assert sz.status == "partial"
+    assert sz.unavailable == ["safeZonePoly_1"]
+    assert "safeZonePoly_1" not in sz.checked
+    assert next(d for d in r.coverage.datasets if d.dataset == "safeZonePoly_1").feature_count is None
+    assert "safeZonePoly_1 (unavailable) could not be retrieved or validated" in r.coverage.coverage_note
+    assert r.status == "partial"
+    assert not r.billing.billable
 
 
 async def test_partial_with_matches_is_billable(navcen, client):

@@ -58,6 +58,7 @@ def build_schema() -> dict[str, Any]:
                     "summary.activeCount": ("Active", "number"),
                     "summary.categoriesMatched": ("Categories matched", "array"),
                     "coverage.completeForRequestedLayers": ("All layers checked", "boolean"),
+                    "coverage.categoriesPartiallyChecked": ("Partially checked categories", "array"),
                     "coverage.categoriesFailed": ("Failed categories", "array"),
                     "billing.billable": ("Billable", "boolean"),
                     "checkedAt": ("Checked at", "date"),
